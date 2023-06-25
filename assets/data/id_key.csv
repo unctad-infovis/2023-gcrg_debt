@@ -1,0 +1,201 @@
+id,region,wb_income_classification,development_status,LDC,SIDS,id_display
+AFG,Developing Asia and Oceania,Low income countries,Developing countries,1,0,Afghanistan
+Africa,,,,,,Africa
+AGO,Africa,Lower middle income countries,Developing countries,1,0,Angola
+ALB,Europe and Central Asia*,Upper middle income countries,Developed countries,0,0,Albania
+ARE,Developing Asia and Oceania,High income countries,Developing countries,0,0,United Arab Emirates
+ARG,Latin America and the Caribbean,Upper middle income countries,Developing countries,0,0,Argentina
+ARM,Developing Asia and Oceania,Upper middle income countries,Developing countries,0,0,Armenia
+ATG,Latin America and the Caribbean,High income countries,Developing countries,0,1,Antigua and Barbuda
+AUS,,High income countries,Developed countries,0,0,Australia
+AUT,,High income countries,Developed countries,0,0,Austria
+AZE,Developing Asia and Oceania,Upper middle income countries,Developing countries,0,0,Azerbaijan
+BDI,Africa,Low income countries,Developing countries,1,0,Burundi
+BEL,,High income countries,Developed countries,0,0,Belgium
+BEN,Africa,Lower middle income countries,Developing countries,1,0,Benin
+BFA,Africa,Low income countries,Developing countries,1,0,Burkina Faso
+BGD,Developing Asia and Oceania,Lower middle income countries,Developing countries,1,0,Bangladesh
+BGR,,Upper middle income countries,Developed countries,0,0,Bulgaria
+BHR,Developing Asia and Oceania,High income countries,Developing countries,0,0,Bahrain
+BHS,Latin America and the Caribbean,High income countries,Developing countries,0,1,Bahamas
+BIH,Europe and Central Asia*,Upper middle income countries,Developed countries,0,0,Bosnia and Herzegovina
+BLR,Europe and Central Asia*,Upper middle income countries,Developed countries,0,0,Belarus
+BLZ,Latin America and the Caribbean,Upper middle income countries,Developing countries,0,0,Belize
+BOL,Latin America and the Caribbean,Lower middle income countries,Developing countries,0,0,Plurinational State of Bolivia
+BRA,Latin America and the Caribbean,Upper middle income countries,Developing countries,0,0,Brazil
+BRB,Latin America and the Caribbean,High income countries,Developing countries,0,1,Barbados
+BRN,Developing Asia and Oceania,High income countries,Developing countries,0,0,Brunei Darussalam
+BTN,Developing Asia and Oceania,Lower middle income countries,Developing countries,1,0,Bhutan
+BWA,Africa,Upper middle income countries,Developing countries,0,0,Botswana
+CAF,Africa,Low income countries,Developing countries,1,0,Central African Republic
+CAN,,High income countries,Developed countries,0,0,Canada
+CHE,,High income countries,Developed countries,0,0,Switzerland
+CHL,Latin America and the Caribbean,High income countries,Developing countries,0,0,Chile
+CHN,Developing Asia and Oceania,Upper middle income countries,Developing countries,0,0,China
+CIV,Africa,Lower middle income countries,Developing countries,0,0,Côte D'Ivoire
+CMR,Africa,Lower middle income countries,Developing countries,0,0,Cameroon
+COD,Africa,Low income countries,Developing countries,1,0,Democratic Republic of the Congo
+COG,Africa,Lower middle income countries,Developing countries,0,0,Congo
+COL,Latin America and the Caribbean,Upper middle income countries,Developing countries,0,0,Colombia
+COM,Africa,Lower middle income countries,Developing countries,1,1,Comoros
+CPV,Africa,Lower middle income countries,Developing countries,0,1,Cabo Verde
+CRI,Latin America and the Caribbean,Upper middle income countries,Developing countries,0,0,Costa Rica
+CUB,Latin America and the Caribbean,Upper middle income countries,Developing countries,0,0,Cuba
+CYP,,High income countries,Developed countries,0,0,Cyprus
+CZE,,High income countries,Developed countries,0,0,Czechia
+DEU,,High income countries,Developed countries,0,0,Germany
+Developed countries,,,,,,Developed countries
+Developing Asia and Oceania,,,,,,Developing Asia and Oceania
+Developing countries,,,,,,Developing countries
+DJI,Africa,Lower middle income countries,Developing countries,1,0,Djibouti
+DMA,Latin America and the Caribbean,Upper middle income countries,Developing countries,0,1,Dominica
+DNK,,High income countries,Developed countries,0,0,Denmark
+DOM,Latin America and the Caribbean,Upper middle income countries,Developing countries,0,0,Dominican Republic
+DZA,Africa,Lower middle income countries,Developing countries,0,0,Algeria
+ECU,Latin America and the Caribbean,Upper middle income countries,Developing countries,0,0,Ecuador
+EGY,Africa,Lower middle income countries,Developing countries,0,0,Egypt
+ERI,Africa,Low income countries,Developing countries,1,0,Eritrea
+ESP,,High income countries,Developed countries,0,0,Spain
+EST,,High income countries,Developed countries,0,0,Estonia
+ETH,Africa,Low income countries,Developing countries,1,0,Ethiopia
+Europe and Central Asia*,,,,,,Europe and Central Asia*
+FIN,,High income countries,Developed countries,0,0,Finland
+FJI,Developing Asia and Oceania,Upper middle income countries,Developing countries,0,1,Fiji
+FRA,,High income countries,Developed countries,0,0,France
+FSM,Developing Asia and Oceania,Lower middle income countries,Developing countries,0,1,Federated States of Micronesia
+GAB,Africa,Upper middle income countries,Developing countries,0,0,Gabon
+GBR,,High income countries,Developed countries,0,0,United Kingdom of Great Britain and Northern Ireland
+GEO,Developing Asia and Oceania,Upper middle income countries,Developing countries,0,0,Georgia
+GHA,Africa,Lower middle income countries,Developing countries,0,0,Ghana
+GIN,Africa,Low income countries,Developing countries,1,0,Guinea
+GMB,Africa,Low income countries,Developing countries,1,0,Republic of The Gambia
+GNB,Africa,Low income countries,Developing countries,1,0,Guinea Bissau
+GNQ,Africa,Upper middle income countries,Developing countries,0,0,Equatorial Guinea
+GRC,,High income countries,Developed countries,0,0,Greece
+GRD,Latin America and the Caribbean,Upper middle income countries,Developing countries,0,1,Grenada
+GTM,Latin America and the Caribbean,Upper middle income countries,Developing countries,0,0,Guatemala
+GUY,Latin America and the Caribbean,Upper middle income countries,Developing countries,0,0,Guyana
+High income countries,,,,,,High income countries
+HND,Latin America and the Caribbean,Lower middle income countries,Developing countries,0,0,Honduras
+HRV,,High income countries,Developed countries,0,0,Croatia
+HTI,Latin America and the Caribbean,Lower middle income countries,Developing countries,1,0,Haiti
+HUN,,High income countries,Developed countries,0,0,Hungary
+IDN,Developing Asia and Oceania,Lower middle income countries,Developing countries,0,0,Indonesia
+IND,Developing Asia and Oceania,Lower middle income countries,Developing countries,0,0,India
+IRL,,High income countries,Developed countries,0,0,Ireland
+IRN,Developing Asia and Oceania,Lower middle income countries,Developing countries,0,0,Islamic Republic of Iran
+IRQ,Developing Asia and Oceania,Upper middle income countries,Developing countries,0,0,Iraq
+ISL,,High income countries,Developed countries,0,0,Iceland
+ISR,,High income countries,Developed countries,0,0,Israel
+ITA,,High income countries,Developed countries,0,0,Italy
+JAM,Latin America and the Caribbean,Upper middle income countries,Developing countries,0,1,Jamaica
+JOR,Developing Asia and Oceania,Upper middle income countries,Developing countries,0,0,Jordan
+JPN,,High income countries,Developed countries,0,0,Japan
+KAZ,Developing Asia and Oceania,Upper middle income countries,Developing countries,0,0,Kazakhstan
+KEN,Africa,Lower middle income countries,Developing countries,0,0,Kenya
+KGZ,Developing Asia and Oceania,Lower middle income countries,Developing countries,0,0,Kyrgyzstan
+KHM,Developing Asia and Oceania,Lower middle income countries,Developing countries,1,0,Cambodia
+KIR,Developing Asia and Oceania,Lower middle income countries,Developing countries,1,1,Kiribati
+KNA,Latin America and the Caribbean,High income countries,Developing countries,0,1,Saint Kitts and Nevis
+KOR,,High income countries,Developed countries,0,0,Republic of Korea
+KWT,Developing Asia and Oceania,High income countries,Developing countries,0,0,Kuwait
+LAO,Developing Asia and Oceania,Lower middle income countries,Developing countries,1,0,Lao People's Democratic Republic
+Latin America and the Caribbean,,,,,,Latin America and the Caribbean
+LBN,Developing Asia and Oceania,Lower middle income countries,Developing countries,0,0,Lebanon
+LBR,Africa,Low income countries,Developing countries,1,0,Liberia
+LBY,Africa,Upper middle income countries,Developing countries,0,0,Libya
+LCA,Latin America and the Caribbean,Upper middle income countries,Developing countries,0,1,Saint Lucia
+LDCs,,,,,,LDCs
+LKA,Developing Asia and Oceania,Lower middle income countries,Developing countries,0,0,Sri Lanka
+Low income countries,,,,,,Low income countries
+Lower middle income countries,,,,,,Lower middle income countries
+LSO,Africa,Lower middle income countries,Developing countries,1,0,Lesotho
+LTU,,High income countries,Developed countries,0,0,Lithuania
+LUX,,High income countries,Developed countries,0,0,Luxembourg
+LVA,,High income countries,Developed countries,0,0,Latvia
+MAR,Africa,Lower middle income countries,Developing countries,0,0,Morocco
+MDA,Europe and Central Asia*,Upper middle income countries,Developed countries,0,0,Republic of Moldova
+MDG,Africa,Low income countries,Developing countries,1,0,Madagascar
+MDV,Developing Asia and Oceania,Upper middle income countries,Developing countries,0,1,Maldives
+MEX,Latin America and the Caribbean,Upper middle income countries,Developing countries,0,0,Mexico
+MHL,Developing Asia and Oceania,Upper middle income countries,Developing countries,0,1,Marshall Islands
+MKD,Europe and Central Asia*,Upper middle income countries,Developed countries,0,0,North Macedonia
+MLI,Africa,Low income countries,Developing countries,1,0,Mali
+MLT,,High income countries,Developed countries,0,0,Malta
+MMR,Developing Asia and Oceania,Lower middle income countries,Developing countries,1,0,Myanmar
+MNE,Europe and Central Asia*,Upper middle income countries,Developed countries,0,0,Montenegro
+MNG,Developing Asia and Oceania,Lower middle income countries,Developing countries,0,0,Mongolia
+MOZ,Africa,Low income countries,Developing countries,1,0,Mozambique
+MRT,Africa,Lower middle income countries,Developing countries,1,0,Mauritania
+MUS,Africa,Upper middle income countries,Developing countries,0,1,Mauritius
+MWI,Africa,Low income countries,Developing countries,1,0,Malawi
+MYS,Developing Asia and Oceania,Upper middle income countries,Developing countries,0,0,Malaysia
+"NAM",Africa,Upper middle income countries,Developing countries,0,0,Namibia
+NER,Africa,Low income countries,Developing countries,1,0,Niger
+NGA,Africa,Lower middle income countries,Developing countries,0,0,Nigeria
+NIC,Latin America and the Caribbean,Lower middle income countries,Developing countries,0,0,Nicaragua
+NLD,,High income countries,Developed countries,0,0,Netherlands
+NOR,,High income countries,Developed countries,0,0,Norway
+NPL,Developing Asia and Oceania,Lower middle income countries,Developing countries,1,0,Nepal
+NRU,Developing Asia and Oceania,High income countries,Developing countries,0,1,Nauru
+NZL,,High income countries,Developed countries,0,0,New Zealand
+OMN,Developing Asia and Oceania,High income countries,Developing countries,0,0,Oman
+PAK,Developing Asia and Oceania,Lower middle income countries,Developing countries,0,0,Pakistan
+PAN,Latin America and the Caribbean,High income countries,Developing countries,0,0,Panama
+PER,Latin America and the Caribbean,Upper middle income countries,Developing countries,0,0,Peru
+PHL,Developing Asia and Oceania,Lower middle income countries,Developing countries,0,0,Philippines
+PLW,Developing Asia and Oceania,Upper middle income countries,Developing countries,0,1,Palau
+PNG,Developing Asia and Oceania,Lower middle income countries,Developing countries,0,0,Papua New Guinea
+POL,,High income countries,Developed countries,0,0,Poland
+PRT,,High income countries,Developed countries,0,0,Portugal
+PRY,Latin America and the Caribbean,Upper middle income countries,Developing countries,0,0,Paraguay
+QAT,Developing Asia and Oceania,High income countries,Developing countries,0,0,Qatar
+ROU,,High income countries,Developed countries,0,0,Romania
+RUS,Europe and Central Asia*,Upper middle income countries,Developed countries,0,0,Russian Federation
+RWA,Africa,Low income countries,Developing countries,1,0,Rwanda
+SAU,Developing Asia and Oceania,High income countries,Developing countries,0,0,Saudi Arabia
+SDN,Africa,Low income countries,Developing countries,1,0,Sudan
+SEN,Africa,Lower middle income countries,Developing countries,1,0,Senegal
+SGP,Developing Asia and Oceania,High income countries,Developing countries,0,0,Singapore
+SIDS,,,,,,SIDS
+SLB,Developing Asia and Oceania,Lower middle income countries,Developing countries,1,1,Solomon Islands
+SLE,Africa,Low income countries,Developing countries,1,0,Sierra Leone
+SLV,Latin America and the Caribbean,Lower middle income countries,Developing countries,0,0,El Salvador
+SOM,Africa,Low income countries,Developing countries,1,0,Somalia
+SRB,Europe and Central Asia*,Upper middle income countries,Developed countries,0,0,Serbia
+SSD,Africa,Low income countries,Developing countries,1,0,South Sudan
+STP,Africa,Lower middle income countries,Developing countries,1,1,Sao Tome and Principe
+SUR,Latin America and the Caribbean,Upper middle income countries,Developing countries,0,0,Suriname
+SVK,,High income countries,Developed countries,0,0,Slovakia
+SVN,,High income countries,Developed countries,0,0,Slovenia
+SWE,,High income countries,Developed countries,0,0,Sweden
+SWZ,Africa,Lower middle income countries,Developing countries,0,0,Eswatini
+SYC,Africa,High income countries,Developing countries,0,1,Seychelles
+SYR,Developing Asia and Oceania,Low income countries,Developing countries,0,0,Syrian Arab Republic
+TCD,Africa,Low income countries,Developing countries,1,0,Chad
+TGO,Africa,Low income countries,Developing countries,1,0,Togo
+THA,Developing Asia and Oceania,Upper middle income countries,Developing countries,0,0,Thailand
+TJK,Developing Asia and Oceania,Lower middle income countries,Developing countries,0,0,Tajikistan
+TKM,Developing Asia and Oceania,Upper middle income countries,Developing countries,0,0,Turkmenistan
+TLS,Developing Asia and Oceania,Lower middle income countries,Developing countries,1,1,Timor-Leste
+TON,Developing Asia and Oceania,Upper middle income countries,Developing countries,0,1,Tonga
+TTO,Latin America and the Caribbean,High income countries,Developing countries,0,1,Trinidad and Tobago
+TUN,Africa,Lower middle income countries,Developing countries,0,0,Tunisia
+TUR,Developing Asia and Oceania,Upper middle income countries,Developing countries,0,0,Türkiye
+TUV,Developing Asia and Oceania,Upper middle income countries,Developing countries,1,1,Tuvalu
+TZA,Africa,Lower middle income countries,Developing countries,1,0,United Republic of Tanzania
+UGA,Africa,Low income countries,Developing countries,1,0,Uganda
+UKR,Europe and Central Asia*,Lower middle income countries,Developed countries,0,0,Ukraine
+Upper middle income countries,,,,,,Upper middle income countries
+URY,Latin America and the Caribbean,High income countries,Developing countries,0,0,Uruguay
+USA,,High income countries,Developed countries,0,0,United States of America
+UZB,Developing Asia and Oceania,Lower middle income countries,Developing countries,0,0,Uzbekistan
+VCT,Latin America and the Caribbean,Upper middle income countries,Developing countries,0,1,Saint Vincent and the Grenadines
+VEN,Latin America and the Caribbean,Upper middle income countries,Developing countries,0,0,Bolivarian Republic of Venezuela
+VNM,Developing Asia and Oceania,Lower middle income countries,Developing countries,0,0,Viet Nam
+VUT,Developing Asia and Oceania,Lower middle income countries,Developing countries,0,1,Vanuatu
+WSM,Developing Asia and Oceania,Lower middle income countries,Developing countries,0,1,Samoa
+YEM,Developing Asia and Oceania,Low income countries,Developing countries,1,0,Yemen
+ZAF,Africa,Upper middle income countries,Developing countries,0,0,South Africa
+ZMB,Africa,Low income countries,Developing countries,1,0,Zambia
+ZWE,Africa,Lower middle income countries,Developing countries,0,0,Zimbabwe
