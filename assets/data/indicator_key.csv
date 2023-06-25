@@ -1,0 +1,19 @@
+number,indicator,indicator_full,indicator_key,desire,decimals,indicator_short,format,group,min,max,max_label
+1.1,gov_debt_to_gdp_perc,Government debt as a share of GDP,gov_debt_to_gdp_perc,Lower is better,1,as a share of GDP,percent,Public debt,0.02063,2.61289,3
+1.2,gov_debt_usd_billions,Government debt in US$ billions,gov_debt_usd_billions,Lower is better,0,in US$ billions,dollar,Public debt,0.0045522,88793.3664,90000
+1.3,gov_debt_usd_per_capita,Government debt in US$ per capita,gov_debt_usd_per_capita,Neutral,0,in US$ per capita,dollar,Public debt,45.2159898,117405.2221,120000
+2.1,external_ppg_perc_gdp,External Public and Publicly Guaranteed debt as a share of GDP,external_ppg_perc_gdp,Lower is better,1,as a share of GDP,percent,External public debt,0.001148884,1.583555515,1.6
+2.2,external_ppg_usd_billions,External Public and Publicly Guaranteed debt in US$ billions,external_ppg_usd_billions,Lower is better,0,in US$ billions,dollar,External public debt,0.140830146,4792.955975,4800
+2.3,external_ppg_per_capita,External Public and Publicly Guaranteed in US$ per capita,external_ppg_per_capita,Neutral,0,in US$ per capita,dollar,External public debt,3.91750774,8051.601516,8100
+3.1,multilateral_share_external_ppg,Multilateral creditors as a share of external PPG debt,multilateral_share_external_ppg,Neutral,1,multilateral,percent,External public debt by creditor,7.53E-04,0.983969832,1
+3.2,bilateral_share_external_ppg,Bilateral creditors as a share of external PPG debt,bilateral_share_external_ppg,Neutral,1,bilateral,percent,External public debt by creditor,0,0.939663126,1
+3.3,private_share_external_ppg,Private creditors as a share of external PPG debt,private_share_external_ppg,Neutral,1,private,percent,External public debt by creditor,0,0.993867703,1
+4.1,gov_net_interest_perc_gdp,Government net interest payments as a share of GDP,gov_net_interest_perc_gdp,Lower is better,1,as a share of GDP,percent,Public debt interest payments,-0.259615385,0.102222222,0.11
+4.2,gov_net_interest_perc_revenues,Government net interest payments as a share of revenues,gov_net_interest_perc_revenues,Lower is better,1,as a share of net revenue,percent,Public debt interest payments,-0.210715253,0.777857846,0.8
+4.3,gov_net_interest_per_capita,Government net interest payments in US$ per capita,gov_net_interest_per_capita,Lower is better,0,in US$ per capita,dollar,Public debt interest payments,-4219.458828,1791.829294,1800
+5.1,edu_spending_perc_gdp,Government education expenditure as a share of GDP,edu_spending_perc_gdp,Higher is better,1,education as a share of GDP,percent,Development spending,0.002501834,0.143338942,0.15
+5.2,health_spending_perc_gdp,Government health expenditure as share of GDP,health_spending_perc_gdp,Higher is better,1,health as a share of GDP,percent,Development spending,0.00354935,0.161320692,0.17
+5.3,gov_investment_perc_gdp,Government investment expenditure as a share of GDP,gov_investment_perc_gdp,Higher is better,1,investment as a share of GDP,percent,Development spending,0.004982691,0.303701234,0.31
+5.4,edu_spending_perc_net_interest,Net interest to government education expenditure,edu_spending_perc_net_interest,Lower is better,1,ratio of net interest to education,number,Debt burden relative to development spending,-2.176027847,3.573575622,3.6
+5.5,health_spending_perc_net_interest,Net interest to government health expenditure,health_spending_perc_net_interest,Lower is better,1,ratio of net interest to health,number,Debt burden relative to development spending,-3.614837874,8.595990876,8.6
+5.6,gov_investment_perc_net_interest,Net interest to government investment expenditure,gov_investment_perc_net_interest,Lower is better,1,ratio of net interest to investment,number,Debt burden relative to development spending,-2.465453391,3.946555627,4

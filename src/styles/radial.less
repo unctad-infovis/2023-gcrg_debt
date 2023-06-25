@@ -1,0 +1,58 @@
+.axis {
+  pointer-events: none;
+
+  .line {
+    stroke: @ungrey;
+    opacity: 0.3;
+  }
+
+  .number {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .max {
+    font-size: 11px;
+    fill: @ungrey;
+  }
+
+  .name {
+    font-size: 12px;
+  }
+
+  //helpers
+  .left {
+    text-anchor: start;
+  }
+
+  .right {
+    text-anchor: end;
+  }
+}
+
+.donut {
+  fill: @lightblue;
+  pointer-events: none;
+}
+
+.donut-label {
+  font-weight: bold;
+  pointer-events: none;
+  text-anchor: middle;
+  font-size: 18px;
+}
+
+.slice {
+  cursor: zoom-in;
+  fill: white;
+}
+
+.slice:hover {
+  fill: @lightblue;
+  opacity: 0.6;
+}
+
+.selected {
+  fill: @lightblue;
+  opacity: 0.4;
+}
