@@ -16,6 +16,7 @@ import Pie from './Radial.Pie.jsx';
 function Radial() {
   // get the radial data
   const { circleData } = useContext(Data);
+
   // get the height and width of the div to determine the sizing for the radial
   const ref = useRef(null);
   const [width, setWidth] = useState(0);
@@ -42,15 +43,16 @@ function Radial() {
       <svg width={width} height={height}>
         <g transform={`translate(${width / 2}, ${height / 2})`}>
           <Pie settings={settings} />
-          {circleData.map((data, index) => (
-            <Spoke
-              key={data.indicator_key}
-              data={data}
-              i={index}
-              total={circleData.length}
-              settings={settings}
-            />
-          ))}
+          {circleData
+            && circleData.map((data, index) => (
+              <Spoke
+                key={data.indicator_key}
+                data={data}
+                i={index}
+                total={circleData.length}
+                settings={settings}
+              />
+            ))}
         </g>
       </svg>
     </div>

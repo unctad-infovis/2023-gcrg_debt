@@ -9,22 +9,22 @@ import { MetricContextProvider } from './context/Metric';
 
 // Load components
 import Radial from './radial/Radial.jsx';
+import Panel from './panel/Panel.jsx';
+import Filter from './filters/Filter.jsx';
 
 function App() {
   return (
     <div className="app">
       <StaticDataContextProvider>
         <FocusContextProvider>
-          <div className="filters">Filters</div>
+          <Filter />
           <div className="visuals">
-            <RadialDataContextProvider>
-              <MetricContextProvider>
+            <MetricContextProvider>
+              <RadialDataContextProvider>
                 <Radial />
-              </MetricContextProvider>
-            </RadialDataContextProvider>
-            <div className="panel">
-              <MetricContextProvider>Panel</MetricContextProvider>
-            </div>
+              </RadialDataContextProvider>
+              <Panel />
+            </MetricContextProvider>
           </div>
         </FocusContextProvider>
       </StaticDataContextProvider>

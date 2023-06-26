@@ -1,0 +1,54 @@
+.name {
+  flex: 0 1 auto;
+  font-size: 24px;
+}
+
+.tabs {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column nowrap;
+
+  ul.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ebeae6;
+    margin: 0;
+    flex: 0 1 auto;
+    padding: 0;
+  }
+
+  ul.nav li {
+    width: 33%;
+    padding: 1rem;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 2px solid white;
+  }
+
+  ul.nav li:hover {
+    border-bottom: 2px solid black;
+  }
+
+  ul.nav li.active {
+    border-bottom: 2px solid black;
+    font-weight: bold;
+  }
+
+  .content {
+    flex: 1 1 auto;
+
+    .axis-line {
+      stroke-dasharray: 2, 2;
+      stroke-width: 1;
+      stroke: @ungray;
+      pointer-events: none;
+    }
+
+    .axis-label {
+      fill: @ungray;
+      text-anchor: end;
+    }
+  }
+}
