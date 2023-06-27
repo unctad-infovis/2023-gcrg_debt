@@ -11,7 +11,9 @@
   margin-right: 24px;
 
   .filters {
+    @import "filter.less";
     flex: 0 1 auto;
+    margin-bottom: 24px;
   }
   .visuals {
     @import "coloring.less";
@@ -23,6 +25,10 @@
     .radial {
       @import "radial.less";
       width: 65%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
     }
 
     .panel {

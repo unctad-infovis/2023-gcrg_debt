@@ -12,6 +12,7 @@ import Data from '../context/RadialData.js';
 // components
 import Spoke from './Radial.Spoke.jsx';
 import Pie from './Radial.Pie.jsx';
+import Center from './Radial.Center.jsx';
 
 function Radial() {
   // get the radial data
@@ -40,6 +41,7 @@ function Radial() {
 
   return (
     <div className="radial" ref={ref}>
+      <Center />
       <svg width={width} height={height}>
         <g transform={`translate(${width / 2}, ${height / 2})`}>
           <Pie settings={settings} />

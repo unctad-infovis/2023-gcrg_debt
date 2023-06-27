@@ -10,10 +10,13 @@ export const FocusContext = createContext({});
 export function FocusContextProvider({ children }) {
   const { idData } = useContext(StaticDataContext);
   // set up the variable for storing the selected focus + comparisons
-  const [id, setId] = useState({ type: 'country', id: 'AFG' });
+  const [id, setId] = useState({
+    type: 'special group',
+    id: 'Developing countries',
+    id_display: 'Developing countries',
+  });
   const [comparisons, setComparisons] = useState([
-    { type: 'development_status', id: 'Developing countries' },
-    { type: 'wb_income_classification', id: 'Low income countries' },
+    { type: 'development_status', id: 'Developed countries' },
   ]);
 
   const comparisonLists = useMemo(
@@ -30,6 +33,21 @@ export function FocusContextProvider({ children }) {
     [idData, comparisons]
   );
 
+  const [checkedState, setCheckedState] = useState([
+    false,
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
+
   const context = useMemo(
     () => ({
       id,
@@ -37,8 +55,10 @@ export function FocusContextProvider({ children }) {
       comparisons,
       setComparisons,
       comparisonLists,
+      checkedState,
+      setCheckedState,
     }),
-    [id, comparisons, comparisonLists]
+    [id, comparisons, comparisonLists, checkedState]
   );
 
   return (

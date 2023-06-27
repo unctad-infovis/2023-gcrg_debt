@@ -1,29 +1,16 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
-// Load helpers.
-import { StaticDataContext } from '../context/StaticData.js';
-import { FocusContext } from '../context/Focus.js';
+// Components
+// import Focus from './Filter.Focus.jsx';
+// import Comparisons from './Filter.Comparisons.jsx';
+import Sentence from './Filter.Sentence.jsx';
 
 function Filter() {
-  const { idData } = useContext(StaticDataContext);
-
-  const { setId } = useContext(FocusContext);
-
-  const handleIdChange = (e) => {
-    setId({ id: e.target.value });
-  };
-
   return (
     <div className="filters">
-      {idData && (
-        <select onChange={handleIdChange}>
-          {idData.map((item) => (
-            <option value={item.id} key={item.id}>
-              {item.id_display}
-            </option>
-          ))}
-        </select>
-      )}
+      <Sentence />
+      {/* <Focus />
+      <Comparisons /> */}
     </div>
   );
 }

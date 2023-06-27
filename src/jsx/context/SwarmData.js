@@ -24,9 +24,9 @@ export function SwarmDataContextProvider({ children }) {
         class:
             d.id === id.id
               ? 'focus_line'
-              : d.id === comparisons[0].id
+              : comparisons[0] && d.id === comparisons[0].id
                 ? 'comparison_1_line'
-                : d.id === comparisons[1].id
+                : comparisons[1] && d.id === comparisons[1].id
                   ? 'comparison_2_line'
                   : 'no_highlight_line',
       })),

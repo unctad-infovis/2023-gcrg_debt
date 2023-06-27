@@ -1,0 +1,117 @@
+.sentence {
+  font-size: 18px;
+  display: flex;
+  flex-flow: row wrap;
+
+  .clickable {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .focus {
+    font-weight: bold;
+    border-bottom: 2px solid @unblue;
+    padding: 0px 4px 2px 4px;
+    cursor: pointer;
+  }
+
+  .focus:hover {
+    background-color: @lightblue;
+  }
+
+  .comparisons {
+    font-weight: bold;
+    border-bottom: 1px dashed @ungray;
+    padding: 0px 4px 2px 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+  }
+  .comparisons:hover {
+    background-color: @lightblue;
+  }
+
+  .chevron-down {
+    stroke: @unblue;
+  }
+
+  .focus-menu {
+    background-color: white;
+    position: absolute;
+    top: 30px;
+    margin-left: -2px;
+    border: 1px solid #ededed;
+    border-radius: 8px;
+    z-index: 100;
+    filter: drop-shadow(0 0 0.75rem #ededed);
+    width: 400px;
+    padding: 24px;
+    overflow: scroll;
+    max-height: 30vh;
+
+    .selections {
+      display: flex;
+      flex-flow: column nowrap;
+
+      .item {
+        display: flex;
+        align-items: baseline;
+        border-bottom: 1px solid #ededed;
+        padding: 6px 0px;
+        font-size: 16px;
+        font-weight: normal;
+
+        label {
+          appearance: none;
+          user-select: none;
+          line-height: 1;
+          margin: 0;
+          padding: 0.75em 0.5em;
+          border-radius: 0;
+          outline: none;
+          cursor: pointer;
+          font-family: inherit;
+          font-size: 1em;
+          display: inline-block;
+        }
+
+        input[type="radio"] {
+          display: none;
+          outline: none;
+        }
+      }
+
+      .item:hover {
+        background-color: @lightblue;
+      }
+    }
+  }
+
+  .comparison-menu {
+    background-color: white;
+    position: absolute;
+    top: 12px;
+    margin-left: -2px;
+    border: 1px solid #ededed;
+    border-radius: 8px;
+    z-index: 100;
+    filter: drop-shadow(0 0 0.75rem #ededed);
+    width: 300px;
+    padding: 24px;
+    overflow: scroll;
+
+    .group {
+      font-weight: bold;
+      font-size: 16px;
+      padding: 10px 0px 5px 0px;
+    }
+
+    .item {
+      font-weight: normal;
+      font-size: 16px;
+      padding: 2px 0px;
+    }
+  }
+}

@@ -26,18 +26,26 @@ export function RadialDataContextProvider({ children }) {
         .map((d) => ({
           ...d,
           value: d.value === 'NA' ? null : +d.value,
+          sorto:
+              d.id === id.id
+                ? 2
+                : comparisons[0] && d.id === comparisons[0].id
+                  ? 1
+                  : 0,
           focus_type:
               d.id === id.id
                 ? 'focus'
                 : comparisons[0] && d.id === comparisons[0].id
                   ? 'comparison_1'
-                  : 'comparison_2',
+                  : comparisons[1] && d.id === comparisons[1].id
+                    ? 'comparison_2'
+                    : '',
         })),
       (d) => d.indicator
     ).map((d) => ({
       indicator_key: d[0],
       indicator_info: indicatorData.find((i) => i.indicator_key === d[0]),
-      circles: d[1].sort((a, b) => descending(+a.focus_type.split('_')[2], +b.focus_type.split('_')[2])),
+      circles: d[1].sort((a, b) => descending(+a.sorto, +b.sorto)),
     })),
     [id, comparisons, latestData, indicatorData]
   );

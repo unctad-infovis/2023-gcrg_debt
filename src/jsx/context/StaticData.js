@@ -28,11 +28,13 @@ export function StaticDataContextProvider({ children }) {
   const [indicatorData, setIndicatorData] = useState([]);
   const [valuesData, setValuesData] = useState([]);
   const [idData, setIdData] = useState([]);
+  const [textData, setTextData] = useState([]);
 
   useEffect(() => {
     fetchData('indicator_key.csv', setIndicatorData);
     fetchData('values.csv', setValuesData);
     fetchData('id_key.csv', setIdData);
+    fetchData('text.csv', setTextData);
   }, []);
 
   const context = useMemo(
@@ -41,8 +43,9 @@ export function StaticDataContextProvider({ children }) {
       valuesData,
       latestData: valuesData && valuesData.filter((d) => +d.latest_year === 1),
       idData,
+      textData,
     }),
-    [indicatorData, valuesData, idData]
+    [indicatorData, valuesData, idData, textData]
   );
 
   return (

@@ -56,3 +56,48 @@
   fill: @lightblue;
   opacity: 0.4;
 }
+
+.center {
+  position: absolute;
+  max-width: 25%;
+
+  .focus {
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    line-height: 300%;
+
+    .dot {
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+  }
+
+  .comparison1 {
+    font-size: 14px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    line-height: 140%;
+    margin-left: 16px;
+  }
+  .comparison2 {
+    font-size: 14px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    line-height: 140%;
+    margin-left: 16px;
+  }
+
+  .dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+}
