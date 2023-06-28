@@ -30,7 +30,7 @@ function Swarm({ width, height }) {
         .force('forceY', forceY((d) => scale(d.value)).strength(3))
         .force(
           'collide',
-          forceCollide((d) => (d.class === 'focus' ? 9 : 5) + 2)
+          forceCollide((d) => d.r + 3)
         )
         .stop()
         .tick(300),
@@ -47,11 +47,12 @@ function Swarm({ width, height }) {
               key={circle.id}
               cx={circle.x}
               cy={circle.y}
-              r={circle.class === 'focus' ? 9 : 5}
+              r={circle.r}
               className={circle.class}
             />
             {(circle.class === 'both_comparisons_circle'
-              || circle.class === 'comparison_2_circle') && (
+              || circle.class === 'comparison_2_circle'
+              || circle.class === 'focus_comparison_circle') && (
               <circle
                 cx={circle.x}
                 cy={circle.y}

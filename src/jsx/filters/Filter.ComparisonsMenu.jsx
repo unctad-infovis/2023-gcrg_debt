@@ -55,7 +55,7 @@ function Comparisons() {
       const format = c
         && c.map((d) => ({
           id: d.id,
-          type: d.category_col,
+          type: d.type,
         }));
       setComparisons(format);
     }

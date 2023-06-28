@@ -42,9 +42,7 @@ function Axis({ settings, angle, data }) {
         <text
           x={x + space}
           y={y}
-          className={`number ${reverse} ${
-            focus.value ? 'focus_circle' : 'no_value'
-          }`}
+          className={`number ${reverse} ${focus.value ? 'focus' : 'no_value'}`}
         >
           {formatNum(focus.value, format, decimals)}
         </text>

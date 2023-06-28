@@ -14,7 +14,7 @@ function FocusMenu({ setMenuOpen }) {
     setId({
       id: e.id,
       id_display: e.id_display,
-      type: e.category ? e.category : 'country',
+      type: e.type,
     });
     setMenuOpen(false);
   };

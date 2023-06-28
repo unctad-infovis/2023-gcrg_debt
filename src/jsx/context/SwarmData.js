@@ -14,7 +14,9 @@ export function SwarmDataContextProvider({ children }) {
   // pull in the latest
   const { valuesData } = useContext(Static_Context);
   const { metric } = useContext(Metric_Context);
-  const { comparisonLists, id, comparisons } = useContext(FocusContext);
+  const {
+    comparisonLists, id, comparisons, focusList
+  } = useContext(FocusContext);
 
   const lineData = useMemo(
     () => valuesData
@@ -40,22 +42,26 @@ export function SwarmDataContextProvider({ children }) {
         .map((d) => {
           const one = comparisonLists.comparison_1.find((c) => c.id === d.id);
           const two = comparisonLists.comparison_2.find((c) => c.id === d.id);
+          const focus = focusList.find((c) => c.id === d.id);
 
           return {
             ...d,
+            r: d.id === id.id ? 9 : 5,
             class:
               d.id === id.id
-                ? 'focus'
-                : one && two
-                  ? 'both_comparisons_circle'
-                  : one
-                    ? 'comparison_1_circle'
-                    : two
-                      ? 'comparison_2_circle'
-                      : 'no_highlight_circle',
+                ? 'focus_circle'
+                : focus
+                  ? 'focus_circle'
+                  : one && two
+                    ? 'both_comparisons_circle'
+                    : one
+                      ? 'comparison_1_circle'
+                      : two
+                        ? 'comparison_2_circle'
+                        : 'no_highlight_circle',
           };
         }),
-    [lineData, comparisonLists, id]
+    [lineData, comparisonLists, id, focusList]
   );
 
   const context = useMemo(
