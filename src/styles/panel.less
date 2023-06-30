@@ -38,17 +38,58 @@
 
   .content {
     flex: 1 1 auto;
+    position: relative;
 
     .axis-line {
       stroke-dasharray: 2, 2;
       stroke-width: 1;
       stroke: @ungray;
       pointer-events: none;
+      opacity: 0.5;
     }
 
     .axis-label {
       fill: @ungray;
       text-anchor: end;
+      font-size: 14px;
+    }
+
+    .xaxis-label {
+      fill: @ungray;
+      text-anchor: middle;
+      font-size: 14px;
+    }
+
+    .reference_label {
+      font-size: 12px;
+      text-anchor: start;
+      fill: @ungray;
+      text-transform: capitalize;
+    }
+
+    .referenceLine {
+      pointer-events: none;
+    }
+
+    .swarm-wrapper {
+      position: absolute;
+      pointer-events: none;
+
+      .tooltip {
+        position: absolute;
+        background-color: white;
+        border-radius: 4px;
+        font-size: 12px;
+        padding: 4px;
+        transform: translateY(-50%);
+        pointer-events: none;
+        margin-left: 18px;
+      }
+    }
+
+    circle:hover {
+      stroke: black;
+      stroke-width: 2px;
     }
   }
 }

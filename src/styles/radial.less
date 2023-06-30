@@ -94,10 +94,38 @@
     margin-left: 16px;
   }
 
+  .comparison2::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    background-color: @undarkgray;
+    position: absolute;
+    margin-left: 4.5px;
+    border-radius: 50%;
+  }
+
   .dot {
     height: 8px;
     width: 8px;
     border-radius: 50%;
     display: inline-block;
   }
+}
+
+.tooltip {
+  position: absolute;
+  background-color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 4px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  margin-left: 18px;
+}
+.radial_circle {
+  cursor: pointer;
+}
+.radial_circle:hover {
+  stroke: black;
 }

@@ -14,10 +14,12 @@ function Center() {
 
         {comparisons[0] && comparisons[0].id}
       </div>
-      <div className="comparison2">
-        {comparisons[1] && <span className="dot comparison_2_circle" />}
-        {comparisons[1] && comparisons[1].id}
-      </div>
+      {comparisons[1] && (
+        <div className="comparison2">
+          {comparisons[1] && <span className="dot comparison_2_circle" />}
+          {comparisons[1] && comparisons[1].id}
+        </div>
+      )}
     </div>
   );
 }

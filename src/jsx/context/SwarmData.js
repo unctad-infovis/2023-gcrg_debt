@@ -2,6 +2,7 @@ import React, { createContext, useMemo, useContext } from 'react';
 import PropTypes from 'prop-types';
 
 // context
+import { descending } from 'd3';
 import Static_Context from './StaticData.js';
 import Metric_Context from './Metric.js';
 import { FocusContext } from './Focus.js';
@@ -48,10 +49,10 @@ export function SwarmDataContextProvider({ children }) {
             ...d,
             r: d.id === id.id ? 9 : 5,
             class:
-              d.id === id.id
+              d.id === id.id || focus
                 ? 'focus_circle'
-                : focus
-                  ? 'focus_circle'
+                : id.type !== 'country'
+                  ? 'no_highlight_circle'
                   : one && two
                     ? 'both_comparisons_circle'
                     : one
@@ -64,12 +65,32 @@ export function SwarmDataContextProvider({ children }) {
     [lineData, comparisonLists, id, focusList]
   );
 
+  const referenceLines = useMemo(
+    () => lineData
+      && lineData
+        .filter(
+          (d) => +d.latest_year === 1
+            && ((comparisons[0] && comparisons[0].id === d.id)
+              || (comparisons[1] && comparisons[1].id === d.id))
+        )
+        .map((d) => ({
+          ...d,
+          class:
+            comparisons[0] && comparisons[0].id === d.id
+              ? 'comparison_1_line_thin'
+              : 'comparison_2_line_thin',
+        }))
+        .sort((a, b) => descending(+a.value, +b.value)),
+    [lineData, comparisons]
+  );
+
   const context = useMemo(
     () => ({
       lineData,
       swarmData,
+      referenceLines,
     }),
-    [swarmData, lineData]
+    [swarmData, lineData, referenceLines]
   );
 
   return (

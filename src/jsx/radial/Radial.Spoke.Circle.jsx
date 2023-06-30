@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { scaleLinear } from 'd3';
 
-function Circle({ data, settings }) {
+function Circle({ data, settings, setTooltip }) {
   const { max_label } = data.indicator_info;
   const { inner_radius, line_length } = settings;
 
@@ -12,6 +12,15 @@ function Circle({ data, settings }) {
     .domain(extent)
     .range([inner_radius, inner_radius + line_length])
     .clamp(true);
+
+  const onHover = (event, id, value) => {
+    setTooltip({
+      xPos: event.clientX,
+      yPos: event.clientY,
+      id,
+      value,
+    });
+  };
 
   return (
     <g className="circles">
@@ -23,7 +32,9 @@ function Circle({ data, settings }) {
             r={
               circle.value === null ? 0 : circle.focus_type === 'focus' ? 9 : 6
             }
-            className={`${circle.focus_type}_circle`}
+            className={`radial_circle ${circle.focus_type}_circle`}
+            onMouseEnter={(d) => onHover(d, circle.id, circle.value)}
+            onMouseLeave={() => setTooltip(null)}
           />
           {circle.focus_type === 'comparison_2' && (
             <circle
@@ -49,6 +60,7 @@ Circle.propTypes = {
     inner_radius: PropTypes.number,
     line_length: PropTypes.number,
   }).isRequired,
+  setTooltip: PropTypes.func.isRequired,
 };
 
 export default Circle;

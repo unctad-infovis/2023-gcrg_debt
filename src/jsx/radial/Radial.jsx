@@ -13,6 +13,7 @@ import Data from '../context/RadialData.js';
 import Spoke from './Radial.Spoke.jsx';
 import Pie from './Radial.Pie.jsx';
 import Center from './Radial.Center.jsx';
+import Tooltip from './Tooltip.jsx';
 
 function Radial() {
   // get the radial data
@@ -22,10 +23,12 @@ function Radial() {
   const ref = useRef(null);
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
+  const [offsetTop, setOffsetTop] = useState(0);
 
   useLayoutEffect(() => {
     setWidth(ref.current.offsetWidth);
     setHeight(ref.current.offsetHeight);
+    setOffsetTop(ref.current.offsetTop);
   }, []);
 
   const settings = useMemo(
@@ -38,6 +41,8 @@ function Radial() {
     }),
     [width, height]
   );
+
+  const [hovered, setHovered] = useState(null);
 
   return (
     <div className="radial" ref={ref}>
@@ -53,10 +58,13 @@ function Radial() {
                 i={index}
                 total={circleData.length}
                 settings={settings}
+                setTooltip={setHovered}
               />
             ))}
         </g>
       </svg>
+
+      <Tooltip data={hovered} offsetTop={offsetTop} />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useContext, useMemo } from 'react';
+import React, { useContext, useMemo, memo } from 'react';
 import PropTypes from 'prop-types';
 
 // context
@@ -13,8 +13,8 @@ import YAxis from './Panel.yAxis.jsx';
 
 // helpers
 
-function Swarm({ width, height }) {
-  const { swarmData } = useContext(SwarmDataContext);
+function Swarm({ width, height, setInteractionData }) {
+  const { swarmData, referenceLines } = useContext(SwarmDataContext);
   const { metricInfo } = useContext(MetricContext);
 
   const extent = metricInfo ? [+metricInfo.max_label, +metricInfo.min] : [0, 0];
@@ -41,6 +41,7 @@ function Swarm({ width, height }) {
     <svg width={width} height={height} className="swarm">
       <g transform={`translate(${width / 2}, ${height / 2})`}>
         <YAxis scale={scale} width={width} info={metricInfo} />
+
         {swarmData.map((circle) => (
           <React.Fragment key={circle.id}>
             <circle
@@ -49,6 +50,12 @@ function Swarm({ width, height }) {
               cy={circle.y}
               r={circle.r}
               className={circle.class}
+              onMouseEnter={() => setInteractionData({
+                xPos: circle.x + width / 2,
+                yPos: circle.y + height / 2,
+                info: circle,
+              })}
+              onMouseLeave={() => setInteractionData(null)}
             />
             {(circle.class === 'both_comparisons_circle'
               || circle.class === 'comparison_2_circle'
@@ -62,6 +69,31 @@ function Swarm({ width, height }) {
             )}
           </React.Fragment>
         ))}
+        {referenceLines.map((d, i) => (
+          <g className="referenceLine" key={d.id}>
+            <line
+              x1={-width / 2}
+              y1={scale(d.value)}
+              x2={width / 2}
+              y2={scale(d.value)}
+              className={d.class}
+            />
+
+            <text
+              x={-width / 2}
+              y={scale(d.value)}
+              dy={i === 0 ? -7 : 14}
+              className="reference_label"
+              stroke="white"
+              strokeWidth="3"
+              paintOrder="stroke"
+            >
+              {d.type}
+              {' '}
+              Avg.
+            </text>
+          </g>
+        ))}
       </g>
     </svg>
   );
@@ -70,6 +102,7 @@ function Swarm({ width, height }) {
 Swarm.propTypes = {
   width: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
+  setInteractionData: PropTypes.func.isRequired,
 };
 
-export default Swarm;
+export default memo(Swarm);

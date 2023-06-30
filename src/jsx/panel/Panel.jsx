@@ -1,9 +1,7 @@
 import React, {
   useContext, useState, useRef, useLayoutEffect
 } from 'react';
-// import React, { useContext, useState, useRef, useLayoutEffect } from "react";
-// import Swarm from "./Panel.Swarm.jsx";
-// import Line from "./Panel.Line.jsx";
+
 // context
 import Metric_Context from '../context/Metric.js';
 import { SwarmDataContextProvider } from '../context/SwarmData.js';
@@ -12,12 +10,15 @@ import { SwarmDataContextProvider } from '../context/SwarmData.js';
 import Tab from './Panel.Tab.jsx';
 import Swarm from './Panel.Swarm.jsx';
 import Line from './Panel.Line.jsx';
+import Tooltip from './Tooltip.jsx';
 
 function Panel() {
   const { metricInfo } = useContext(Metric_Context);
+  console.log(metricInfo);
 
   // manage the tabs
   const [activeTab, setActiveTab] = useState('country');
+  console.log(setActiveTab);
 
   // get height and width of SVG area
   const ref = useRef(null);
@@ -25,9 +26,13 @@ function Panel() {
   const [height, setHeight] = useState(0);
 
   useLayoutEffect(() => {
-    setWidth(ref.current.offsetWidth);
-    setHeight(ref.current.offsetHeight);
+    setTimeout(() => {
+      setWidth(ref.current.offsetWidth);
+      setHeight(ref.current.offsetHeight * 0.99);
+    }, 300);
   }, []);
+
+  const [interactionData, setInteractionData] = useState(null);
 
   return (
     <div className="panel">
@@ -55,9 +60,16 @@ function Panel() {
           />
         </ul>
         <div className="content" ref={ref}>
+          <div className="swarm-wrapper" style={{ width, height }}>
+            <Tooltip data={interactionData} />
+          </div>
           <SwarmDataContextProvider>
             {activeTab === 'country' ? (
-              <Swarm width={width} height={height} />
+              <Swarm
+                width={width}
+                height={height}
+                setInteractionData={setInteractionData}
+              />
             ) : (
               <Line width={width} height={height} />
             )}

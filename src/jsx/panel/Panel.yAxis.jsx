@@ -6,7 +6,7 @@ function Axis({ scale, width, info }) {
   return scale.ticks().map((tick) => (
     <g key={tick}>
       <line
-        x1={-width / 2}
+        x1={-width / 2.05}
         y1={scale(tick)}
         x2={width / 2}
         y2={scale(tick)}

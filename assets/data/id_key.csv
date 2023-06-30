@@ -107,7 +107,7 @@ LBY,Africa,Upper middle income countries,Developing countries,0,0,Libya,,,countr
 LCA,Latin America and the Caribbean,Upper middle income countries,Developing countries,0,1,Saint Lucia,,,country
 LDCs,,,,,,LDCs,Special Group,LDC,LDC
 LKA,Developing Asia and Oceania,Lower middle income countries,Developing countries,0,0,Sri Lanka,,,country
-Low income countries,,,,,,Low income countries,Income Level,wb_income_classification,SIDS
+Low income countries,,,,,,Low income countries,Income Level,wb_income_classification,income
 Lower middle income countries,,,,,,Lower middle income countries,Income Level,wb_income_classification,income
 LSO,Africa,Lower middle income countries,Developing countries,1,0,Lesotho,,,country
 LTU,,High income countries,Developed countries,0,0,Lithuania,,,country
