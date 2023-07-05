@@ -2,7 +2,7 @@ import React, { createContext, useMemo, useContext } from 'react';
 import PropTypes from 'prop-types';
 
 // context
-import { groups, descending } from 'd3';
+import { groups, descending, ascending } from 'd3';
 import Static_Context from './StaticData.js';
 import Focus_Context from './Focus.js';
 
@@ -42,11 +42,13 @@ export function RadialDataContextProvider({ children }) {
                     : '',
         })),
       (d) => d.indicator
-    ).map((d) => ({
-      indicator_key: d[0],
-      indicator_info: indicatorData.find((i) => i.indicator_key === d[0]),
-      circles: d[1].sort((a, b) => descending(+a.sorto, +b.sorto)),
-    })),
+    )
+      .map((d) => ({
+        indicator_key: d[0],
+        indicator_info: indicatorData.find((i) => i.indicator_key === d[0]),
+        circles: d[1].sort((a, b) => descending(+a.sorto, +b.sorto)),
+      }))
+      .sort((a, b) => ascending(+a.indicator_info.number, +b.indicator_info.number)),
     [id, comparisons, latestData, indicatorData]
   );
 

@@ -1,5 +1,5 @@
 .sentence {
-  font-size: 18px;
+  font-size: 24px;
   display: flex;
   flex-flow: row wrap;
 
@@ -9,39 +9,40 @@
     gap: 4px;
   }
 
-  .focus {
-    font-weight: bold;
-    border-bottom: 2px solid @unblue;
-    padding: 0px 4px 2px 4px;
-    cursor: pointer;
-  }
+  .focus-wrapper {
+    position: relative;
 
-  .focus:hover {
-    background-color: @lightblue;
+    .focus {
+      // font-weight: bold;
+      border-bottom: 2px solid @unblue;
+      padding: 0px 4px 2px 4px;
+      cursor: pointer;
+      color: @unblue;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
   }
-
-  .comparisons {
-    font-weight: bold;
-    border-bottom: 1px dashed @ungray;
-    padding: 0px 4px 2px 4px;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    cursor: pointer;
-  }
-  .comparisons:hover {
-    background-color: @lightblue;
-  }
-
-  .chevron-down {
-    stroke: @unblue;
+  .comparisons-wrapper {
+    position: relative;
+    .comparisons {
+      // font-weight: bold;
+      border-bottom: 2px solid black;
+      padding: 0px 4px 2px 4px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
   }
 
   .focus-menu {
     background-color: white;
+    color: black;
     position: absolute;
-    top: 30px;
-    margin-left: -2px;
+    top: 36px;
+    left: 0;
+    margin: 0;
     border: 1px solid #ededed;
     border-radius: 8px;
     z-index: 100;
@@ -51,9 +52,59 @@
     overflow: scroll;
     max-height: 30vh;
 
+    .tabs {
+      flex: 1 1 auto;
+      display: flex;
+      flex-flow: column nowrap;
+
+      ul.nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #ebeae6;
+        margin: 0;
+        flex: 0 1 auto;
+        padding: 0;
+        font-size: 16px;
+      }
+
+      ul.nav li {
+        width: 50%;
+        padding: 1rem 0.5rem;
+        list-style: none;
+        text-align: center;
+        cursor: pointer;
+        border-bottom: 2px solid white;
+        letter-spacing: 0.2px;
+        color: @ungray;
+      }
+
+      ul.nav li:hover {
+        color: black;
+      }
+
+      ul.nav li.active {
+        border-bottom: 2px solid black;
+        color: #000;
+      }
+
+      .content {
+        flex: 1 1 auto;
+        position: relative;
+      }
+    }
+
     .selections {
       display: flex;
       flex-flow: column nowrap;
+
+      .searchInput {
+        border: none;
+        padding: 12px;
+        background-color: #ebeae6;
+        border-bottom: 1px solid @ungray;
+        margin: 8px 0px;
+      }
 
       .item {
         display: flex;
@@ -62,6 +113,7 @@
         padding: 6px 0px;
         font-size: 16px;
         font-weight: normal;
+        cursor: pointer;
 
         label {
           appearance: none;
@@ -71,7 +123,7 @@
           padding: 0.75em 0.5em;
           border-radius: 0;
           outline: none;
-          cursor: pointer;
+          pointer-events: none;
           font-family: inherit;
           font-size: 1em;
           display: inline-block;
@@ -92,8 +144,8 @@
   .comparison-menu {
     background-color: white;
     position: absolute;
-    top: 12px;
-    margin-left: -2px;
+    top: 36px;
+    left: 0;
     border: 1px solid #ededed;
     border-radius: 8px;
     z-index: 100;
@@ -101,6 +153,8 @@
     width: 300px;
     padding: 24px;
     overflow: scroll;
+    max-height: 50vh;
+    margin: 0;
 
     .group {
       font-weight: bold;

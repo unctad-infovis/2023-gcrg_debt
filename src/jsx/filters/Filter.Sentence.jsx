@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useRef } from 'react';
 
 // Load helpers.
 import { StaticDataContext } from '../context/StaticData.js';
@@ -8,11 +8,15 @@ import { FocusContext } from '../context/Focus.js';
 import Arrow from './Arrow.jsx';
 import FocusMenu from './Filter.FocusMenu.jsx';
 import ComparisonsMenu from './Filter.ComparisonsMenu.jsx';
+import useOutsideClick from './ClickOutside.jsx';
 
 function Sentence() {
   const { textData } = useContext(StaticDataContext);
 
   const { id, comparisons } = useContext(FocusContext);
+
+  const compRef = useRef();
+  const focusRef = useRef();
 
   const pre_value = id.type === 'country' ? 'sentence_2_pre' : 'sentence_1_pre';
   const pre_find = textData.find((d) => d.id === pre_value);
@@ -41,13 +45,25 @@ function Sentence() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [compOpen, setCompOpen] = useState(false);
 
+  useOutsideClick(compRef, () => {
+    setCompOpen(false);
+  });
+  useOutsideClick(focusRef, () => {
+    setMenuOpen(false);
+  });
+
+  // const onClickOutside = () => {
+  //   setCompOpen(false);
+  //   setMenuOpen(false);
+  // };
+
   return (
     <div className="sentence">
       {pre_text}
       &nbsp;
-      <div className="focus">
+      <div className="focus-wrapper" ref={focusRef}>
         <div
-          className="clickable"
+          className="focus clickable"
           onClick={() => setMenuOpen(!menuOpen)}
           onKeyDown={() => setMenuOpen(!menuOpen)}
           role="presentation"
@@ -61,9 +77,9 @@ function Sentence() {
       &nbsp;
       {middle_text}
       &nbsp;
-      <div className="comparisons">
+      <div className="comparisons-wrapper" ref={compRef}>
         <div
-          className="clickable"
+          className="comparisons clickable"
           onClick={() => setCompOpen(!compOpen)}
           onKeyDown={() => setCompOpen(!compOpen)}
           role="presentation"

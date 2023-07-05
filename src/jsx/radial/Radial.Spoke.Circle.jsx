@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { scaleLinear } from 'd3';
 
-function Circle({ data, settings, setTooltip }) {
+function Circle({
+  data, settings, setTooltip, setInteraction
+}) {
   const { max_label } = data.indicator_info;
   const { inner_radius, line_length } = settings;
 
@@ -13,13 +15,21 @@ function Circle({ data, settings, setTooltip }) {
     .range([inner_radius, inner_radius + line_length])
     .clamp(true);
 
-  const onHover = (event, id, value) => {
+  const onHover = (event, id, value, type, id_display) => {
     setTooltip({
-      xPos: event.clientX,
-      yPos: event.clientY,
+      xPos: event.pageX,
+      yPos: event.pageY,
       id,
       value,
+      type,
+      id_display,
+      indicator_info: data.indicator_info,
     });
+  };
+
+  const handleEnter = (d, id, value, type, display) => {
+    onHover(d, id, value, type, display);
+    setInteraction('enter');
   };
 
   return (
@@ -32,9 +42,16 @@ function Circle({ data, settings, setTooltip }) {
             r={
               circle.value === null ? 0 : circle.focus_type === 'focus' ? 9 : 6
             }
+            fillOpacity={0.65}
             className={`radial_circle ${circle.focus_type}_circle`}
-            onMouseEnter={(d) => onHover(d, circle.id, circle.value)}
-            onMouseLeave={() => setTooltip(null)}
+            onMouseEnter={(d) => handleEnter(
+              d,
+              circle.id,
+              circle.value,
+              circle.type,
+              circle.id_display
+            )}
+            onMouseLeave={() => setInteraction('leave')}
           />
           {circle.focus_type === 'comparison_2' && (
             <circle
@@ -61,6 +78,7 @@ Circle.propTypes = {
     line_length: PropTypes.number,
   }).isRequired,
   setTooltip: PropTypes.func.isRequired,
+  setInteraction: PropTypes.func.isRequired,
 };
 
 export default Circle;

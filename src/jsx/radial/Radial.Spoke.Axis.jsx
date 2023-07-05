@@ -1,12 +1,16 @@
-import React, { memo } from 'react';
+import React, { memo, useContext } from 'react';
 import PropTypes from 'prop-types';
 import formatNum from '../helpers/FormatNum.js';
+import { MetricContext } from '../context/Metric.js';
 
 function Axis({ settings, angle, data }) {
   const {
     indicator_short, format, decimals, max_label
   } = data.indicator_info;
+
   const { inner_radius, line_length } = settings;
+
+  const { metric } = useContext(MetricContext);
 
   const side = angle > 90 ? 'left' : 'right';
   const reverse = side === 'left' ? 'right' : 'left';
@@ -18,8 +22,10 @@ function Axis({ settings, angle, data }) {
 
   const focus = data.circles.find((d) => d.focus_type === 'focus');
 
+  const selected = focus.indicator === metric;
+
   return (
-    <g className="axis">
+    <g className={`axis ${selected ? 'selected' : ''}`}>
       <line
         x1={inner_radius}
         x2={line_length + inner_radius}

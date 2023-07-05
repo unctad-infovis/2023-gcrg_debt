@@ -1,54 +1,44 @@
-import React, { useContext, useMemo } from 'react';
+import React, { useContext } from 'react';
 
 // Load helpers.
 import { groups } from 'd3';
-import { StaticDataContext } from '../context/StaticData.js';
 import { FocusContext } from '../context/Focus.js';
 
 function Comparisons() {
-  const { idData } = useContext(StaticDataContext);
+  const { setComparisons, optionsList } = useContext(FocusContext);
 
-  const { setComparisons, checkedState, setCheckedState } = useContext(FocusContext);
-
-  const comparisonData = useMemo(
-    () => idData
-      .filter((d) => d.category !== '')
-      .map((d, i) => ({ ...d, order: i })),
-    [idData]
-  );
-  const comparisonsG = groups(comparisonData, (d) => d.category).map((d) => ({
+  const comparisonsG = groups(optionsList, (d) => d.category).map((d) => ({
     group: d[0],
     values: d[1],
   }));
 
-  // const [checkedState, setCheckedState] = useState(
-  //   new Array(comparisonData.length || 12).fill(false)
-  //   // comparisonData.map(
-  // );
-
   const handleOnChange = (position) => {
-    const updatedCheckedState = checkedState.map((item, index) => (index === position ? !item : item));
-    const numberChecked = updatedCheckedState.filter((d) => d === true).length;
+    const updatedCheckedState = optionsList.map((item, index) => ({
+      ...item,
+      checked: index === position ? !item.checked : item.checked,
+    }));
+
+    const numberChecked = updatedCheckedState.filter(
+      (d) => d.checked === true
+    ).length;
 
     if (numberChecked <= 2) {
-      setCheckedState(updatedCheckedState);
+      const indices = updatedCheckedState
+        .map((d) => d.checked)
+        .reduce((out, bool, index) => (bool ? out.concat(index) : out), []);
 
-      const indices = updatedCheckedState.reduce(
-        (out, bool, index) => (bool ? out.concat(index) : out),
-        []
-      );
       let c = [];
       if (numberChecked === 0) {
         c = [];
       } else if (numberChecked === 1) {
-        c = [comparisonData[indices]];
+        c = [optionsList[indices]];
       } else {
         const c1 = indices[0] !== position
-          ? comparisonData[indices[0]]
-          : comparisonData[indices[1]];
+          ? optionsList[indices[0]]
+          : optionsList[indices[1]];
         const c2 = indices[0] !== position
-          ? comparisonData[indices[1]]
-          : comparisonData[indices[0]];
+          ? optionsList[indices[1]]
+          : optionsList[indices[0]];
         c = [c1, c2];
       }
 
@@ -73,7 +63,7 @@ function Comparisons() {
                 id={`custom-checkbox-${item.order}`}
                 name={item.id_display}
                 value={item.id}
-                checked={checkedState[item.order]}
+                checked={item.checked}
                 onChange={() => handleOnChange(item.order)}
               />
               <label htmlFor={`custom-checkbox-${item.order}}`}>

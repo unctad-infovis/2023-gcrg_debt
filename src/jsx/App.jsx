@@ -6,13 +6,18 @@ import { StaticDataContextProvider } from './context/StaticData.js';
 import { FocusContextProvider } from './context/Focus.js';
 import { RadialDataContextProvider } from './context/RadialData.js';
 import { MetricContextProvider } from './context/Metric';
+import { PanelContextProvider } from './context/Panel';
+import viewPort from './helpers/viewPort';
 
 // Load components
 import Radial from './radial/Radial.jsx';
+import Dotplot from './dotplot/Dotplot.jsx';
 import Panel from './panel/Panel.jsx';
 import Filter from './filters/Filter.jsx';
 
 function App() {
+  const { smScreen } = viewPort();
+
   return (
     <div className="app">
       <StaticDataContextProvider>
@@ -20,10 +25,12 @@ function App() {
           <Filter />
           <div className="visuals">
             <MetricContextProvider>
-              <RadialDataContextProvider>
-                <Radial />
-              </RadialDataContextProvider>
-              <Panel />
+              <PanelContextProvider>
+                <RadialDataContextProvider>
+                  {smScreen ? <Dotplot /> : <Radial />}
+                </RadialDataContextProvider>
+                <Panel />
+              </PanelContextProvider>
             </MetricContextProvider>
           </div>
         </FocusContextProvider>

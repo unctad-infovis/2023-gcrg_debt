@@ -45,13 +45,17 @@ function Pie({ settings }) {
   const entries = groups(indicatorData, (d) => d.group);
   const pie_data = pieGenerator(groups(indicatorData, (d) => d.group));
 
-  const arcs = pieData(pie_data, settings, 1.18, 1.28, 0.05).map((d, i) => ({
-    d,
-    id: entries[i][0].replace(/\s/g, ''),
-    text: entries[i][0],
-    textpath: invisibleArc(d, pie_data[i].endAngle),
-    dy: pie_data[i].endAngle > 3 && pie_data[i].endAngle < 5 ? -15 : 25,
-  }));
+  const arcs = pieData(pie_data, settings, 1.18, 1.28, 0.05).map((d, i) => {
+    const textpath = invisibleArc(d, pie_data[i].endAngle);
+    const dy = pie_data[i].endAngle > 3 && pie_data[i].endAngle < 5 ? -15 : 25;
+    return {
+      d,
+      id: entries[i][0].replace(/\s/g, ''),
+      text: entries[i][0],
+      textpath: textpath !== '' ? textpath : null, // Set textpath to null if it's empty
+      dy,
+    };
+  });
 
   // get sections for selected metric/hovering
   const slice_entries = indicatorData
@@ -63,7 +67,7 @@ function Pie({ settings }) {
     (d, i) => slice_entries[i].id !== 'filler'
   );
 
-  const slices = pieData(slice_data, settings, 0.3, 1.18, 0).map((d, i) => ({
+  const slices = pieData(slice_data, settings, 0.356, 1.18, 0).map((d, i) => ({
     d,
     indicator_key: indicatorData[i].indicator_key,
   }));

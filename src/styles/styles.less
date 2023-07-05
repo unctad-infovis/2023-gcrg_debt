@@ -7,35 +7,102 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  height: 100vh;
-  margin-right: 24px;
+  padding: 2rem 4rem;
+
+  @media (max-width: 1200px) {
+    padding: 1.5rem 2rem;
+  }
+  @media (max-width: 500px) {
+    padding: 1.5rem 1rem;
+  }
 
   .filters {
     @import "filter.less";
     flex: 0 1 auto;
-    margin-bottom: 24px;
+    margin: 1rem 0 4rem;
+
+    @media (max-width: 1200px) {
+      margin: 1rem 0 2.5rem;
+    }
   }
+
   .visuals {
     @import "coloring.less";
     flex: 1 1 auto;
+    gap: 1rem;
     display: flex;
     flex-flow: row nowrap;
     width: 100%;
+    // height: 100%;
+    position: relative;
+    min-height: 900px;
+
+    @media (max-width: 1100px) {
+      min-height: 650px;
+    }
 
     .radial {
       @import "radial.less";
-      width: 65%;
       display: flex;
       justify-content: center;
       align-items: center;
       position: relative;
+      width: calc(
+        100% - 350px - 1.5rem - 1.5rem
+      ); // width - panelWidth - panelHorizPadding x2
+      min-width: 400px;
+
+      @media (max-width: 1200px) {
+        width: calc(100% - 290px - 1rem - 1rem);
+      }
+
+      @media (max-width: 1100px) {
+        width: 100%;
+        min-height: 650px;
+      }
     }
 
-    .panel {
-      @import "panel.less";
-      width: 35%;
+    .dotplot {
       display: flex;
-      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: calc(
+        100% - 1.5rem - 1.5rem
+      ); // width - panelWidth - panelHorizPadding x2
+    }
+
+    .panel-wrapper {
+      // height: 100%;
+
+      .panel {
+        @import "panel.less";
+        display: flex;
+        flex-flow: column nowrap;
+        background-color: hsl(24, 1%, 99%);
+        border: 1px solid hsl(24, 10%, 85%);
+        padding: 1.25rem 1.5rem;
+        border-radius: 24px;
+        width: 350px;
+        height: calc(100% - 4rem);
+
+        @media (max-width: 1200px) {
+          width: 290px;
+          padding: 0.75rem 1rem;
+          height: calc(100% - 3rem);
+        }
+
+        @media (max-width: 1100px) {
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: auto;
+          z-index: 10;
+          height: 95%;
+          width: calc(100% - 2rem - 2rem);
+          // min-width: 375px;
+        }
+      }
     }
   }
 }

@@ -19,6 +19,23 @@ export function FocusContextProvider({ children }) {
     { type: 'development', id: 'Developed countries' },
   ]);
 
+  useMemo(() => {
+    const defaultComps = idData.find((d) => d.id === id.id);
+    let comp1 = null;
+    let comp2 = null;
+
+    if (id.type === 'country') {
+      comp1 = idData.find((d) => defaultComps.development === d.id);
+      comp2 = idData.find((d) => defaultComps.region === d.id);
+    } else if (id.type === 'development' && id.id === 'Developing countries') {
+      comp1 = idData.find((d) => d.id === 'Developed countries');
+    } else {
+      comp1 = idData.find((d) => d.id === 'Developing countries');
+    }
+    const newComps = comp2 ? [comp1, comp2] : [comp1];
+    setComparisons(newComps);
+  }, [id, idData]);
+
   const comparisonLists = useMemo(
     () => ({
       comparison_1:
@@ -38,20 +55,19 @@ export function FocusContextProvider({ children }) {
     [idData, id]
   );
 
-  const [checkedState, setCheckedState] = useState([
-    false,
-    true,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-  ]);
+  const optionsList = useMemo(
+    () => idData
+      .filter((d) => d.category !== '')
+      .map((d, i) => ({
+        ...d,
+        order: i,
+        checked:
+            comparisons[0] && comparisons[0].id === d.id
+              ? true
+              : !!(comparisons[1] && comparisons[1].id === d.id),
+      })),
+    [idData, comparisons]
+  );
 
   const context = useMemo(
     () => ({
@@ -60,11 +76,10 @@ export function FocusContextProvider({ children }) {
       comparisons,
       setComparisons,
       comparisonLists,
-      checkedState,
-      setCheckedState,
       focusList,
+      optionsList,
     }),
-    [id, comparisons, comparisonLists, checkedState, focusList]
+    [id, comparisons, comparisonLists, focusList, optionsList]
   );
 
   return (

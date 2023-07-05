@@ -18,7 +18,7 @@ const fetchData = (name, setValue) => {
         }
         return response.text();
       })
-      .then((body) => setValue(CSVtoJSON(body)));
+      .then((body) => setValue(name.includes('csv') ? CSVtoJSON(body) : JSON.parse(body)));
   } catch (error) {
     console.error(error);
   }
@@ -29,23 +29,41 @@ export function StaticDataContextProvider({ children }) {
   const [valuesData, setValuesData] = useState([]);
   const [idData, setIdData] = useState([]);
   const [textData, setTextData] = useState([]);
+  const [aboutData, setAboutData] = useState([]);
 
   useEffect(() => {
     fetchData('indicator_key.csv', setIndicatorData);
     fetchData('values.csv', setValuesData);
     fetchData('id_key.csv', setIdData);
     fetchData('text.csv', setTextData);
+    fetchData('about.json', setAboutData);
   }, []);
+
+  const latestData = useMemo(
+    () => valuesData
+      && valuesData
+        .filter((d) => +d.latest_year === 1)
+        .map((d) => ({
+          ...d,
+          id_display: idData
+            ? idData.find((i) => i.id === d.id)
+              ? idData.find((i) => i.id === d.id).id_display
+              : d.id
+            : d.id,
+        })),
+    [valuesData, idData]
+  );
 
   const context = useMemo(
     () => ({
       indicatorData,
       valuesData,
-      latestData: valuesData && valuesData.filter((d) => +d.latest_year === 1),
+      latestData,
       idData,
       textData,
+      aboutData,
     }),
-    [indicatorData, valuesData, idData, textData]
+    [indicatorData, valuesData, idData, textData, aboutData, latestData]
   );
 
   return (

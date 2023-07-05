@@ -5,77 +5,106 @@ import React, {
 // context
 import Metric_Context from '../context/Metric.js';
 import { SwarmDataContextProvider } from '../context/SwarmData.js';
+import { PanelContext } from '../context/Panel.js';
 
 // components
 import Tab from './Panel.Tab.jsx';
 import Swarm from './Panel.Swarm.jsx';
 import Line from './Panel.Line.jsx';
 import Tooltip from './Tooltip.jsx';
+import About from './Panel.About.jsx';
+import Button from './Panel.Button.jsx';
+import viewPort from '../helpers/viewPort';
 
 function Panel() {
   const { metricInfo } = useContext(Metric_Context);
-  console.log(metricInfo);
+  const { showPanel } = useContext(PanelContext);
+
+  const { width, hidePanelWidth } = viewPort();
 
   // manage the tabs
   const [activeTab, setActiveTab] = useState('country');
-  console.log(setActiveTab);
 
-  // get height and width of SVG area
+  // manage panel state on smScreens
+  const [hidePanel, setHidePanel] = useState(true);
+
+  console.log(hidePanel, setHidePanel);
+
+  // get height and figureWidth of SVG area
   const ref = useRef(null);
-  const [width, setWidth] = useState(0);
+  const [figureWidth, setfigureWidth] = useState(0);
   const [height, setHeight] = useState(0);
 
   useLayoutEffect(() => {
-    setTimeout(() => {
-      setWidth(ref.current.offsetWidth);
-      setHeight(ref.current.offsetHeight * 0.99);
-    }, 300);
-  }, []);
+    const updateDimensions = () => {
+      if (ref.current) {
+        setfigureWidth(ref.current.offsetWidth);
+        setHeight(ref.current.offsetHeight * 0.99);
+      }
+    };
+
+    const resizeHandler = setTimeout(updateDimensions, 300);
+
+    return () => clearTimeout(resizeHandler);
+  }, [width, showPanel, hidePanelWidth, figureWidth]);
 
   const [interactionData, setInteractionData] = useState(null);
 
-  return (
-    <div className="panel">
-      <div className="name">{metricInfo && metricInfo.indicator_full}</div>
-      <div className="tabs">
-        <ul className="nav">
-          <Tab
-            id="country"
-            display="By country"
-            activeTab={activeTab}
-            setTab={setActiveTab}
-          />
-          <Tab
-            id="trend"
-            display="Trend over time"
-            activeTab={activeTab}
-            setTab={setActiveTab}
-          />
+  console.log(showPanel, hidePanelWidth);
 
-          <Tab
-            id="about"
-            display="About"
-            activeTab={activeTab}
-            setTab={setActiveTab}
-          />
-        </ul>
-        <div className="content" ref={ref}>
-          <div className="swarm-wrapper" style={{ width, height }}>
-            <Tooltip data={interactionData} />
+  return (
+    <div className="panel-wrapper">
+      {(showPanel && hidePanelWidth) || !hidePanelWidth ? (
+        <div className="panel">
+          <div className="name">
+            {metricInfo && metricInfo.indicator_full}
+            {hidePanelWidth ? <Button /> : ''}
           </div>
-          <SwarmDataContextProvider>
-            {activeTab === 'country' ? (
-              <Swarm
-                width={width}
-                height={height}
-                setInteractionData={setInteractionData}
+          <div className="tabs">
+            <ul className="nav">
+              <Tab
+                id="country"
+                display="By country"
+                activeTab={activeTab}
+                setTab={setActiveTab}
               />
-            ) : (
-              <Line width={width} height={height} />
-            )}
-          </SwarmDataContextProvider>
+              <Tab
+                id="trend"
+                display="Trend over time"
+                activeTab={activeTab}
+                setTab={setActiveTab}
+              />
+
+              <Tab
+                id="about"
+                display="About"
+                activeTab={activeTab}
+                setTab={setActiveTab}
+              />
+            </ul>
+            <div className="content" ref={ref}>
+              <div className="swarm-wrapper" style={{ figureWidth, height }}>
+                <Tooltip data={interactionData} />
+              </div>
+              <SwarmDataContextProvider>
+                {activeTab === 'country' ? (
+                  <Swarm
+                    width={figureWidth}
+                    height={height}
+                    setInteractionData={setInteractionData}
+                  />
+                ) : activeTab === 'trend' ? (
+                  <Line width={figureWidth} height={height} />
+                ) : (
+                  <About />
+                )}
+              </SwarmDataContextProvider>
+            </div>
+          </div>
         </div>
-      </div>
+      ) : (
+        ''
+      )}
     </div>
   );
 }

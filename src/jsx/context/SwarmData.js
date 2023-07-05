@@ -6,6 +6,7 @@ import { descending } from 'd3';
 import Static_Context from './StaticData.js';
 import Metric_Context from './Metric.js';
 import { FocusContext } from './Focus.js';
+import viewPort from '../helpers/viewPort';
 
 // helpers
 
@@ -18,6 +19,9 @@ export function SwarmDataContextProvider({ children }) {
   const {
     comparisonLists, id, comparisons, focusList
   } = useContext(FocusContext);
+
+  const { width, hidePanelWidth } = viewPort();
+  const swarmRadius = width <= 1200 ? 3.5 : hidePanelWidth ? 4 : 5;
 
   const lineData = useMemo(
     () => valuesData
@@ -47,7 +51,7 @@ export function SwarmDataContextProvider({ children }) {
 
           return {
             ...d,
-            r: d.id === id.id ? 9 : 5,
+            r: d.id === id.id ? 9 : swarmRadius,
             class:
               d.id === id.id || focus
                 ? 'focus_circle'
@@ -62,7 +66,7 @@ export function SwarmDataContextProvider({ children }) {
                         : 'no_highlight_circle',
           };
         }),
-    [lineData, comparisonLists, id, focusList]
+    [lineData, comparisonLists, id, focusList, swarmRadius]
   );
 
   const referenceLines = useMemo(

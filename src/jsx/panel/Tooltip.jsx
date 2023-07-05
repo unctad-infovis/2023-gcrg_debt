@@ -28,9 +28,14 @@ Tooltip.propTypes = {
       id: PropTypes.string,
       value: PropTypes.number,
     }),
-    // id: PropTypes.string,
-    // value: PropTypes.number,
-  }).isRequired,
+  }),
 };
 
+Tooltip.defaultProps = {
+  data: {
+    xPos: null,
+    yPos: null,
+    info: { id: null, value: null },
+  },
+};
 export default Tooltip;

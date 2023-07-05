@@ -30,7 +30,7 @@ function Swarm({ width, height, setInteractionData }) {
         .force('forceY', forceY((d) => scale(d.value)).strength(3))
         .force(
           'collide',
-          forceCollide((d) => d.r + 3)
+          forceCollide((d) => d.r * 1.4)
         )
         .stop()
         .tick(300),
@@ -38,8 +38,34 @@ function Swarm({ width, height, setInteractionData }) {
   );
 
   return (
-    <svg width={width} height={height} className="swarm">
+    <svg width={width} height="100%" className="swarm">
       <g transform={`translate(${width / 2}, ${height / 2})`}>
+        {referenceLines.map((d) => (
+          <g className="referenceLine" key={d.id}>
+            <line
+              x1={-width / 2}
+              y1={scale(d.value)}
+              x2={width / 2}
+              y2={scale(d.value)}
+              className={d.class}
+            />
+
+            {/* <text
+              x={-width / 2}
+              y={scale(d.value)}
+              dy={i === 0 ? -7 : 14}
+              className="reference_label"
+              stroke="white"
+              strokeWidth="3"
+              paintOrder="stroke"
+            >
+              {d.type}
+              {' '}
+              Avg.
+            </text> */}
+          </g>
+        ))}
+
         <YAxis scale={scale} width={width} info={metricInfo} />
 
         {swarmData.map((circle) => (
@@ -68,31 +94,6 @@ function Swarm({ width, height, setInteractionData }) {
               />
             )}
           </React.Fragment>
-        ))}
-        {referenceLines.map((d, i) => (
-          <g className="referenceLine" key={d.id}>
-            <line
-              x1={-width / 2}
-              y1={scale(d.value)}
-              x2={width / 2}
-              y2={scale(d.value)}
-              className={d.class}
-            />
-
-            <text
-              x={-width / 2}
-              y={scale(d.value)}
-              dy={i === 0 ? -7 : 14}
-              className="reference_label"
-              stroke="white"
-              strokeWidth="3"
-              paintOrder="stroke"
-            >
-              {d.type}
-              {' '}
-              Avg.
-            </text>
-          </g>
         ))}
       </g>
     </svg>
