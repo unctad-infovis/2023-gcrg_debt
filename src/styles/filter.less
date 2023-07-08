@@ -40,7 +40,7 @@
     background-color: white;
     color: black;
     position: absolute;
-    top: 36px;
+    top: 42px;
     left: 0;
     margin: 0;
     border: 1px solid #ededed;
@@ -104,6 +104,22 @@
         background-color: #ebeae6;
         border-bottom: 1px solid @ungray;
         margin: 8px 0px;
+        font-size: 16px;
+      }
+
+      input {
+        font-size: 16px;
+      }
+
+      .group {
+        padding: 12px 0px 5px 0px;
+      }
+
+      .name {
+        font-weight: bold;
+        font-size: 16px;
+        display: inline-block;
+        padding: 0.75em 0em;
       }
 
       .item {
@@ -144,7 +160,7 @@
   .comparison-menu {
     background-color: white;
     position: absolute;
-    top: 36px;
+    top: 42px;
     left: 0;
     border: 1px solid #ededed;
     border-radius: 8px;
@@ -153,19 +169,40 @@
     width: 300px;
     padding: 24px;
     overflow: scroll;
-    max-height: 50vh;
+    max-height: 65vh;
     margin: 0;
 
     .group {
+      padding: 12px 0px 5px 0px;
+    }
+
+    .name {
       font-weight: bold;
       font-size: 16px;
-      padding: 10px 0px 5px 0px;
+      padding-bottom: 4px;
     }
 
     .item {
       font-weight: normal;
       font-size: 16px;
-      padding: 2px 0px;
+      padding: 3px 0px;
+
+      label {
+        font-weight: normal;
+      }
+    }
+
+    .instructions {
+      color: @undarkgray;
+      font-size: 18px;
+    }
+
+    .description {
+      color: @undarkgray;
+      font-size: 14px;
+      line-height: 140%;
+      display: block;
+      padding-top: 12px;
     }
   }
 }

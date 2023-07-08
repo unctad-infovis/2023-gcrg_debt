@@ -1,3 +1,24 @@
+// import React from 'react';
+// import PropTypes from 'prop-types';
+// // import { FocusContext } from '../context/Focus.js';
+
+// function Center({ radius }) {
+//   // const { comparisons } = useContext(FocusContext);
+
+//   console.log('inner_radius', radius);
+//   return (
+
+//     <circle cx={0} cy={0} r={radius * 0.75} fill="none" stroke="#aea29a" opacity={0.5} />
+
+//   );
+// }
+
+// Center.propTypes = {
+//   radius: PropTypes.number.isRequired,
+// };
+
+// export default Center;
+
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { FocusContext } from '../context/Focus.js';
@@ -10,7 +31,7 @@ function Center({ radius }) {
       style={{ width: 0.9 * radius * 2, height: 0.9 * radius * 2 }}
     >
       {' '}
-      <div className="content">
+      <div className="content" style={{ padding: radius * 0.25 }}>
         <div className="focus">
           <span className="focus_legend dot" />
           {id.id_display}

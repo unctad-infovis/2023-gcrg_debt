@@ -92,7 +92,7 @@
 
     .xaxis-label {
       fill: @ungray;
-      text-anchor: middle;
+      text-anchor: start;
       font-size: 14px;
     }
 
@@ -116,16 +116,48 @@
         background-color: white;
         border-radius: 4px;
         font-size: 12px;
-        padding: 4px;
-        transform: translateY(-50%);
-        pointer-events: none;
-        margin-left: 18px;
+        padding: 8px 12px;
+        border: 1px solid #ededed;
+        border-radius: 8px;
+        z-index: 100;
+        filter: drop-shadow(0 0 0.75rem #ededed);
+        margin-left: 4px;
+        margin-top: 4px;
+        min-width: 150px;
+        max-width: 200px;
+
+        .title {
+          font-size: 16px;
+          margin: 4px;
+        }
+
+        .kpi {
+          font-size: 18px;
+          margin: 4px;
+        }
+
+        hr {
+          background-color: none;
+          border: 0.5px solid @ungrey;
+          opacity: 0.5;
+        }
+
+        button {
+          background-color: white;
+          border: none;
+          cursor: pointer;
+          text-align: left;
+          color: @undarkgray;
+          display: flex;
+          flex-wrap: wrap;
+        }
       }
     }
 
     circle:hover {
       stroke: black;
       stroke-width: 2px;
+      cursor: pointer;
     }
   }
 

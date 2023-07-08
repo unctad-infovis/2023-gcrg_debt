@@ -7,6 +7,7 @@ import {
 } from 'd3';
 import { SwarmDataContext } from '../context/SwarmData.js';
 import { MetricContext } from '../context/Metric.js';
+import { FocusContext } from '../context/Focus.js';
 
 // components
 import YAxis from './Panel.yAxis.jsx';
@@ -16,6 +17,7 @@ import YAxis from './Panel.yAxis.jsx';
 function Swarm({ width, height, setInteractionData }) {
   const { swarmData, referenceLines } = useContext(SwarmDataContext);
   const { metricInfo } = useContext(MetricContext);
+  const { setId } = useContext(FocusContext);
 
   const extent = metricInfo ? [+metricInfo.max_label, +metricInfo.min] : [0, 0];
   const scale = scaleLinear()
@@ -76,6 +78,11 @@ function Swarm({ width, height, setInteractionData }) {
               cy={circle.y}
               r={circle.r}
               className={circle.class}
+              onClick={() => setId({
+                type: circle.id_info.type,
+                id: circle.id,
+                id_display: circle.id_info.id_display,
+              })}
               onMouseEnter={() => setInteractionData({
                 xPos: circle.x + width / 2,
                 yPos: circle.y + height / 2,

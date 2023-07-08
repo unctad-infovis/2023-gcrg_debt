@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 
 // Load helpers.
-import { ascending } from 'd3';
+import { ascending, groups } from 'd3';
 import { StaticDataContext } from '../context/StaticData.js';
 import { FocusContext } from '../context/Focus.js';
 import Search from './Search.jsx';
@@ -33,7 +33,12 @@ function FocusMenu({ setMenuOpen }) {
     .filter((d) => (activeTab === 'Country'
       ? d.id_display.toLowerCase().includes(query.toLowerCase())
       : true))
-    .sort((a, b) => ascending(a.id_display, b.id_display));
+    .sort((a, b) => (activeTab === 'Country' ? ascending(a.id_display, b.id_display) : true));
+
+  const grouping = groups(listData, (d) => d.category_display).map((d) => ({
+    name: d[0],
+    items: d[1],
+  }));
 
   return (
     <div className="focus-menu">
@@ -54,19 +59,40 @@ function FocusMenu({ setMenuOpen }) {
       </div>
       <div className="selections">
         {activeTab === 'Country' && (
-          <Search query={query} setQuery={setQuery} />
+          <>
+            <Search query={query} setQuery={setQuery} />
+            {listData
+              && listData.map((item) => (
+                <div
+                  key={item.id}
+                  className="item"
+                  onClick={() => handleIdChange(item)}
+                  onKeyDown={() => handleIdChange(item)}
+                  role="presentation"
+                >
+                  <input type="radio" id={item.id} name="country-values" />
+                  <label htmlFor={item.id}>{item.id_display}</label>
+                </div>
+              ))}
+          </>
         )}
-        {listData
-          && listData.map((item) => (
-            <div
-              key={item.id}
-              className="item"
-              onClick={() => handleIdChange(item)}
-              onKeyDown={() => handleIdChange(item)}
-              role="presentation"
-            >
-              <input type="radio" id={item.id} name="country-values" />
-              <label htmlFor={item.id}>{item.id_display}</label>
+        {activeTab !== 'Country'
+          && listData
+          && grouping.map((group) => (
+            <div className="group" key={group.name}>
+              <span className="name">{group.name}</span>
+              {group.items.map((item) => (
+                <div
+                  key={item.id}
+                  className="item"
+                  onClick={() => handleIdChange(item)}
+                  onKeyDown={() => handleIdChange(item)}
+                  role="presentation"
+                >
+                  <input type="radio" id={item.id} name="country-values" />
+                  <label htmlFor={item.id}>{item.id_display}</label>
+                </div>
+              ))}
             </div>
           ))}
       </div>

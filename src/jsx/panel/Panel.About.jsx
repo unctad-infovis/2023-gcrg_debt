@@ -14,7 +14,6 @@ function About() {
   return (
     <div className="about">
       <div className="desc">
-
         {p.map((paragraph) => (
           <p>
             {' '}

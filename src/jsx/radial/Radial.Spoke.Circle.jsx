@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { scaleLinear } from 'd3';
+import { FocusContext } from '../context/Focus.js';
 
 function Circle({
   data, settings, setTooltip, setInteraction
 }) {
+  const { setId } = useContext(FocusContext);
   const { max_label } = data.indicator_info;
   const { inner_radius, line_length } = settings;
 
@@ -44,6 +46,11 @@ function Circle({
             }
             fillOpacity={0.65}
             className={`radial_circle ${circle.focus_type}_circle`}
+            onClick={() => setId({
+              type: circle.type,
+              id: circle.id,
+              id_display: circle.id_display,
+            })}
             onMouseEnter={(d) => handleEnter(
               d,
               circle.id,

@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import formatNum from '../helpers/FormatNum.js';
 
 function Tooltip({ data }) {
   if (!data) {
     return null;
   }
+
   return (
     <div
       className="tooltip"
@@ -13,9 +15,21 @@ function Tooltip({ data }) {
         top: data.yPos,
       }}
     >
-      {data.info.id}
-      <br />
-      {data.info.value}
+      <p className="title">{data.info.id_info.id_display}</p>
+      <p className="kpi">
+        {formatNum(
+          data.info.value,
+          data.info.indicator_info.format,
+          data.info.indicator_info.decimals
+        )}
+      </p>
+
+      <hr />
+      <button type="button" className="switch">
+        Click on circle to switch focus to
+        {' '}
+        {data.info.id_info.id_display}
+      </button>
     </div>
   );
 }
@@ -26,7 +40,14 @@ Tooltip.propTypes = {
     yPos: PropTypes.number,
     info: PropTypes.shape({
       id: PropTypes.string,
-      value: PropTypes.number,
+      value: PropTypes.string,
+      indicator_info: PropTypes.shape({
+        format: PropTypes.string,
+        decimals: PropTypes.string,
+      }),
+      id_info: PropTypes.shape({
+        id_display: PropTypes.string,
+      }),
     }),
   }),
 };

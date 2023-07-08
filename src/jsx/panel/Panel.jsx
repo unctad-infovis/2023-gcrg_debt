@@ -26,9 +26,7 @@ function Panel() {
   const [activeTab, setActiveTab] = useState('country');
 
   // manage panel state on smScreens
-  const [hidePanel, setHidePanel] = useState(true);
-
-  console.log(hidePanel, setHidePanel);
+  // const [hidePanel, setHidePanel] = useState(true);
 
   // get height and figureWidth of SVG area
   const ref = useRef(null);
@@ -49,8 +47,6 @@ function Panel() {
   }, [width, showPanel, hidePanelWidth, figureWidth]);
 
   const [interactionData, setInteractionData] = useState(null);
-
-  console.log(showPanel, hidePanelWidth);
 
   return (
     <div className="panel-wrapper">
@@ -94,7 +90,11 @@ function Panel() {
                     setInteractionData={setInteractionData}
                   />
                 ) : activeTab === 'trend' ? (
-                  <Line width={figureWidth} height={height} />
+                  <Line
+                    width={figureWidth}
+                    height={height}
+                    setInteractionData={setInteractionData}
+                  />
                 ) : (
                   <About />
                 )}

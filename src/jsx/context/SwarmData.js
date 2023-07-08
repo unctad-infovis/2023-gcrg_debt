@@ -14,20 +14,24 @@ export const SwarmDataContext = createContext({});
 
 export function SwarmDataContextProvider({ children }) {
   // pull in the latest
-  const { valuesData } = useContext(Static_Context);
+  const { valuesData, indicatorData, idData } = useContext(Static_Context);
   const { metric } = useContext(Metric_Context);
   const {
     comparisonLists, id, comparisons, focusList
   } = useContext(FocusContext);
 
   const { width, hidePanelWidth } = viewPort();
-  const swarmRadius = width <= 1200 ? 3.5 : hidePanelWidth ? 4 : 5;
+  const swarmRadius = width <= 1200 ? 3.5 : hidePanelWidth ? 4 : 4.5;
 
   const lineData = useMemo(
     () => valuesData
       .filter((d) => d.indicator === metric && d.value !== 'NA')
       .map((d) => ({
         ...d,
+        indicator_info: indicatorData.find(
+          (i) => i.indicator === d.indicator
+        ),
+        id_info: idData.find((i) => i.id === d.id),
         class:
             d.id === id.id
               ? 'focus_line'
@@ -37,13 +41,13 @@ export function SwarmDataContextProvider({ children }) {
                   ? 'comparison_2_line'
                   : 'no_highlight_line',
       })),
-    [valuesData, metric, id, comparisons]
+    [valuesData, metric, id, comparisons, idData, indicatorData]
   );
 
   const swarmData = useMemo(
     () => lineData
       && lineData
-        .filter((d) => +d.latest_year === 1 && d.type === 'country')
+        .filter((d) => +d.latest_year === 1 && d.id.length === 2)
         .map((d) => {
           const one = comparisonLists.comparison_1.find((c) => c.id === d.id);
           const two = comparisonLists.comparison_2.find((c) => c.id === d.id);
@@ -52,6 +56,7 @@ export function SwarmDataContextProvider({ children }) {
           return {
             ...d,
             r: d.id === id.id ? 9 : swarmRadius,
+
             class:
               d.id === id.id || focus
                 ? 'focus_circle'

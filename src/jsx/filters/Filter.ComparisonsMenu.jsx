@@ -3,14 +3,18 @@ import React, { useContext } from 'react';
 // Load helpers.
 import { groups } from 'd3';
 import { FocusContext } from '../context/Focus.js';
+import { StaticDataContext } from '../context/StaticData.js';
 
 function Comparisons() {
+  const { textData } = useContext(StaticDataContext);
   const { setComparisons, optionsList } = useContext(FocusContext);
 
-  const comparisonsG = groups(optionsList, (d) => d.category).map((d) => ({
-    group: d[0],
-    values: d[1],
-  }));
+  const comparisonsG = groups(optionsList, (d) => d.category_display).map(
+    (d) => ({
+      group: d[0],
+      values: d[1],
+    })
+  );
 
   const handleOnChange = (position) => {
     const updatedCheckedState = optionsList.map((item, index) => ({
@@ -53,9 +57,12 @@ function Comparisons() {
 
   return (
     <ul className="comparison-menu">
+      <span className="instructions">
+        {textData.find((d) => d.id === 'comparisons_instructions').text}
+      </span>
       {comparisonsG.map(({ group, values }) => (
         <div className="group" key={group}>
-          {group}
+          <span className="name">{group}</span>
           {values.map((item) => (
             <div className="item" key={item.id}>
               <input
@@ -73,6 +80,9 @@ function Comparisons() {
           ))}
         </div>
       ))}
+      <span className="description">
+        {textData.find((d) => d.id === 'comparisons_star').text}
+      </span>
     </ul>
   );
 }

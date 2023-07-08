@@ -57,7 +57,7 @@ export function FocusContextProvider({ children }) {
 
   const optionsList = useMemo(
     () => idData
-      .filter((d) => d.category !== '')
+      .filter((d) => d.type !== 'country')
       .map((d, i) => ({
         ...d,
         order: i,

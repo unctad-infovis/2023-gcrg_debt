@@ -12,7 +12,7 @@ export const RadialDataContext = createContext({});
 
 export function RadialDataContextProvider({ children }) {
   // pull in the latest
-  const { latestData, indicatorData } = useContext(Static_Context);
+  const { latestData, indicatorData, idData } = useContext(Static_Context);
   // get the selected ID and comparisons
   const { id, comparisons } = useContext(Focus_Context);
 
@@ -21,17 +21,20 @@ export function RadialDataContextProvider({ children }) {
     () => groups(
       latestData
         .filter(
-          (d) => d.id === id.id || comparisons.find((c) => c.id === d.id)
+          (d) => (d.id && d.id === id.id)
+              || (comparisons && comparisons.find((c) => c.id === d.id))
         )
         .map((d) => ({
           ...d,
           value: d.value === 'NA' ? null : +d.value,
+          type: idData.find((i) => i.id === d.id).type,
           sorto:
               d.id === id.id
                 ? 2
                 : comparisons[0] && d.id === comparisons[0].id
                   ? 1
                   : 0,
+
           focus_type:
               d.id === id.id
                 ? 'focus'
@@ -49,7 +52,7 @@ export function RadialDataContextProvider({ children }) {
         circles: d[1].sort((a, b) => descending(+a.sorto, +b.sorto)),
       }))
       .sort((a, b) => ascending(+a.indicator_info.number, +b.indicator_info.number)),
-    [id, comparisons, latestData, indicatorData]
+    [id, comparisons, latestData, indicatorData, idData]
   );
 
   const context = useMemo(

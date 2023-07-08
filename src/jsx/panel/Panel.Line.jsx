@@ -8,13 +8,17 @@ import { MetricContext } from '../context/Metric.js';
 import YAxis from './Panel.yAxis.jsx';
 import XAxis from './Panel.xAxis.jsx';
 
-function Line({ width, height }) {
+function Line({ width, height, setInteractionData }) {
   const { lineData } = useContext(SwarmDataContext);
   const { metricInfo } = useContext(MetricContext);
 
+  const labels = [...new Set(lineData.map((d) => d.xaxis_display))];
+
+  const xAxisHeight = labels.length > 1 ? 2.5 : 2.25;
+
   const scale = scaleLinear()
     .domain([+metricInfo.max_label, +metricInfo.min])
-    .range([-height / 2.2, height / 2.2])
+    .range([-height / 2.2, height / xAxisHeight])
     .clamp(true);
 
   const xScale = scaleLinear()
@@ -22,12 +26,11 @@ function Line({ width, height }) {
     .range([-width / 2.2, width / 2.5]);
 
   const yearsWithData = [...new Set(lineData.map((d) => d.year))];
-  const yearsLabel = [...new Set(lineData.map((d) => d.xaxis_display))].map(
-    (d, i) => ({
-      year: yearsWithData[i],
-      label: d,
-    })
-  );
+
+  const yearsLabel = yearsWithData.map((d, i) => ({
+    year: d,
+    label: yearsWithData.length === labels.length ? labels[i] : d,
+  }));
 
   const lineGenerator = line()
     .x((d) => xScale(d.year))
@@ -46,7 +49,7 @@ function Line({ width, height }) {
   );
 
   return (
-    <svg width={width} height={height}>
+    <svg width={width} height="100%">
       <g transform={`translate(${width / 2}, ${height / 2})`} id="line">
         <XAxis
           scale={xScale}
@@ -70,6 +73,12 @@ function Line({ width, height }) {
                 cx={xScale(circle.year)}
                 cy={scale(circle.value)}
                 r={5}
+                onMouseEnter={() => setInteractionData({
+                  xPos: xScale(circle.year) + width / 2,
+                  yPos: scale(circle.value) + height / 2,
+                  info: circle,
+                })}
+                onMouseLeave={() => setInteractionData(null)}
                 className={
                   circle.class === 'comparison_2_line'
                     ? 'comparison_2_circle_filled'
@@ -94,6 +103,7 @@ function Line({ width, height }) {
 Line.propTypes = {
   width: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
+  setInteractionData: PropTypes.func.isRequired,
 };
 
 export default Line;
