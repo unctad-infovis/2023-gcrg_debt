@@ -5,20 +5,20 @@ import {
 } from 'd3';
 import { SwarmDataContext } from '../context/SwarmData.js';
 import { MetricContext } from '../context/Metric.js';
+import { FocusContext } from '../context/Focus.js';
 import YAxis from './Panel.yAxis.jsx';
 import XAxis from './Panel.xAxis.jsx';
 
 function Line({ width, height, setInteractionData }) {
   const { lineData } = useContext(SwarmDataContext);
   const { metricInfo } = useContext(MetricContext);
+  const { setId } = useContext(FocusContext);
 
   const labels = [...new Set(lineData.map((d) => d.xaxis_display))];
 
-  const xAxisHeight = labels.length > 1 ? 2.5 : 2.25;
-
   const scale = scaleLinear()
     .domain([+metricInfo.max_label, +metricInfo.min])
-    .range([-height / 2.2, height / xAxisHeight])
+    .range([-height / 2.2, height / 2.25])
     .clamp(true);
 
   const xScale = scaleLinear()
@@ -48,8 +48,17 @@ function Line({ width, height, setInteractionData }) {
     [lineData]
   );
 
+  const pathMouseEnter = (event, data) => {
+    setInteractionData({
+      xPos: event.clientX,
+      yPos: event.clientY,
+      info: data.values[0],
+      type: 'line',
+    });
+  };
+
   return (
-    <svg width={width} height="100%">
+    <svg width={width} height={height}>
       <g transform={`translate(${width / 2}, ${height / 2})`} id="line">
         <XAxis
           scale={xScale}
@@ -62,23 +71,41 @@ function Line({ width, height, setInteractionData }) {
         {countries
           && countries.map((path) => (
             <React.Fragment key={path.id}>
-              <path d={path.d} className={path.class} fill="none" />
-              {path.class !== 'no_highlight_line' && <circle />}
+              <path
+                d={path.d}
+                className={`${path.class} line`}
+                fill="none"
+                onMouseEnter={(event) => pathMouseEnter(event, path)}
+                onMouseLeave={() => setInteractionData(null)}
+                onClick={() => setId({
+                  type: path.values[0].id_info.type,
+                  id: path.id,
+                  id_display: path.values[0].id_info.id_display,
+                })}
+              />
             </React.Fragment>
           ))}
         {circleData
           && circleData.map((circle) => (
-            <>
+            <React.Fragment key={circle.year + circle.id}>
               <circle
                 cx={xScale(circle.year)}
                 cy={scale(circle.value)}
                 r={5}
                 onMouseEnter={() => setInteractionData({
-                  xPos: xScale(circle.year) + width / 2,
-                  yPos: scale(circle.value) + height / 2,
+                  xPos: xScale(circle.year) < 0 ? 0 : xScale(circle.year),
+                  yPos:
+                      scale(circle.value) + height / 1.9 > height / 2
+                        ? scale(circle.value) + height / 4
+                        : scale(circle.value) + height / 1.9,
                   info: circle,
                 })}
                 onMouseLeave={() => setInteractionData(null)}
+                onClick={() => setId({
+                  type: circle.id_info.type,
+                  id: circle.id,
+                  id_display: circle.id_info.id_display,
+                })}
                 className={
                   circle.class === 'comparison_2_line'
                     ? 'comparison_2_circle_filled'
@@ -93,7 +120,7 @@ function Line({ width, height, setInteractionData }) {
                   className="comparison_2_center"
                 />
               )}
-            </>
+            </React.Fragment>
           ))}
       </g>
     </svg>

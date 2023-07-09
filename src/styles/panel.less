@@ -72,9 +72,42 @@
     color: #000;
   }
 
+  .legend {
+    flex: 0 1 auto;
+    margin-top: 12px;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 150%;
+
+    .group {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-right: 16px;
+    }
+    .dot {
+      height: 8px;
+      width: 8px;
+      min-height: 8px;
+      min-width: 8px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .line {
+      height: 2px;
+      width: 12px;
+      display: inline-block;
+    }
+  }
+
   .content {
     flex: 1 1 auto;
     position: relative;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
 
     .axis-line {
       stroke-dasharray: 2, 2;
@@ -92,8 +125,12 @@
 
     .xaxis-label {
       fill: @ungray;
-      text-anchor: start;
+      text-anchor: middle;
       font-size: 14px;
+
+      @media (max-width: 1200px) and (min-width: 1100px) {
+        font-size: 12px;
+      }
     }
 
     .reference_label {
@@ -111,35 +148,45 @@
       position: absolute;
       pointer-events: none;
 
-      .tooltip {
+      .tooltip-viz {
         position: absolute;
         background-color: white;
-        border-radius: 4px;
-        font-size: 12px;
+        font-size: 14px;
         padding: 8px 12px;
-        border: 1px solid #ededed;
-        border-radius: 8px;
+        border: 1px solid hsla(24, 11%, 64%, 0.3);
+        border-radius: 12px;
         z-index: 100;
         filter: drop-shadow(0 0 0.75rem #ededed);
-        margin-left: 4px;
-        margin-top: 4px;
-        min-width: 150px;
-        max-width: 200px;
+        width: 210px;
+
+        p {
+          margin: 0;
+          line-height: 1.4em;
+          color: @undarkgray;
+        }
+
+        .year {
+          font-weight: normal;
+          color: @undarkgray;
+        }
 
         .title {
-          font-size: 16px;
-          margin: 4px;
+          margin: 0 0 0.25rem;
+          font-weight: bold;
+          color: #000;
         }
 
         .kpi {
-          font-size: 18px;
-          margin: 4px;
+          margin: 0;
+          color: #000;
+          font-weight: bold;
+          font-size: 16px;
         }
 
         hr {
           background-color: none;
           border: 0.5px solid @ungrey;
-          opacity: 0.5;
+          opacity: 0.3;
         }
 
         button {
@@ -147,11 +194,21 @@
           border: none;
           cursor: pointer;
           text-align: left;
-          color: @undarkgray;
+          color: @ungray;
           display: flex;
           flex-wrap: wrap;
+          font-size: 12px;
+          margin: 0;
+          padding: 0;
+          font-style: italic;
         }
       }
+    }
+
+    .no_highlight_line:hover {
+      stroke: black;
+      stroke-width: 3;
+      cursor: pointer;
     }
 
     circle:hover {
@@ -166,7 +223,6 @@
     margin-top: 1rem;
     display: flex;
     flex-flow: column nowrap;
-    overflow-y: scroll;
     gap: 24px;
     line-height: 28px;
 

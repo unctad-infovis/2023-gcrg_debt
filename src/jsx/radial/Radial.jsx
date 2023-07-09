@@ -48,7 +48,6 @@ function Radial() {
   );
 
   const [hovered, setHovered] = useState(null);
-  const [interaction, setInteraction] = useState(null);
 
   return (
     <div className="radial" ref={ref}>
@@ -64,13 +63,12 @@ function Radial() {
                 total={circleData.length}
                 settings={settings}
                 setTooltip={setHovered}
-                setInteraction={setInteraction}
               />
             ))}
         </g>
       </svg>
       <Center radius={settings.inner_radius} />
-      <Tooltip data={hovered} offset={offset} interaction={interaction} />
+      <Tooltip data={hovered} offset={offset} />
     </div>
   );
 }

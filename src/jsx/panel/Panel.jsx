@@ -15,6 +15,7 @@ import Tooltip from './Tooltip.jsx';
 import About from './Panel.About.jsx';
 import Button from './Panel.Button.jsx';
 import viewPort from '../helpers/viewPort';
+import Legend from './Panel.Legend.jsx';
 
 function Panel() {
   const { metricInfo } = useContext(Metric_Context);
@@ -31,13 +32,15 @@ function Panel() {
   // get height and figureWidth of SVG area
   const ref = useRef(null);
   const [figureWidth, setfigureWidth] = useState(0);
-  const [height, setHeight] = useState(0);
+  const [figureHeight, setHeight] = useState(0);
+  const [offset, setOffset] = useState({ top: 0, left: 0 });
 
   useLayoutEffect(() => {
     const updateDimensions = () => {
       if (ref.current) {
         setfigureWidth(ref.current.offsetWidth);
         setHeight(ref.current.offsetHeight * 0.99);
+        setOffset(ref.current.getBoundingClientRect());
       }
     };
 
@@ -78,21 +81,31 @@ function Panel() {
                 setTab={setActiveTab}
               />
             </ul>
+            <div className="legend">
+              {activeTab === 'country' && <Legend />}
+            </div>
             <div className="content" ref={ref}>
-              <div className="swarm-wrapper" style={{ figureWidth, height }}>
-                <Tooltip data={interactionData} />
+              <div
+                className="swarm-wrapper"
+                style={{ figureWidth, figureHeight }}
+              >
+                <Tooltip
+                  data={interactionData}
+                  offset={offset}
+                  width={figureWidth}
+                />
               </div>
               <SwarmDataContextProvider>
                 {activeTab === 'country' ? (
                   <Swarm
                     width={figureWidth}
-                    height={height}
+                    figureHeight={figureHeight}
                     setInteractionData={setInteractionData}
                   />
                 ) : activeTab === 'trend' ? (
                   <Line
                     width={figureWidth}
-                    height={height}
+                    height={figureHeight}
                     setInteractionData={setInteractionData}
                   />
                 ) : (

@@ -14,7 +14,7 @@ import YAxis from './Panel.yAxis.jsx';
 
 // helpers
 
-function Swarm({ width, height, setInteractionData }) {
+function Swarm({ width, figureHeight, setInteractionData }) {
   const { swarmData, referenceLines } = useContext(SwarmDataContext);
   const { metricInfo } = useContext(MetricContext);
   const { setId } = useContext(FocusContext);
@@ -22,7 +22,7 @@ function Swarm({ width, height, setInteractionData }) {
   const extent = metricInfo ? [+metricInfo.max_label, +metricInfo.min] : [0, 0];
   const scale = scaleLinear()
     .domain(extent)
-    .range([-height / 2.5, height / 2.5])
+    .range([-figureHeight / 2.5, figureHeight / 2.5])
     .clamp(true);
 
   useMemo(
@@ -40,8 +40,8 @@ function Swarm({ width, height, setInteractionData }) {
   );
 
   return (
-    <svg width={width} height="100%" className="swarm">
-      <g transform={`translate(${width / 2}, ${height / 2})`}>
+    <svg width={width} height={figureHeight} className="swarm">
+      <g transform={`translate(${width / 2}, ${figureHeight / 2})`}>
         {referenceLines.map((d) => (
           <g className="referenceLine" key={d.id}>
             <line
@@ -51,20 +51,6 @@ function Swarm({ width, height, setInteractionData }) {
               y2={scale(d.value)}
               className={d.class}
             />
-
-            {/* <text
-              x={-width / 2}
-              y={scale(d.value)}
-              dy={i === 0 ? -7 : 14}
-              className="reference_label"
-              stroke="white"
-              strokeWidth="3"
-              paintOrder="stroke"
-            >
-              {d.type}
-              {' '}
-              Avg.
-            </text> */}
           </g>
         ))}
 
@@ -84,8 +70,11 @@ function Swarm({ width, height, setInteractionData }) {
                 id_display: circle.id_info.id_display,
               })}
               onMouseEnter={() => setInteractionData({
-                xPos: circle.x + width / 2,
-                yPos: circle.y + height / 2,
+                xPos: circle.x < 0 ? 0 : circle.x,
+                yPos:
+                    circle.y + figureHeight / 1.9 > figureHeight / 2
+                      ? circle.y + figureHeight / 4
+                      : circle.y + figureHeight / 1.9,
                 info: circle,
               })}
               onMouseLeave={() => setInteractionData(null)}
@@ -109,7 +98,7 @@ function Swarm({ width, height, setInteractionData }) {
 
 Swarm.propTypes = {
   width: PropTypes.number.isRequired,
-  height: PropTypes.number.isRequired,
+  figureHeight: PropTypes.number.isRequired,
   setInteractionData: PropTypes.func.isRequired,
 };
 

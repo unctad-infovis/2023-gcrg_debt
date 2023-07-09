@@ -6,6 +6,7 @@ import { ascending, groups } from 'd3';
 import { StaticDataContext } from '../context/StaticData.js';
 import { FocusContext } from '../context/Focus.js';
 import Search from './Search.jsx';
+import Exit from './Exit.jsx';
 
 function FocusMenu({ setMenuOpen }) {
   const { idData, textData } = useContext(StaticDataContext);
@@ -43,6 +44,7 @@ function FocusMenu({ setMenuOpen }) {
   return (
     <div className="focus-menu">
       <div className="tabs">
+        <Exit handleExit={setMenuOpen} />
         <ul className="nav">
           {tabs.map((tab) => (
             <li

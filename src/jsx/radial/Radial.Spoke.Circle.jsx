@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import { scaleLinear } from 'd3';
 import { FocusContext } from '../context/Focus.js';
 
-function Circle({
-  data, settings, setTooltip, setInteraction
-}) {
+function Circle({ data, settings, setTooltip }) {
   const { setId } = useContext(FocusContext);
   const { max_label } = data.indicator_info;
   const { inner_radius, line_length } = settings;
@@ -31,7 +29,6 @@ function Circle({
 
   const handleEnter = (d, id, value, type, display) => {
     onHover(d, id, value, type, display);
-    setInteraction('enter');
   };
 
   return (
@@ -58,7 +55,7 @@ function Circle({
               circle.type,
               circle.id_display
             )}
-            onMouseLeave={() => setInteraction('leave')}
+            onMouseLeave={() => setTooltip(null)}
           />
           {circle.focus_type === 'comparison_2' && (
             <circle
@@ -85,7 +82,6 @@ Circle.propTypes = {
     line_length: PropTypes.number,
   }).isRequired,
   setTooltip: PropTypes.func.isRequired,
-  setInteraction: PropTypes.func.isRequired,
 };
 
 export default Circle;

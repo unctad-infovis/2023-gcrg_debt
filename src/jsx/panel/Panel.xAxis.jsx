@@ -2,19 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Axis({ scale, height, yearLabel }) {
-  return scale.ticks().map((tick) => (
+  const num = yearLabel[0].label.includes('-') ? null : 4;
+  const axisTicks = scale.ticks(num).map((tick) => {
+    const label = yearLabel.find((d) => +d.year === +tick);
+    return {
+      label_1: label ? label.label.split('-')[0] : null,
+      label_2: label ? label.label.split('-')[1] : null,
+      tick,
+    };
+  });
+
+  return axisTicks.map(({ tick, label_1, label_2 }) => (
     <g key={tick}>
-      <text
-        // x={scale(tick)}
-        // y={height / 2}
-        // dy={-5}
-        className="xaxis-label"
-        key={`${tick}number`}
-        transform={`translate(${scale(tick) + 5}, ${height / 2}) rotate(-90)`}
-      >
-        {yearLabel.find((d) => +d.year === +tick)
-          ? yearLabel.find((d) => +d.year === +tick).label
-          : ''}
+      <text x={scale(tick)} y={height / 2} dy={-15} className="xaxis-label">
+        {label_1}
+        {label_2 ? '-' : null}
+      </text>
+      <text x={scale(tick)} y={height / 2} dy={0} className="xaxis-label">
+        {label_2}
       </text>
     </g>
   ));

@@ -47,7 +47,7 @@ function Pie({ settings }) {
 
   const arcs = pieData(pie_data, settings, 1.18, 1.28, 0.05).map((d, i) => {
     const textpath = invisibleArc(d, pie_data[i].endAngle);
-    const dy = pie_data[i].endAngle > 3 && pie_data[i].endAngle < 5 ? -15 : 25;
+    const dy = pie_data[i].endAngle > 3 && pie_data[i].endAngle < 5 ? -10 : 20;
     return {
       d,
       id: entries[i][0].replace(/\s/g, ''),

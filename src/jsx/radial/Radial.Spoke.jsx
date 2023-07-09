@@ -7,7 +7,7 @@ import Axis from './Radial.Spoke.Axis.jsx';
 import Circle from './Radial.Spoke.Circle.jsx';
 
 function Spoke({
-  i, total, settings, data, setTooltip, setInteraction
+  i, total, settings, data, setTooltip
 }) {
   const { section_gap } = settings;
   const total_gaps = total + 6 * section_gap;
@@ -23,12 +23,7 @@ function Spoke({
   return (
     <g transform={`rotate(${angle})`}>
       <Axis settings={settings} angle={angle} data={data} />
-      <Circle
-        settings={settings}
-        data={data}
-        setTooltip={setTooltip}
-        setInteraction={setInteraction}
-      />
+      <Circle settings={settings} data={data} setTooltip={setTooltip} />
     </g>
   );
 }
@@ -42,7 +37,6 @@ Spoke.propTypes = {
   total: PropTypes.number.isRequired,
   settings: PropTypes.shape({ section_gap: PropTypes.number }).isRequired,
   setTooltip: PropTypes.func.isRequired,
-  setInteraction: PropTypes.func.isRequired,
 };
 
 export default Spoke;

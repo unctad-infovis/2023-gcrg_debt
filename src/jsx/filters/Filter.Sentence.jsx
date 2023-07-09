@@ -33,7 +33,7 @@ function Sentence() {
 
   let comps = null;
   if (comparisons.length === 0) {
-    comps = 'select';
+    comps = '';
   } else if (comparisons.length === 1) {
     comps = comp1;
   } else {

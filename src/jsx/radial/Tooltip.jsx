@@ -1,32 +1,16 @@
-import React, {
-  useContext, useState, useEffect, useRef
-} from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import formatNum from '../helpers/FormatNum.js';
 import { FocusContext } from '../context/Focus.js';
 
-function Tooltip({ data, offset, interaction }) {
+function Tooltip({ data, offset }) {
   const { id, setId } = useContext(FocusContext);
 
-  const [onTooltip, setOnTooltip] = useState(false);
-
-  const previous = useRef(null);
-
-  useEffect(() => {
-    previous.current = data ? (data.id === previous ? null : data.id) : null;
-  }, [data]);
-
-  if (
-    !data
-    || (onTooltip === false
-      && interaction === 'leave'
-      && (data ? data.id === previous.current : true))
-  ) {
+  if (!data) {
     return null;
   }
 
   const switchFocus = () => {
-    setOnTooltip(false);
     setId({
       type: data.type,
       id: data.id,
@@ -36,23 +20,23 @@ function Tooltip({ data, offset, interaction }) {
 
   return (
     <div
-      className="tooltip"
+      className="tooltip-viz"
       style={{
         left: data.xPos - offset.left + 2,
         top: data.yPos - offset.top - 1,
       }}
-      onMouseEnter={() => setOnTooltip(true)}
-      onMouseLeave={() => setOnTooltip(false)}
     >
-      <p className="title">{data.id_display}</p>
-      <p className="kpi">
-        {formatNum(
-          data.value,
-          data.indicator_info.format,
-          data.indicator_info.decimals
-        )}
+      <p className="title">{data.id_display || data.id}</p>
+      <p>
+        {`${data.indicator_info.indicator_full}: `}
+        <span className="kpi">
+          {formatNum(
+            data.value,
+            data.indicator_info.format,
+            data.indicator_info.decimals
+          )}
+        </span>
       </p>
-
       {data.id !== id.id && (
         <>
           <hr />
@@ -83,13 +67,13 @@ Tooltip.propTypes = {
     indicator_info: PropTypes.shape({
       format: PropTypes.string,
       decimals: PropTypes.string,
+      indicator_full: PropTypes.string,
     }),
   }),
   offset: PropTypes.shape({
     left: PropTypes.number,
     top: PropTypes.number,
   }),
-  interaction: PropTypes.string,
 };
 
 Tooltip.defaultProps = {
@@ -104,7 +88,6 @@ Tooltip.defaultProps = {
     left: 0,
     top: 0,
   },
-  interaction: null,
 };
 
 export default Tooltip;

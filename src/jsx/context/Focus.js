@@ -51,7 +51,9 @@ export function FocusContextProvider({ children }) {
   );
 
   const focusList = useMemo(
-    () => (idData && id ? idData.filter((d) => d[id.type] === id.id) : []),
+    () => (idData && id
+      ? idData.filter((d) => d[id.type] === id.id || +d[id.type] === 1)
+      : []),
     [idData, id]
   );
 

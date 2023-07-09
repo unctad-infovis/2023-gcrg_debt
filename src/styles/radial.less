@@ -107,10 +107,10 @@
       // margin-left: 16px;
 
       .dot {
-        height: 16px;
-        width: 16px;
-        min-height: 16px;
-        min-width: 16px;
+        height: 12px;
+        width: 12px;
+        min-height: 12px;
+        min-width: 12px;
         border-radius: 50%;
         display: inline-block;
       }
@@ -155,33 +155,41 @@
   }
 }
 
-.tooltip {
+.tooltip-viz {
   position: absolute;
   background-color: white;
-  border-radius: 4px;
-  font-size: 12px;
+  font-size: 14px;
   padding: 8px 12px;
-  border: 1px solid #ededed;
-  border-radius: 8px;
+  border: 1px solid hsla(24, 11%, 64%, 0.3);
+  border-radius: 12px;
   z-index: 100;
   filter: drop-shadow(0 0 0.75rem #ededed);
-  margin-left: 4px;
-  margin-top: 4px;
+  width: 210px;
+
+  p {
+    margin: 0;
+    line-height: 1.4em;
+    color: @undarkgray;
+  }
 
   .title {
-    font-size: 16px;
-    margin: 4px;
+    // font-size: 16px;
+    margin: 0 0 0.25rem;
+    font-weight: bold;
+    color: #000;
   }
 
   .kpi {
-    font-size: 18px;
-    margin: 4px;
+    margin: 0;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
   }
 
   hr {
     background-color: none;
     border: 0.5px solid @ungrey;
-    opacity: 0.5;
+    opacity: 0.3;
   }
 
   button {
@@ -189,9 +197,13 @@
     border: none;
     cursor: pointer;
     text-align: left;
-    color: @undarkgray;
+    color: @ungray;
     display: flex;
     flex-wrap: wrap;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    font-style: italic;
   }
 }
 .radial_circle {

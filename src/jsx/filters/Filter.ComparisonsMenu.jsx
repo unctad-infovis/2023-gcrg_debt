@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
 
 // Load helpers.
 import { groups } from 'd3';
 import { FocusContext } from '../context/Focus.js';
 import { StaticDataContext } from '../context/StaticData.js';
+import Exit from './Exit.jsx';
 
-function Comparisons() {
+function Comparisons({ setCompOpen }) {
   const { textData } = useContext(StaticDataContext);
   const { setComparisons, optionsList } = useContext(FocusContext);
 
@@ -59,6 +61,7 @@ function Comparisons() {
     <ul className="comparison-menu">
       <span className="instructions">
         {textData.find((d) => d.id === 'comparisons_instructions').text}
+        <Exit handleExit={setCompOpen} />
       </span>
       {comparisonsG.map(({ group, values }) => (
         <div className="group" key={group}>
@@ -73,7 +76,7 @@ function Comparisons() {
                 checked={item.checked}
                 onChange={() => handleOnChange(item.order)}
               />
-              <label htmlFor={`custom-checkbox-${item.order}}`}>
+              <label htmlFor={`custom-checkbox-${item.order}`}>
                 {item.id_display}
               </label>
             </div>
@@ -86,5 +89,9 @@ function Comparisons() {
     </ul>
   );
 }
+
+Comparisons.propTypes = {
+  setCompOpen: PropTypes.func.isRequired,
+};
 
 export default Comparisons;
