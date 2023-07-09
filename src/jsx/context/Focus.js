@@ -1,5 +1,9 @@
 import React, {
-  createContext, useState, useMemo, useContext
+  createContext,
+  useState,
+  useMemo,
+  useContext,
+  useEffect,
 } from 'react';
 import PropTypes from 'prop-types';
 
@@ -10,11 +14,28 @@ export const FocusContext = createContext({});
 export function FocusContextProvider({ children }) {
   const { idData } = useContext(StaticDataContext);
   // set up the variable for storing the selected focus + comparisons
+
   const [id, setId] = useState({
     type: 'development',
     id: 'Developing countries',
     id_display: 'Developing countries',
   });
+
+  useEffect(() => {
+    const query = window.location.href.includes('?')
+      ? window.location.href.split('?')[1]
+      : null;
+    if (query) {
+      const id_query = query.split('=')[0] === 'id' ? query.split('=')[1] : null;
+      if (id_query && idData) {
+        const data = idData.find((d) => d.id === id_query);
+        if (data) {
+          setId(data);
+        }
+      }
+    }
+  }, [idData]);
+
   const [comparisons, setComparisons] = useState([
     { type: 'development', id: 'Developed countries' },
   ]);
