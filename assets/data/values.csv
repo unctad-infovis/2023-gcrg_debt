@@ -114,7 +114,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_to_gdp_perc,2010,,0.45275
 0,MZ,gov_debt_to_gdp_perc,2010,,0.39618
 0,MM,gov_debt_to_gdp_perc,2010,,0.52478
-0,"NAM",gov_debt_to_gdp_perc,2010,,0.16327999999999998
+0,NAM,gov_debt_to_gdp_perc,2010,,0.16327999999999998
 0,NR,gov_debt_to_gdp_perc,2010,,2.4249799999999997
 0,NP,gov_debt_to_gdp_perc,2010,,0.35396
 0,NL,gov_debt_to_gdp_perc,2010,,0.59251
@@ -298,7 +298,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_to_gdp_perc,2011,,0.48555
 0,MZ,gov_debt_to_gdp_perc,2011,,0.3472
 0,MM,gov_debt_to_gdp_perc,2011,,0.4788
-0,"NAM",gov_debt_to_gdp_perc,2011,,0.27449999999999997
+0,NAM,gov_debt_to_gdp_perc,2011,,0.27449999999999997
 0,NR,gov_debt_to_gdp_perc,2011,,1.88939
 0,NP,gov_debt_to_gdp_perc,2011,,0.32429
 0,NL,gov_debt_to_gdp_perc,2011,,0.6169899999999999
@@ -482,7 +482,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_to_gdp_perc,2012,,0.52282
 0,MZ,gov_debt_to_gdp_perc,2012,,0.37436
 0,MM,gov_debt_to_gdp_perc,2012,,0.36514
-0,"NAM",gov_debt_to_gdp_perc,2012,,0.24628
+0,NAM,gov_debt_to_gdp_perc,2012,,0.24628
 0,NR,gov_debt_to_gdp_perc,2012,,1.2307899999999998
 0,NP,gov_debt_to_gdp_perc,2012,,0.34515
 0,NL,gov_debt_to_gdp_perc,2012,,0.6622
@@ -666,7 +666,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_to_gdp_perc,2013,,0.57076
 0,MZ,gov_debt_to_gdp_perc,2013,,0.50135
 0,MM,gov_debt_to_gdp_perc,2013,,0.36056
-0,"NAM",gov_debt_to_gdp_perc,2013,,0.26113
+0,NAM,gov_debt_to_gdp_perc,2013,,0.26113
 0,NR,gov_debt_to_gdp_perc,2013,,1.26892
 0,NP,gov_debt_to_gdp_perc,2013,,0.31899
 0,NL,gov_debt_to_gdp_perc,2013,,0.6768000000000001
@@ -850,7 +850,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_to_gdp_perc,2014,,0.58564
 0,MZ,gov_debt_to_gdp_perc,2014,,0.6434099999999999
 0,MM,gov_debt_to_gdp_perc,2014,,0.35222000000000003
-0,"NAM",gov_debt_to_gdp_perc,2014,,0.27571999999999997
+0,NAM,gov_debt_to_gdp_perc,2014,,0.27571999999999997
 0,NR,gov_debt_to_gdp_perc,2014,,1.12522
 0,NP,gov_debt_to_gdp_perc,2014,,0.27551
 0,NL,gov_debt_to_gdp_perc,2014,,0.67873000000000006
@@ -1034,7 +1034,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_to_gdp_perc,2015,,0.58394
 0,MZ,gov_debt_to_gdp_perc,2015,,0.87426
 0,MM,gov_debt_to_gdp_perc,2015,,0.36374
-0,"NAM",gov_debt_to_gdp_perc,2015,,0.4209000000000001
+0,NAM,gov_debt_to_gdp_perc,2015,,0.4209000000000001
 0,NR,gov_debt_to_gdp_perc,2015,,0.8220099999999999
 0,NP,gov_debt_to_gdp_perc,2015,,0.25730000000000003
 0,NL,gov_debt_to_gdp_perc,2015,,0.6464700000000001
@@ -1218,7 +1218,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_to_gdp_perc,2016,,0.60076
 0,MZ,gov_debt_to_gdp_perc,2016,,1.26188
 0,MM,gov_debt_to_gdp_perc,2016,,0.38334
-0,"NAM",gov_debt_to_gdp_perc,2016,,0.45833
+0,NAM,gov_debt_to_gdp_perc,2016,,0.45833
 0,NR,gov_debt_to_gdp_perc,2016,,0.81754
 0,NP,gov_debt_to_gdp_perc,2016,,0.24957
 0,NL,gov_debt_to_gdp_perc,2016,,0.619
@@ -1402,7 +1402,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_to_gdp_perc,2017,,0.60258
 0,MZ,gov_debt_to_gdp_perc,2017,,1.0415
 0,MM,gov_debt_to_gdp_perc,2017,,0.3847
-0,"NAM",gov_debt_to_gdp_perc,2017,,0.43829
+0,NAM,gov_debt_to_gdp_perc,2017,,0.43829
 0,NR,gov_debt_to_gdp_perc,2017,,0.77972
 0,NP,gov_debt_to_gdp_perc,2017,,0.24989
 0,NL,gov_debt_to_gdp_perc,2017,,0.5695
@@ -1586,7 +1586,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_to_gdp_perc,2018,,0.60464
 0,MZ,gov_debt_to_gdp_perc,2018,,1.06748
 0,MM,gov_debt_to_gdp_perc,2018,,0.40415
-0,"NAM",gov_debt_to_gdp_perc,2018,,0.5040100000000001
+0,NAM,gov_debt_to_gdp_perc,2018,,0.5040100000000001
 0,NR,gov_debt_to_gdp_perc,2018,,0.71056
 0,NP,gov_debt_to_gdp_perc,2018,,0.31088
 0,NL,gov_debt_to_gdp_perc,2018,,0.52435
@@ -1770,7 +1770,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_to_gdp_perc,2019,,0.6027
 0,MZ,gov_debt_to_gdp_perc,2019,,0.99046
 0,MM,gov_debt_to_gdp_perc,2019,,0.38753
-0,"NAM",gov_debt_to_gdp_perc,2019,,0.59366
+0,NAM,gov_debt_to_gdp_perc,2019,,0.59366
 0,NR,gov_debt_to_gdp_perc,2019,,0.5957
 0,NP,gov_debt_to_gdp_perc,2019,,0.3403
 0,NL,gov_debt_to_gdp_perc,2019,,0.48549
@@ -1954,7 +1954,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_to_gdp_perc,2020,,0.72248
 0,MZ,gov_debt_to_gdp_perc,2020,,1.19961
 0,MM,gov_debt_to_gdp_perc,2020,,0.39276000000000005
-0,"NAM",gov_debt_to_gdp_perc,2020,,0.66609
+0,NAM,gov_debt_to_gdp_perc,2020,,0.66609
 0,NR,gov_debt_to_gdp_perc,2020,,0.56269
 0,NP,gov_debt_to_gdp_perc,2020,,0.43307
 0,NL,gov_debt_to_gdp_perc,2020,,0.5467
@@ -2136,7 +2136,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_to_gdp_perc,2021,,0.6894
 0,MZ,gov_debt_to_gdp_perc,2021,,1.07203
 0,MM,gov_debt_to_gdp_perc,2021,,0.6553100000000001
-0,"NAM",gov_debt_to_gdp_perc,2021,,0.71979
+0,NAM,gov_debt_to_gdp_perc,2021,,0.71979
 0,NR,gov_debt_to_gdp_perc,2021,,0.24753
 0,NP,gov_debt_to_gdp_perc,2021,,0.44046
 0,NL,gov_debt_to_gdp_perc,2021,,0.52435
@@ -2318,7 +2318,7 @@ latest_year,id,indicator,year,xaxis_display,value
 1,MA,gov_debt_to_gdp_perc,2022,,0.6878799999999999
 1,MZ,gov_debt_to_gdp_perc,2022,,0.76142
 1,MM,gov_debt_to_gdp_perc,2022,,0.63896
-1,"NAM",gov_debt_to_gdp_perc,2022,,0.7127800000000001
+1,NAM,gov_debt_to_gdp_perc,2022,,0.7127800000000001
 1,NR,gov_debt_to_gdp_perc,2022,,0.24265
 1,NP,gov_debt_to_gdp_perc,2022,,0.4383
 1,NL,gov_debt_to_gdp_perc,2022,,0.48507
@@ -2503,7 +2503,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_billions,2010,,45.67387275
 0,MZ,gov_debt_usd_billions,2010,,4.399578900000001
 0,MM,gov_debt_usd_billions,2010,,19.98572152
-0,"NAM",gov_debt_usd_billions,2010,,1.84196168
+0,NAM,gov_debt_usd_billions,2010,,1.84196168
 0,NR,gov_debt_usd_billions,2010,,0.11639903999999998
 0,NP,gov_debt_usd_billions,2010,,6.45977
 0,NL,gov_debt_usd_billions,2010,,502.49173323
@@ -2687,7 +2687,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_billions,2011,,53.26726275
 0,MZ,gov_debt_usd_billions,2011,,4.9934304
 0,MM,gov_debt_usd_billions,2011,,25.814980799999997
-0,"NAM",gov_debt_usd_billions,2011,,3.4101134999999996
+0,NAM,gov_debt_usd_billions,2011,,3.4101134999999996
 0,NR,gov_debt_usd_billions,2011,,0.12469974
 0,NP,gov_debt_usd_billions,2011,,7.03125578
 0,NL,gov_debt_usd_billions,2011,,558.4444358899999
@@ -2871,7 +2871,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_billions,2012,,55.599292899999995
 0,MZ,gov_debt_usd_billions,2012,,6.12116036
 0,MM,gov_debt_usd_billions,2012,,21.54326
-0,"NAM",gov_debt_usd_billions,2012,,3.20558048
+0,NAM,gov_debt_usd_billions,2012,,3.20558048
 0,NR,gov_debt_usd_billions,2012,,0.12430979
 0,NP,gov_debt_usd_billions,2012,,7.49079045
 0,NL,gov_debt_usd_billions,2012,,555.887101
@@ -3055,7 +3055,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_billions,2013,,65.98442208
 0,MZ,gov_debt_usd_billions,2013,,8.5099149
 0,MM,gov_debt_usd_billions,2013,,21.959185679999997
-0,"NAM",gov_debt_usd_billions,2013,,3.1774298399999994
+0,NAM,gov_debt_usd_billions,2013,,3.1774298399999994
 0,NR,gov_debt_usd_billions,2013,,0.11927848
 0,NP,gov_debt_usd_billions,2013,,7.069137390000001
 0,NL,gov_debt_usd_billions,2013,,593.6794848000001
@@ -3239,7 +3239,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_billions,2014,,69.76787884000001
 0,MZ,gov_debt_usd_billions,2014,,11.39865156
 0,MM,gov_debt_usd_billions,2014,,22.24374966
-0,"NAM",gov_debt_usd_billions,2014,,3.4283024799999993
+0,NAM,gov_debt_usd_billions,2014,,3.4283024799999993
 0,NR,gov_debt_usd_billions,2014,,0.11139678
 0,NP,gov_debt_usd_billions,2014,,6.26013822
 0,NL,gov_debt_usd_billions,2014,,605.69729454
@@ -3423,7 +3423,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_billions,2015,,64.47515116
 0,MZ,gov_debt_usd_billions,2015,,13.945321260000002
 0,MM,gov_debt_usd_billions,2015,,22.7901297
-0,"NAM",gov_debt_usd_billions,2015,,4.819305
+0,NAM,gov_debt_usd_billions,2015,,4.819305
 0,NR,gov_debt_usd_billions,2015,,0.06987085
 0,NP,gov_debt_usd_billions,2015,,6.268085300000001
 0,NL,gov_debt_usd_billions,2015,,494.9697555000001
@@ -3607,7 +3607,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_billions,2016,,67.02859547999999
 0,MZ,gov_debt_usd_billions,2016,,15.06306156
 0,MM,gov_debt_usd_billions,2016,,23.034900600000004
-0,"NAM",gov_debt_usd_billions,2016,,4.912839269999999
+0,NAM,gov_debt_usd_billions,2016,,4.912839269999999
 0,NR,gov_debt_usd_billions,2016,,0.07930138
 0,NP,gov_debt_usd_billions,2016,,6.120454680000001
 0,NL,gov_debt_usd_billions,2016,,485.1994360000001
@@ -3791,7 +3791,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_billions,2017,,71.43043578
 0,MZ,gov_debt_usd_billions,2017,,13.7675885
 0,MM,gov_debt_usd_billions,2017,,23.5694149
-0,"NAM",gov_debt_usd_billions,2017,,5.64649007
+0,NAM,gov_debt_usd_billions,2017,,5.64649007
 0,NR,gov_debt_usd_billions,2017,,0.08498947999999999
 0,NP,gov_debt_usd_billions,2017,,7.23981308
 0,NL,gov_debt_usd_billions,2017,,474.7209625
@@ -3975,7 +3975,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_billions,2018,,76.99546224
 0,MZ,gov_debt_usd_billions,2018,,15.8467406
 0,MM,gov_debt_usd_billions,2018,,26.95640085
-0,"NAM",gov_debt_usd_billions,2018,,6.892840760000001
+0,NAM,gov_debt_usd_billions,2018,,6.892840760000001
 0,NR,gov_debt_usd_billions,2018,,0.09308336
 0,NP,gov_debt_usd_billions,2018,,10.29385856
 0,NL,gov_debt_usd_billions,2018,,479.4960523
@@ -4159,7 +4159,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_billions,2019,,77.70008399999999
 0,MZ,gov_debt_usd_billions,2019,,15.243179400000002
 0,MM,gov_debt_usd_billions,2019,,26.662839060000003
-0,"NAM",gov_debt_usd_billions,2019,,7.44390274
+0,NAM,gov_debt_usd_billions,2019,,7.44390274
 0,NR,gov_debt_usd_billions,2019,,0.0744625
 0,NP,gov_debt_usd_billions,2019,,11.6334958
 0,NL,gov_debt_usd_billions,2019,,441.93911955
@@ -4343,7 +4343,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_billions,2020,,87.67150304
 0,MZ,gov_debt_usd_billions,2020,,16.98287877
 0,MM,gov_debt_usd_billions,2020,,31.914499320000008
-0,"NAM",gov_debt_usd_billions,2020,,7.047898289999999
+0,NAM,gov_debt_usd_billions,2020,,7.047898289999999
 0,NR,gov_debt_usd_billions,2020,,0.07033625
 0,NP,gov_debt_usd_billions,2020,,14.47926238
 0,NL,gov_debt_usd_billions,2020,,496.9858355
@@ -4525,7 +4525,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_billions,2021,,98.4925098
 0,MZ,gov_debt_usd_billions,2021,,16.91341731
 0,MM,gov_debt_usd_billions,2021,,42.6999996
-0,"NAM",gov_debt_usd_billions,2021,,8.85845553
+0,NAM,gov_debt_usd_billions,2021,,8.85845553
 0,NR,gov_debt_usd_billions,2021,,0.03613938
 0,NP,gov_debt_usd_billions,2021,,15.983852940000002
 0,NL,gov_debt_usd_billions,2021,,531.439212
@@ -4707,7 +4707,7 @@ latest_year,id,indicator,year,xaxis_display,value
 1,MA,gov_debt_usd_billions,2022,,94.96320975999998
 1,MZ,gov_debt_usd_billions,2022,,13.6598748
 1,MM,gov_debt_usd_billions,2022,,36.26545272
-1,"NAM",gov_debt_usd_billions,2022,,8.799269100000002
+1,NAM,gov_debt_usd_billions,2022,,8.799269100000002
 1,NR,gov_debt_usd_billions,2022,,0.03664014999999999
 1,NP,gov_debt_usd_billions,2022,,17.5973067
 1,NL,gov_debt_usd_billions,2022,,482.00484267
@@ -4892,7 +4892,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_per_capita,2010,,1419.236615188615
 0,MZ,gov_debt_usd_per_capita,2010,,186.96153748087713
 0,MM,gov_debt_usd_per_capita,2010,,406.5526459041071
-0,"NAM",gov_debt_usd_per_capita,2010,,883.4348585131894
+0,NAM,gov_debt_usd_per_capita,2010,,883.4348585131894
 0,NR,gov_debt_usd_per_capita,2010,,11639.904
 0,NP,gov_debt_usd_per_capita,2010,,239.13560137711468
 0,NL,gov_debt_usd_per_capita,2010,,30316.243332126694
@@ -5076,7 +5076,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_per_capita,2011,,1635.0183477086466
 0,MZ,gov_debt_usd_per_capita,2011,,206.4424673391765
 0,MM,gov_debt_usd_per_capita,2011,,521.293608772036
-0,"NAM",gov_debt_usd_per_capita,2011,,1611.5848298676744
+0,NAM,gov_debt_usd_per_capita,2011,,1611.5848298676744
 0,NR,gov_debt_usd_per_capita,2011,,12469.974
 0,NP,gov_debt_usd_per_capita,2011,,260.02203246921346
 0,NL,gov_debt_usd_per_capita,2011,,33528.12415285783
@@ -5260,7 +5260,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_per_capita,2012,,1685.9510249257078
 0,MZ,gov_debt_usd_per_capita,2012,,246.19556610224024
 0,MM,gov_debt_usd_per_capita,2012,,431.6508044641247
-0,"NAM",gov_debt_usd_per_capita,2012,,1487.508343387471
+0,NAM,gov_debt_usd_per_capita,2012,,1487.508343387471
 0,NR,gov_debt_usd_per_capita,2012,,12430.979
 0,NP,gov_debt_usd_per_capita,2012,,277.5497591611397
 0,NL,gov_debt_usd_per_capita,2012,,33226.96359832636
@@ -5444,7 +5444,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_per_capita,2013,,1976.883638324645
 0,MZ,gov_debt_usd_per_capita,2013,,332.9257423418489
 0,MM,gov_debt_usd_per_capita,2013,,436.3561259041411
-0,"NAM",gov_debt_usd_per_capita,2013,,1446.9170491803277
+0,NAM,gov_debt_usd_per_capita,2013,,1446.9170491803277
 0,NR,gov_debt_usd_per_capita,2013,,10843.498181818182
 0,NP,gov_debt_usd_per_capita,2013,,262.62723891964185
 0,NL,gov_debt_usd_per_capita,2013,,35380.18383790227
@@ -5628,7 +5628,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_per_capita,2014,,2065.9721302931594
 0,MZ,gov_debt_usd_per_capita,2014,,433.63963935174615
 0,MM,gov_debt_usd_per_capita,2014,,438.2314050987037
-0,"NAM",gov_debt_usd_per_capita,2014,,1531.8599106344948
+0,NAM,gov_debt_usd_per_capita,2014,,1531.8599106344948
 0,NR,gov_debt_usd_per_capita,2014,,9283.065000000002
 0,NP,gov_debt_usd_per_capita,2014,,232.66699695235263
 0,NL,gov_debt_usd_per_capita,2014,,35991.28258007012
@@ -5812,7 +5812,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_per_capita,2015,,1889.3817189743588
 0,MZ,gov_debt_usd_per_capita,2015,,515.691193698691
 0,MM,gov_debt_usd_per_capita,2015,,445.128414617473
-0,"NAM",gov_debt_usd_per_capita,2015,,2112.803594914511
+0,NAM,gov_debt_usd_per_capita,2015,,2112.803594914511
 0,NR,gov_debt_usd_per_capita,2015,,5822.570833333333
 0,NP,gov_debt_usd_per_capita,2015,,232.0224060707015
 0,NL,gov_debt_usd_per_capita,2015,,29286.41828885865
@@ -5996,7 +5996,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_per_capita,2016,,1943.5902073244984
 0,MZ,gov_debt_usd_per_capita,2016,,541.2526611570249
 0,MM,gov_debt_usd_per_capita,2016,,446.12748823426887
-0,"NAM",gov_debt_usd_per_capita,2016,,2113.958377796902
+0,NAM,gov_debt_usd_per_capita,2016,,2113.958377796902
 0,NR,gov_debt_usd_per_capita,2016,,6100.1061538461545
 0,NP,gov_debt_usd_per_capita,2016,,224.496742104684
 0,NL,gov_debt_usd_per_capita,2016,,28576.443606808414
@@ -6180,7 +6180,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_per_capita,2017,,2049.536203948124
 0,MZ,gov_debt_usd_per_capita,2017,,480.56087472512127
 0,MM,gov_debt_usd_per_capita,2017,,452.822572526417
-0,"NAM",gov_debt_usd_per_capita,2017,,2383.4909539890245
+0,NAM,gov_debt_usd_per_capita,2017,,2383.4909539890245
 0,NR,gov_debt_usd_per_capita,2017,,6537.652307692307
 0,NP,gov_debt_usd_per_capita,2017,,261.9988086707922
 0,NL,gov_debt_usd_per_capita,2017,,27790.713177613863
@@ -6364,7 +6364,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_per_capita,2018,,2186.128967632027
 0,MZ,gov_debt_usd_per_capita,2018,,538.565137302882
 0,MM,gov_debt_usd_per_capita,2018,,513.9545243951268
-0,"NAM",gov_debt_usd_per_capita,2018,,2855.3607125103563
+0,NAM,gov_debt_usd_per_capita,2018,,2855.3607125103563
 0,NR,gov_debt_usd_per_capita,2018,,7160.258461538462
 0,NP,gov_debt_usd_per_capita,2018,,366.3816400911162
 0,NL,gov_debt_usd_per_capita,2018,,27908.50662359583
@@ -6548,7 +6548,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_per_capita,2019,,2183.3839323348407
 0,MZ,gov_debt_usd_per_capita,2019,,503.30777917189465
 0,MM,gov_debt_usd_per_capita,2019,,504.6721505905512
-0,"NAM",gov_debt_usd_per_capita,2019,,3027.2072956486372
+0,NAM,gov_debt_usd_per_capita,2019,,3027.2072956486372
 0,NR,gov_debt_usd_per_capita,2019,,5727.884615384616
 0,NP,gov_debt_usd_per_capita,2019,,406.6376245237512
 0,NL,gov_debt_usd_per_capita,2019,,25572.220781738222
@@ -6732,7 +6732,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_per_capita,2020,,2438.570956831331
 0,MZ,gov_debt_usd_per_capita,2020,,544.7071258579767
 0,MM,gov_debt_usd_per_capita,2020,,599.9078802233126
-0,"NAM",gov_debt_usd_per_capita,2020,,2814.6558666134183
+0,NAM,gov_debt_usd_per_capita,2020,,2814.6558666134183
 0,NR,gov_debt_usd_per_capita,2020,,5410.48076923077
 0,NP,gov_debt_usd_per_capita,2020,,496.93730926313623
 0,NL,gov_debt_usd_per_capita,2020,,28549.27823414522
@@ -6914,7 +6914,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_debt_usd_per_capita,2021,,2712.320926389998
 0,MZ,gov_debt_usd_per_capita,2021,,527.2755341833713
 0,MM,gov_debt_usd_per_capita,2021,,797.3856134453781
-0,"NAM",gov_debt_usd_per_capita,2021,,3473.9041294117656
+0,NAM,gov_debt_usd_per_capita,2021,,3473.9041294117656
 0,NR,gov_debt_usd_per_capita,2021,,2779.9523076923074
 0,NP,gov_debt_usd_per_capita,2021,,538.9753486646886
 0,NL,gov_debt_usd_per_capita,2021,,30411.399828326175
@@ -7096,7 +7096,7 @@ latest_year,id,indicator,year,xaxis_display,value
 1,MA,gov_debt_usd_per_capita,2022,,2589.6702961548945
 1,MZ,gov_debt_usd_per_capita,2022,,414.31224749772525
 1,MM,gov_debt_usd_per_capita,2022,,673.0032424006235
-1,"NAM",gov_debt_usd_per_capita,2022,,3388.2437812861
+1,NAM,gov_debt_usd_per_capita,2022,,3388.2437812861
 1,NR,gov_debt_usd_per_capita,2022,,2818.473076923077
 1,NP,gov_debt_usd_per_capita,2022,,582.9818353486831
 1,NL,gov_debt_usd_per_capita,2022,,27394.421294117652
@@ -8619,7 +8619,7 @@ latest_year,id,indicator,year,xaxis_display,value
 1,MA,external_ppg_perc_gdp,2021,,0.29502028630824473
 1,MZ,external_ppg_perc_gdp,2021,,0.6703985452874438
 1,MM,external_ppg_perc_gdp,2021,,0.1814286295733579
-1,"NAM",external_ppg_perc_gdp,2021,,NA
+1,NAM,external_ppg_perc_gdp,2021,,NA
 1,NR,external_ppg_perc_gdp,2021,,NA
 1,NP,external_ppg_perc_gdp,2021,,0.2147863204552344
 1,NL,external_ppg_perc_gdp,2021,,NA
@@ -10151,7 +10151,7 @@ latest_year,id,indicator,year,xaxis_display,value
 1,MA,external_ppg_usd_billions,2021,,42.148663244
 1,MZ,external_ppg_usd_billions,2021,,10.576877849
 1,MM,external_ppg_usd_billions,2021,,11.821889503
-1,"NAM",external_ppg_usd_billions,2021,,NA
+1,NAM,external_ppg_usd_billions,2021,,NA
 1,NR,external_ppg_usd_billions,2021,,NA
 1,NP,external_ppg_usd_billions,2021,,7.794380783
 1,NL,external_ppg_usd_billions,2021,,NA
@@ -11670,7 +11670,7 @@ latest_year,id,indicator,year,xaxis_display,value
 1,MA,external_ppg_per_capita,2021,,1160.7045202544543
 1,MZ,external_ppg_per_capita,2021,,329.73401031892007
 1,MM,external_ppg_per_capita,2021,,220.76357615312793
-1,"NAM",external_ppg_per_capita,2021,,NA
+1,NAM,external_ppg_per_capita,2021,,NA
 1,NR,external_ppg_per_capita,2021,,NA
 1,NP,external_ppg_per_capita,2021,,262.82643589830053
 1,NL,external_ppg_per_capita,2021,,NA
@@ -13196,7 +13196,7 @@ latest_year,id,indicator,year,xaxis_display,value
 1,MA,multilateral_share_external_ppg,2021,,0.4503545712022582
 1,MZ,multilateral_share_external_ppg,2021,,0.4324634998439037
 1,MM,multilateral_share_external_ppg,2021,,0.22634273187217424
-1,"NAM",multilateral_share_external_ppg,2021,,NA
+1,NAM,multilateral_share_external_ppg,2021,,NA
 1,NR,multilateral_share_external_ppg,2021,,NA
 1,NP,multilateral_share_external_ppg,2021,,0.8660926310815574
 1,NL,multilateral_share_external_ppg,2021,,NA
@@ -14723,7 +14723,7 @@ latest_year,id,indicator,year,xaxis_display,value
 1,MA,bilateral_share_external_ppg,2021,,0.16517349206777132
 1,MZ,bilateral_share_external_ppg,2021,,0.4477674395613605
 1,MM,bilateral_share_external_ppg,2021,,0.5937332634701754
-1,"NAM",bilateral_share_external_ppg,2021,,NA
+1,NAM,bilateral_share_external_ppg,2021,,NA
 1,NR,bilateral_share_external_ppg,2021,,NA
 1,NP,bilateral_share_external_ppg,2021,,0.13390141129316185
 1,NL,bilateral_share_external_ppg,2021,,NA
@@ -16072,7 +16072,7 @@ latest_year,id,indicator,year,xaxis_display,value
 1,MA,private_share_external_ppg,2021,,0.3844719367299704
 1,MZ,private_share_external_ppg,2021,,0.11976906068928168
 1,MM,private_share_external_ppg,2021,,0.17992400457306154
-1,"NAM",private_share_external_ppg,2021,,NA
+1,NAM,private_share_external_ppg,2021,,NA
 1,NR,private_share_external_ppg,2021,,NA
 1,NP,private_share_external_ppg,2021,,5.957702259207164e-6
 1,NL,private_share_external_ppg,2021,,NA
@@ -16250,7 +16250,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_gdp,2010,,0.02066350264388256
 0,MZ,gov_net_interest_perc_gdp,2010,,0.00708802354719382
 0,MM,gov_net_interest_perc_gdp,2010,,0.01327313341593848
-0,"NAM",gov_net_interest_perc_gdp,2010,,0.01128342958147192
+0,NAM,gov_net_interest_perc_gdp,2010,,0.01128342958147192
 0,NP,gov_net_interest_perc_gdp,2010,,0.00700843894263283
 0,NL,gov_net_interest_perc_gdp,2010,,0.01326841753665203
 0,NZ,gov_net_interest_perc_gdp,2010,,0.00633655702157009
@@ -16430,7 +16430,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_gdp,2011,,0.02055328575388338
 0,MZ,gov_net_interest_perc_gdp,2011,,0.00856861952410911
 0,MM,gov_net_interest_perc_gdp,2011,,0.01320969614317449
-0,"NAM",gov_net_interest_perc_gdp,2011,,0.01167487903404803
+0,NAM,gov_net_interest_perc_gdp,2011,,0.01167487903404803
 0,NR,gov_net_interest_perc_gdp,2011,,-0.0303030303030303
 0,NP,gov_net_interest_perc_gdp,2011,,0.00740662343410241
 0,NL,gov_net_interest_perc_gdp,2011,,0.0143643741379761
@@ -16615,7 +16615,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_gdp,2012,,0.02259183860294598
 0,MZ,gov_net_interest_perc_gdp,2012,,0.00889160007846163
 0,MM,gov_net_interest_perc_gdp,2012,,0.01316706012220862
-0,"NAM",gov_net_interest_perc_gdp,2012,,0.01427047462194939
+0,NAM,gov_net_interest_perc_gdp,2012,,0.01427047462194939
 0,NR,gov_net_interest_perc_gdp,2012,,-0.0816326530612245
 0,NP,gov_net_interest_perc_gdp,2012,,0.00762633787918424
 0,NL,gov_net_interest_perc_gdp,2012,,0.01373118967909508
@@ -16800,7 +16800,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_gdp,2013,,0.02384784469983864
 0,MZ,gov_net_interest_perc_gdp,2013,,0.00778282455669994
 0,MM,gov_net_interest_perc_gdp,2013,,0.01275481789006343
-0,"NAM",gov_net_interest_perc_gdp,2013,,0.01475009154935574
+0,NAM,gov_net_interest_perc_gdp,2013,,0.01475009154935574
 0,NR,gov_net_interest_perc_gdp,2013,,-0.0217391304347826
 0,NP,gov_net_interest_perc_gdp,2013,,0.00667213871646231
 0,NL,gov_net_interest_perc_gdp,2013,,0.01373127639247013
@@ -16985,7 +16985,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_gdp,2014,,0.02559588596535024
 0,MZ,gov_net_interest_perc_gdp,2014,,0.01029081082443509
 0,MM,gov_net_interest_perc_gdp,2014,,0.01248960443474894
-0,"NAM",gov_net_interest_perc_gdp,2014,,0.01460292503485716
+0,NAM,gov_net_interest_perc_gdp,2014,,0.01460292503485716
 0,NR,gov_net_interest_perc_gdp,2014,,-0.2962962962962963
 0,NP,gov_net_interest_perc_gdp,2014,,0.00501717782067877
 0,NL,gov_net_interest_perc_gdp,2014,,0.01327357198165465
@@ -17170,7 +17170,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_gdp,2015,,0.02531258115979668
 0,MZ,gov_net_interest_perc_gdp,2015,,0.01195120421475163
 0,MM,gov_net_interest_perc_gdp,2015,,0.01168086187667837
-0,"NAM",gov_net_interest_perc_gdp,2015,,0.0168197289393846
+0,NAM,gov_net_interest_perc_gdp,2015,,0.0168197289393846
 0,NR,gov_net_interest_perc_gdp,2015,,-0.10784313725490197
 0,NP,gov_net_interest_perc_gdp,2015,,0.00344770675512865
 0,NL,gov_net_interest_perc_gdp,2015,,0.01201725197389015
@@ -17355,7 +17355,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_gdp,2016,,0.02457847840986977
 0,MZ,gov_net_interest_perc_gdp,2016,,0.02455022040595082
 0,MM,gov_net_interest_perc_gdp,2016,,0.01265068398554215
-0,"NAM",gov_net_interest_perc_gdp,2016,,0.02457072564486265
+0,NAM,gov_net_interest_perc_gdp,2016,,0.02457072564486265
 0,NR,gov_net_interest_perc_gdp,2016,,-0.21641791044776115
 0,NP,gov_net_interest_perc_gdp,2016,,0.00295033318252574
 0,NL,gov_net_interest_perc_gdp,2016,,0.01111900126634638
@@ -17540,7 +17540,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_gdp,2017,,0.02356863086430498
 0,MZ,gov_net_interest_perc_gdp,2017,,0.02960408125388149
 0,MM,gov_net_interest_perc_gdp,2017,,0.01334098830931359
-0,"NAM",gov_net_interest_perc_gdp,2017,,0.029859532552311
+0,NAM,gov_net_interest_perc_gdp,2017,,0.029859532552311
 0,NR,gov_net_interest_perc_gdp,2017,,-0.18620689655172415
 0,NP,gov_net_interest_perc_gdp,2017,,0.00288253741286579
 0,NL,gov_net_interest_perc_gdp,2017,,0.00971352550850373
@@ -17725,7 +17725,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_gdp,2018,,0.02253354974733108
 0,MZ,gov_net_interest_perc_gdp,2018,,0.04425464538108261
 0,MM,gov_net_interest_perc_gdp,2018,,0.01779058629388668
-0,"NAM",gov_net_interest_perc_gdp,2018,,0.03226982277278576
+0,NAM,gov_net_interest_perc_gdp,2018,,0.03226982277278576
 0,NR,gov_net_interest_perc_gdp,2018,,-0.3195266272189349
 0,NP,gov_net_interest_perc_gdp,2018,,0.00432674083826444
 0,NL,gov_net_interest_perc_gdp,2018,,0.00849497472179765
@@ -17911,7 +17911,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_gdp,2019,,0.02124548328816622
 0,MZ,gov_net_interest_perc_gdp,2019,,0.03237826725159746
 0,MM,gov_net_interest_perc_gdp,2019,,0.01472090139988695
-0,"NAM",gov_net_interest_perc_gdp,2019,,0.03679688319141774
+0,NAM,gov_net_interest_perc_gdp,2019,,0.03679688319141774
 0,NR,gov_net_interest_perc_gdp,2019,,-0.28
 0,NP,gov_net_interest_perc_gdp,2019,,0.00499309394054828
 0,NL,gov_net_interest_perc_gdp,2019,,0.00719016548695967
@@ -18097,7 +18097,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_gdp,2020,,0.02497787265059613
 0,MZ,gov_net_interest_perc_gdp,2020,,0.03119257845429206
 0,MM,gov_net_interest_perc_gdp,2020,,0.01603021430030956
-0,"NAM",gov_net_interest_perc_gdp,2020,,0.04126676157237325
+0,NAM,gov_net_interest_perc_gdp,2020,,0.04126676157237325
 0,NR,gov_net_interest_perc_gdp,2020,,-0.3279569892473118
 0,NP,gov_net_interest_perc_gdp,2020,,0.0063265358603132
 0,NL,gov_net_interest_perc_gdp,2020,,0.00683841161035994
@@ -18281,7 +18281,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_gdp,2021,,0.02111591325000973
 0,MZ,gov_net_interest_perc_gdp,2021,,0.02720583251842025
 0,MM,gov_net_interest_perc_gdp,2021,,0.02096059396171493
-0,"NAM",gov_net_interest_perc_gdp,2021,,0.04286695797949816
+0,NAM,gov_net_interest_perc_gdp,2021,,0.04286695797949816
 0,NR,gov_net_interest_perc_gdp,2021,,-0.4
 0,NP,gov_net_interest_perc_gdp,2021,,0.00774717695742641
 0,NL,gov_net_interest_perc_gdp,2021,,0.00544399758978742
@@ -18466,7 +18466,7 @@ latest_year,id,indicator,year,xaxis_display,value
 1,MA,gov_net_interest_perc_gdp,2022,,0.02064551990990731
 1,MZ,gov_net_interest_perc_gdp,2022,,0.03103556649730239
 1,MM,gov_net_interest_perc_gdp,2022,,0.02668234247521232
-1,"NAM",gov_net_interest_perc_gdp,2022,,0.04460462284093328
+1,NAM,gov_net_interest_perc_gdp,2022,,0.04460462284093328
 1,NR,gov_net_interest_perc_gdp,2022,,-0.25961538461538464
 1,NP,gov_net_interest_perc_gdp,2022,,0.00894689001428385
 1,NL,gov_net_interest_perc_gdp,2022,,0.00229615402155733
@@ -18652,7 +18652,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_per_capita,2010,,64.7739360579677
 0,MZ,gov_net_interest_per_capita,2010,,3.3449133729214457
 0,MM,gov_net_interest_per_capita,2010,,10.282837588490436
-0,"NAM",gov_net_interest_per_capita,2010,,61.04957751011264
+0,NAM,gov_net_interest_per_capita,2010,,61.04957751011264
 0,NP,gov_net_interest_per_capita,2010,,4.734905812129316
 0,NL,gov_net_interest_per_capita,2010,,678.8890899282713
 0,NZ,gov_net_interest_per_capita,2010,,211.59995446116977
@@ -18832,7 +18832,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_per_capita,2011,,69.21017261517471
 0,MZ,gov_net_interest_per_capita,2011,,5.09483570347847
 0,MM,gov_net_interest_per_capita,2011,,14.382059676811782
-0,"NAM",gov_net_interest_per_capita,2011,,68.54301618146444
+0,NAM,gov_net_interest_per_capita,2011,,68.54301618146444
 0,NR,gov_net_interest_per_capita,2011,,-200
 0,NP,gov_net_interest_per_capita,2011,,5.938774797463425
 0,NL,gov_net_interest_per_capita,2011,,780.5807541064896
@@ -19016,7 +19016,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_per_capita,2012,,72.85247972073171
 0,MZ,gov_net_interest_per_capita,2012,,5.8475064506667005
 0,MM,gov_net_interest_per_capita,2012,,15.565460081554605
-0,"NAM",gov_net_interest_per_capita,2012,,86.19234231057693
+0,NAM,gov_net_interest_per_capita,2012,,86.19234231057693
 0,NR,gov_net_interest_per_capita,2012,,-824.4897959183675
 0,NP,gov_net_interest_per_capita,2012,,6.132661861941373
 0,NL,gov_net_interest_per_capita,2012,,688.9848076547975
@@ -19201,7 +19201,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_per_capita,2013,,82.59936575166114
 0,MZ,gov_net_interest_per_capita,2013,,5.168251008388749
 0,MM,gov_net_interest_per_capita,2013,,15.436107502554115
-0,"NAM",gov_net_interest_per_capita,2013,,81.7300154702007
+0,NAM,gov_net_interest_per_capita,2013,,81.7300154702007
 0,NR,gov_net_interest_per_capita,2013,,-185.77075098814228
 0,NP,gov_net_interest_per_capita,2013,,5.493229783984896
 0,NL,gov_net_interest_per_capita,2013,,717.8118840050837
@@ -19386,7 +19386,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_per_capita,2014,,90.29503970796978
 0,MZ,gov_net_interest_per_capita,2014,,6.93570739426661
 0,MM,gov_net_interest_per_capita,2014,,15.539540345712997
-0,"NAM",gov_net_interest_per_capita,2014,,81.13171129732527
+0,NAM,gov_net_interest_per_capita,2014,,81.13171129732527
 0,NR,gov_net_interest_per_capita,2014,,-2444.4444444444443
 0,NP,gov_net_interest_per_capita,2014,,4.236984852503651
 0,NL,gov_net_interest_per_capita,2014,,703.8629205112989
@@ -19571,7 +19571,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_per_capita,2015,,81.9007571041111
 0,MZ,gov_net_interest_per_capita,2015,,7.049539916777727
 0,MM,gov_net_interest_per_capita,2015,,14.294505769317434
-0,"NAM",gov_net_interest_per_capita,2015,,84.43046749493807
+0,NAM,gov_net_interest_per_capita,2015,,84.43046749493807
 0,NR,gov_net_interest_per_capita,2015,,-763.888888888889
 0,NP,gov_net_interest_per_capita,2015,,3.108998121846717
 0,NL,gov_net_interest_per_capita,2015,,544.4061874332288
@@ -19756,7 +19756,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_per_capita,2016,,79.51676201537971
 0,MZ,gov_net_interest_per_capita,2016,,10.530218504701224
 0,MM,gov_net_interest_per_capita,2016,,14.722747093742914
-0,"NAM",gov_net_interest_per_capita,2016,,113.3277143663007
+0,NAM,gov_net_interest_per_capita,2016,,113.3277143663007
 0,NR,gov_net_interest_per_capita,2016,,-1614.8105625717565
 0,NP,gov_net_interest_per_capita,2016,,2.6539255022653916
 0,NL,gov_net_interest_per_capita,2016,,513.3142369172517
@@ -19941,7 +19941,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_per_capita,2017,,80.16323514534537
 0,MZ,gov_net_interest_per_capita,2017,,13.659686205279746
 0,MM,gov_net_interest_per_capita,2017,,15.703406930772635
-0,"NAM",gov_net_interest_per_capita,2017,,162.3809024362274
+0,NAM,gov_net_interest_per_capita,2017,,162.3809024362274
 0,NR,gov_net_interest_per_capita,2017,,-1561.273209549072
 0,NP,gov_net_interest_per_capita,2017,,3.0222152471880683
 0,NL,gov_net_interest_per_capita,2017,,474.0049189644658
@@ -20126,7 +20126,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_per_capita,2018,,81.4720260753801
 0,MZ,gov_net_interest_per_capita,2018,,22.327358981857373
 0,MM,gov_net_interest_per_capita,2018,,22.624155183434347
-0,"NAM",gov_net_interest_per_capita,2018,,182.8177697765609
+0,NAM,gov_net_interest_per_capita,2018,,182.8177697765609
 0,NR,gov_net_interest_per_capita,2018,,-3219.845243513882
 0,NP,gov_net_interest_per_capita,2018,,5.09919713256735
 0,NL,gov_net_interest_per_capita,2018,,452.1446710986344
@@ -20312,7 +20312,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_per_capita,2019,,76.96540044146425
 0,MZ,gov_net_interest_per_capita,2019,,16.453197285943503
 0,MM,gov_net_interest_per_capita,2019,,19.17071960393364
-0,"NAM",gov_net_interest_per_capita,2019,,187.63567236160517
+0,NAM,gov_net_interest_per_capita,2019,,187.63567236160517
 0,NR,gov_net_interest_per_capita,2019,,-2692.3076923076924
 0,NP,gov_net_interest_per_capita,2019,,5.966440960941792
 0,NL,gov_net_interest_per_capita,2019,,378.72767572919565
@@ -20498,7 +20498,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_per_capita,2020,,84.3072677571356
 0,MZ,gov_net_interest_per_capita,2020,,14.163619641330836
 0,MM,gov_net_interest_per_capita,2020,,24.484804665506005
-0,"NAM",gov_net_interest_per_capita,2020,,174.37843618102292
+0,NAM,gov_net_interest_per_capita,2020,,174.37843618102292
 0,NR,gov_net_interest_per_capita,2020,,-3153.4325889164597
 0,NP,gov_net_interest_per_capita,2020,,7.25954627977183
 0,NL,gov_net_interest_per_capita,2020,,357.1094123720048
@@ -20682,7 +20682,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_per_capita,2021,,83.076781821638
 0,MZ,gov_net_interest_per_capita,2021,,13.381127276338695
 0,MM,gov_net_interest_per_capita,2021,,25.504991644170772
-0,"NAM",gov_net_interest_per_capita,2021,,206.88770660928785
+0,NAM,gov_net_interest_per_capita,2021,,206.88770660928785
 0,NR,gov_net_interest_per_capita,2021,,-4492.307692307692
 0,NP,gov_net_interest_per_capita,2021,,9.479946877800348
 0,NL,gov_net_interest_per_capita,2021,,315.7425142890615
@@ -20867,7 +20867,7 @@ latest_year,id,indicator,year,xaxis_display,value
 1,MA,gov_net_interest_per_capita,2022,,77.72444272163959
 1,MZ,gov_net_interest_per_capita,2022,,16.88741470917819
 1,MM,gov_net_interest_per_capita,2022,,28.103954865189955
-1,"NAM",gov_net_interest_per_capita,2022,,212.0308313328153
+1,NAM,gov_net_interest_per_capita,2022,,212.0308313328153
 1,NR,gov_net_interest_per_capita,2022,,-3015.5325443786983
 1,NP,gov_net_interest_per_capita,2022,,11.900238104471844
 1,NL,gov_net_interest_per_capita,2022,,129.67573880620142
@@ -21052,7 +21052,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_revenues,2010,,0.083397499881173065
 0,MZ,gov_net_interest_perc_revenues,2010,,0.02971089399446463
 0,MM,gov_net_interest_perc_revenues,2010,,0.14358201647265928
-0,"NAM",gov_net_interest_perc_revenues,2010,,0.03960732650546089
+0,NAM,gov_net_interest_perc_revenues,2010,,0.03960732650546089
 0,NP,gov_net_interest_perc_revenues,2010,,0.04440077121540941
 0,NL,gov_net_interest_perc_revenues,2010,,0.03158870985764409
 0,NZ,gov_net_interest_perc_revenues,2010,,0.01689175782748448
@@ -21232,7 +21232,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_revenues,2011,,0.08170550899651964
 0,MZ,gov_net_interest_perc_revenues,2011,,0.03431593267102881
 0,MM,gov_net_interest_perc_revenues,2011,,0.13839752548302925
-0,"NAM",gov_net_interest_perc_revenues,2011,,0.03719943422913721
+0,NAM,gov_net_interest_perc_revenues,2011,,0.03719943422913721
 0,NR,gov_net_interest_perc_revenues,2011,,-0.0625
 0,NP,gov_net_interest_perc_revenues,2011,,0.04738474922646357
 0,NL,gov_net_interest_perc_revenues,2011,,0.03430825278373535
@@ -21416,7 +21416,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_revenues,2012,,0.08719646334846196
 0,MZ,gov_net_interest_perc_revenues,2012,,0.03532071206555524
 0,MM,gov_net_interest_perc_revenues,2012,,0.08608037937794735
-0,"NAM",gov_net_interest_perc_revenues,2012,,0.0446794796671745
+0,NAM,gov_net_interest_perc_revenues,2012,,0.0446794796671745
 0,NR,gov_net_interest_perc_revenues,2012,,-0.15094339622641512
 0,NP,gov_net_interest_perc_revenues,2012,,0.0488789907818816
 0,NL,gov_net_interest_perc_revenues,2012,,0.03247562336100607
@@ -21600,7 +21600,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_revenues,2013,,0.09268784346977468
 0,MZ,gov_net_interest_perc_revenues,2013,,0.02626278635153964
 0,MM,gov_net_interest_perc_revenues,2013,,0.06187949318892491
-0,"NAM",gov_net_interest_perc_revenues,2013,,0.04387475934745161
+0,NAM,gov_net_interest_perc_revenues,2013,,0.04387475934745161
 0,NR,gov_net_interest_perc_revenues,2013,,-0.03225806451612903
 0,NP,gov_net_interest_perc_revenues,2013,,0.03908816325303919
 0,NL,gov_net_interest_perc_revenues,2013,,0.03188986760905111
@@ -21785,7 +21785,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_revenues,2014,,0.09883669369609056
 0,MZ,gov_net_interest_perc_revenues,2014,,0.03382488697422302
 0,MM,gov_net_interest_perc_revenues,2014,,0.05560366838885731
-0,"NAM",gov_net_interest_perc_revenues,2014,,0.04131173681339433
+0,NAM,gov_net_interest_perc_revenues,2014,,0.04131173681339433
 0,NR,gov_net_interest_perc_revenues,2014,,-0.3265306122448979
 0,NP,gov_net_interest_perc_revenues,2014,,0.0279812342619609
 0,NL,gov_net_interest_perc_revenues,2014,,0.03085731692963811
@@ -21970,7 +21970,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_revenues,2015,,0.1059151824698536
 0,MZ,gov_net_interest_perc_revenues,2015,,0.04592147199344496
 0,MM,gov_net_interest_perc_revenues,2015,,0.05451978222938172
-0,"NAM",gov_net_interest_perc_revenues,2015,,0.04755082284607939
+0,NAM,gov_net_interest_perc_revenues,2015,,0.04755082284607939
 0,NR,gov_net_interest_perc_revenues,2015,,-0.11224489795918366
 0,NP,gov_net_interest_perc_revenues,2015,,0.01889467507535484
 0,NL,gov_net_interest_perc_revenues,2015,,0.0285468378834303
@@ -22155,7 +22155,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_revenues,2016,,0.10187924496854037
 0,MZ,gov_net_interest_perc_revenues,2016,,0.10262633218742535
 0,MM,gov_net_interest_perc_revenues,2016,,0.06465995467026439
-0,"NAM",gov_net_interest_perc_revenues,2016,,0.07569689984567599
+0,NAM,gov_net_interest_perc_revenues,2016,,0.07569689984567599
 0,NR,gov_net_interest_perc_revenues,2016,,-0.18354430379746833
 0,NP,gov_net_interest_perc_revenues,2016,,0.01465686367878706
 0,NL,gov_net_interest_perc_revenues,2016,,0.02587019573450531
@@ -22340,7 +22340,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_revenues,2017,,0.09589341870413916
 0,MZ,gov_net_interest_perc_revenues,2017,,0.10934986860261738
 0,MM,gov_net_interest_perc_revenues,2017,,0.07449424531448551
-0,"NAM",gov_net_interest_perc_revenues,2017,,0.0902127209973938
+0,NAM,gov_net_interest_perc_revenues,2017,,0.0902127209973938
 0,NR,gov_net_interest_perc_revenues,2017,,-0.15428571428571433
 0,NP,gov_net_interest_perc_revenues,2017,,0.01376196608381299
 0,NL,gov_net_interest_perc_revenues,2017,,0.02256959746162853
@@ -22525,7 +22525,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_revenues,2018,,0.09294805427865437
 0,MZ,gov_net_interest_perc_revenues,2018,,0.17179155974755533
 0,MM,gov_net_interest_perc_revenues,2018,,0.10091607393392164
-0,"NAM",gov_net_interest_perc_revenues,2018,,0.10331170323744183
+0,NAM,gov_net_interest_perc_revenues,2018,,0.10331170323744183
 0,NR,gov_net_interest_perc_revenues,2018,,-0.2608695652173913
 0,NP,gov_net_interest_perc_revenues,2018,,0.0195199703408195
 0,NL,gov_net_interest_perc_revenues,2018,,0.0197644498418844
@@ -22710,7 +22710,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_revenues,2019,,0.089225286990336
 0,MZ,gov_net_interest_perc_revenues,2019,,0.1081242346345846
 0,MM,gov_net_interest_perc_revenues,2019,,0.09003925816251349
-0,"NAM",gov_net_interest_perc_revenues,2019,,0.11526560528271884
+0,NAM,gov_net_interest_perc_revenues,2019,,0.11526560528271884
 0,NR,gov_net_interest_perc_revenues,2019,,-0.19918699186991873
 0,NP,gov_net_interest_perc_revenues,2019,,0.02233813028875638
 0,NL,gov_net_interest_perc_revenues,2019,,0.01666391120181975
@@ -22896,7 +22896,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_revenues,2020,,0.09251254230315573
 0,MZ,gov_net_interest_perc_revenues,2020,,0.11344766244188928
 0,MM,gov_net_interest_perc_revenues,2020,,0.0999536301222193
-0,"NAM",gov_net_interest_perc_revenues,2020,,0.12350323833084229
+0,NAM,gov_net_interest_perc_revenues,2020,,0.12350323833084229
 0,NR,gov_net_interest_perc_revenues,2020,,-0.2103448275862069
 0,NP,gov_net_interest_perc_revenues,2020,,0.02844059923863997
 0,NL,gov_net_interest_perc_revenues,2020,,0.01579618942667402
@@ -23080,7 +23080,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_net_interest_perc_revenues,2021,,0.08409965666647023
 0,MZ,gov_net_interest_perc_revenues,2021,,0.0975507299206721
 0,MM,gov_net_interest_perc_revenues,2021,,0.15970321468511148
-0,"NAM",gov_net_interest_perc_revenues,2021,,0.1391436217662801
+0,NAM,gov_net_interest_perc_revenues,2021,,0.1391436217662801
 0,NR,gov_net_interest_perc_revenues,2021,,-0.24375
 0,NP,gov_net_interest_perc_revenues,2021,,0.03271853000128359
 0,NL,gov_net_interest_perc_revenues,2021,,0.01259979567898899
@@ -23265,7 +23265,7 @@ latest_year,id,indicator,year,xaxis_display,value
 1,MA,gov_net_interest_perc_revenues,2022,,0.07960973165571764
 1,MZ,gov_net_interest_perc_revenues,2022,,0.10644541191829304
 1,MM,gov_net_interest_perc_revenues,2022,,0.2014307086346334
-1,"NAM",gov_net_interest_perc_revenues,2022,,0.14841047603360236
+1,NAM,gov_net_interest_perc_revenues,2022,,0.14841047603360236
 1,NR,gov_net_interest_perc_revenues,2022,,-0.16666666666666663
 1,NP,gov_net_interest_perc_revenues,2022,,0.03810974539069358
 1,NL,gov_net_interest_perc_revenues,2022,,0.00527633108551068
@@ -23440,7 +23440,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,edu_spending_perc_gdp,2010,2010-2012,0.06080097560667779
 0,MZ,edu_spending_perc_gdp,2010,2010-2012,0.05947135140303074
 0,MM,edu_spending_perc_gdp,2010,2010-2012,0.01155656953642384
-0,"NAM",edu_spending_perc_gdp,2010,2010-2012,0.07796303921568629
+0,NAM,edu_spending_perc_gdp,2010,2010-2012,0.07796303921568629
 0,NP,edu_spending_perc_gdp,2010,2010-2012,0.03668661799302343
 0,NL,edu_spending_perc_gdp,2010,2010-2012,0.05453624040986809
 0,NZ,edu_spending_perc_gdp,2010,2010-2012,0.07036913969360074
@@ -23610,7 +23610,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,edu_spending_perc_gdp,2014,2014-2016,0.05371770765541543
 0,MZ,edu_spending_perc_gdp,2014,2014-2016,0.06311327515130252
 0,MM,edu_spending_perc_gdp,2014,2014-2016,0.01967407933382822
-0,"NAM",edu_spending_perc_gdp,2014,2014-2016,0.0999769904343554
+0,NAM,edu_spending_perc_gdp,2014,2014-2016,0.0999769904343554
 0,NP,edu_spending_perc_gdp,2014,2014-2016,0.03418534361165808
 0,NL,edu_spending_perc_gdp,2014,2014-2016,0.05431929708603002
 0,NZ,edu_spending_perc_gdp,2014,2014-2016,0.0636000947943159
@@ -23778,7 +23778,7 @@ latest_year,id,indicator,year,xaxis_display,value
 1,MA,edu_spending_perc_gdp,2019,2019-2021,0.06042178640924874
 1,MZ,edu_spending_perc_gdp,2019,2019-2021,0.06029720015885624
 1,MM,edu_spending_perc_gdp,2019,2019-2021,0.02052369168149652
-1,"NAM",edu_spending_perc_gdp,2019,2019-2021,0.0933195585288057
+1,NAM,edu_spending_perc_gdp,2019,2019-2021,0.0933195585288057
 1,NR,edu_spending_perc_gdp,2019,2019-2021,NA
 1,NP,edu_spending_perc_gdp,2019,2019-2021,0.03739761618339123
 1,NL,edu_spending_perc_gdp,2019,2019-2021,0.05038247313687837
@@ -23958,7 +23958,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,health_spending_perc_gdp,2010,2010-2012,0.02436187791241626
 0,MZ,health_spending_perc_gdp,2010,2010-2012,0.01270780670100626
 0,MM,health_spending_perc_gdp,2010,2010-2012,0.00292969390120529
-0,"NAM",health_spending_perc_gdp,2010,2010-2012,0.03981473653416939
+0,NAM,health_spending_perc_gdp,2010,2010-2012,0.03981473653416939
 0,NR,health_spending_perc_gdp,2010,2010-2012,0.05380984290465115
 0,NP,health_spending_perc_gdp,2010,2010-2012,0.00790232875733268
 0,NL,health_spending_perc_gdp,2010,2010-2012,0.07051719886028059
@@ -24142,7 +24142,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,health_spending_perc_gdp,2014,2014-2016,0.0220132930225271
 0,MZ,health_spending_perc_gdp,2014,2014-2016,0.01767295816610385
 0,MM,health_spending_perc_gdp,2014,2014-2016,0.00998164520216086
-0,"NAM",health_spending_perc_gdp,2014,2014-2016,0.04143713367218737
+0,NAM,health_spending_perc_gdp,2014,2014-2016,0.04143713367218737
 0,NR,health_spending_perc_gdp,2014,2014-2016,0.07894038151245551
 0,NP,health_spending_perc_gdp,2014,2014-2016,0.00931684742679905
 0,NL,health_spending_perc_gdp,2014,2014-2016,0.06921444510643035
@@ -24326,7 +24326,7 @@ latest_year,id,indicator,year,xaxis_display,value
 1,MA,health_spending_perc_gdp,2019,2019-2021,0.0227834060239124
 1,MZ,health_spending_perc_gdp,2019,2019-2021,0.02070671638778793
 1,MM,health_spending_perc_gdp,2019,2019-2021,0.00771095708382252
-1,"NAM",health_spending_perc_gdp,2019,2019-2021,0.04096418480094419
+1,NAM,health_spending_perc_gdp,2019,2019-2021,0.04096418480094419
 1,NR,health_spending_perc_gdp,2019,2019-2021,0.09388536212121212
 1,NP,health_spending_perc_gdp,2019,2019-2021,0.01294658401541156
 1,NL,health_spending_perc_gdp,2019,2019-2021,0.06908750733885312
@@ -24504,7 +24504,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_investment_perc_gdp,2010,2010-2012,0.04467362592817579
 0,MZ,gov_investment_perc_gdp,2010,2010-2012,0.12292349930593743
 0,MM,gov_investment_perc_gdp,2010,2010-2012,0.09696183197384894
-0,"NAM",gov_investment_perc_gdp,2010,2010-2012,0.07486681709209558
+0,NAM,gov_investment_perc_gdp,2010,2010-2012,0.07486681709209558
 0,NP,gov_investment_perc_gdp,2010,2010-2012,0.02243787566682741
 0,NL,gov_investment_perc_gdp,2010,2010-2012,0.04115316117119397
 0,NZ,gov_investment_perc_gdp,2010,2010-2012,0.0563054379316365
@@ -24669,7 +24669,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_investment_perc_gdp,2014,2014-2016,0.05106203134654956
 0,MZ,gov_investment_perc_gdp,2014,2014-2016,0.13751553389771623
 0,MM,gov_investment_perc_gdp,2014,2014-2016,0.09095232845659151
-0,"NAM",gov_investment_perc_gdp,2014,2014-2016,0.06904599502732701
+0,NAM,gov_investment_perc_gdp,2014,2014-2016,0.06904599502732701
 0,NP,gov_investment_perc_gdp,2014,2014-2016,0.03288773678389629
 0,NL,gov_investment_perc_gdp,2014,2014-2016,0.0351639713954254
 0,NZ,gov_investment_perc_gdp,2014,2014-2016,0.0531775124904776
@@ -24835,7 +24835,7 @@ latest_year,id,indicator,year,xaxis_display,value
 1,MA,gov_investment_perc_gdp,2019,2019-2021,0.04150908167725834
 1,MZ,gov_investment_perc_gdp,2019,2019-2021,0.09557384790086552
 1,MM,gov_investment_perc_gdp,2019,2019-2021,0.087378039980195693
-1,"NAM",gov_investment_perc_gdp,2019,2019-2021,0.05233077158491662
+1,NAM,gov_investment_perc_gdp,2019,2019-2021,0.05233077158491662
 1,NR,gov_investment_perc_gdp,2019,2019-2021,NA
 1,NP,gov_investment_perc_gdp,2019,2019-2021,0.05515747757365274
 1,NL,gov_investment_perc_gdp,2019,2019-2021,0.03264885860103991
@@ -25007,7 +25007,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,edu_spending_perc_net_interest,2010,2010-2012,0.34986933900926526
 0,MZ,edu_spending_perc_net_interest,2010,2010-2012,0.13959416007984482
 0,MM,edu_spending_perc_net_interest,2010,2010-2012,1.1429894165746763
-0,"NAM",edu_spending_perc_net_interest,2010,2010-2012,0.1600074895231543
+0,NAM,edu_spending_perc_net_interest,2010,2010-2012,0.1600074895231543
 0,NP,edu_spending_perc_net_interest,2010,2010-2012,0.20078405577106215
 0,NL,edu_spending_perc_net_interest,2010,2010-2012,0.2530585690188777
 0,NZ,edu_spending_perc_net_interest,2010,2010-2012,0.1124525162435581
@@ -25177,7 +25177,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,edu_spending_perc_net_interest,2014,2014-2016,0.4685868433504361
 0,MZ,edu_spending_perc_net_interest,2014,2014-2016,0.23139376178586285
 0,MM,edu_spending_perc_net_interest,2014,2014-2016,0.6236171738729916
-0,"NAM",edu_spending_perc_net_interest,2014,2014-2016,0.18428431106988535
+0,NAM,edu_spending_perc_net_interest,2014,2014-2016,0.18428431106988535
 0,NP,edu_spending_perc_net_interest,2014,2014-2016,0.11043865204001736
 0,NL,edu_spending_perc_net_interest,2014,2014-2016,0.22437774293005913
 0,NZ,edu_spending_perc_net_interest,2014,2014-2016,0.1007435419862822
@@ -25344,7 +25344,7 @@ latest_year,id,indicator,year,xaxis_display,value
 1,MA,edu_spending_perc_net_interest,2019,2019-2021,0.3699073729351383
 1,MZ,edu_spending_perc_net_interest,2019,2019-2021,0.5009755665316252
 1,MM,edu_spending_perc_net_interest,2019,2019-2021,0.8333966972589049
-1,"NAM",edu_spending_perc_net_interest,2019,2019-2021,0.4312128177791844
+1,NAM,edu_spending_perc_net_interest,2019,2019-2021,0.4312128177791844
 1,NR,edu_spending_perc_net_interest,2019,2019-2021,NA
 1,NP,edu_spending_perc_net_interest,2019,2019-2021,0.17070543928494347
 1,NL,edu_spending_perc_net_interest,2019,2019-2021,0.1280715539450309
@@ -25525,7 +25525,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,health_spending_perc_net_interest,2010,2010-2012,0.8731838006537722
 0,MZ,health_spending_perc_net_interest,2010,2010-2012,0.6532876635007361
 0,MM,health_spending_perc_net_interest,2010,2010-2012,4.508674666185252
-0,"NAM",health_spending_perc_net_interest,2010,2010-2012,0.31331791357683125
+0,NAM,health_spending_perc_net_interest,2010,2010-2012,0.31331791357683125
 0,NR,health_spending_perc_net_interest,2010,2010-2012,-1.3283077670385894
 0,NP,health_spending_perc_net_interest,2010,2010-2012,0.932141420505667
 0,NL,health_spending_perc_net_interest,2010,2010-2012,0.19570917706381225
@@ -25708,7 +25708,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,health_spending_perc_net_interest,2014,2014-2016,1.1434641348985697
 0,MZ,health_spending_perc_net_interest,2014,2014-2016,0.8263482558282822
 0,MM,health_spending_perc_net_interest,2014,2014-2016,1.229165483667856
-0,"NAM",health_spending_perc_net_interest,2014,2014-2016,0.444629953191044
+0,NAM,health_spending_perc_net_interest,2014,2014-2016,0.444629953191044
 0,NR,health_spending_perc_net_interest,2014,2014-2016,-2.6819887436843133
 0,NP,health_spending_perc_net_interest,2014,2014-2016,0.4052211112888671
 0,NL,health_spending_perc_net_interest,2014,2014-2016,0.17609100613274192
@@ -25891,7 +25891,7 @@ latest_year,id,indicator,year,xaxis_display,value
 1,MA,health_spending_perc_net_interest,2019,2019-2021,0.9809974968288429
 1,MZ,health_spending_perc_net_interest,2019,2019-2021,1.4588225116981397
 1,MM,health_spending_perc_net_interest,2019,2019-2021,2.218191163170133
-1,"NAM",health_spending_perc_net_interest,2019,2019-2021,0.9823359108122254
+1,NAM,health_spending_perc_net_interest,2019,2019-2021,0.9823359108122254
 1,NR,health_spending_perc_net_interest,2019,2019-2021,-3.614837873547288
 1,NP,health_spending_perc_net_interest,2019,2019-2021,0.4931012297294832
 1,NL,health_spending_perc_net_interest,2019,2019-2021,0.09339693780795916
@@ -26069,7 +26069,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_investment_perc_net_interest,2010,2010-2012,0.4761735074029496
 0,MZ,gov_investment_perc_net_interest,2010,2010-2012,0.06753674760964425
 0,MM,gov_investment_perc_net_interest,2010,2010-2012,0.13622923993024702
-0,"NAM",gov_investment_perc_net_interest,2010,2010-2012,0.1666248234535172
+0,NAM,gov_investment_perc_net_interest,2010,2010-2012,0.1666248234535172
 0,NP,gov_investment_perc_net_interest,2010,2010-2012,0.32828811704545785
 0,NL,gov_investment_perc_net_interest,2010,2010-2012,0.33535365364473907
 0,NZ,gov_investment_perc_net_interest,2010,2010-2012,0.1405403654625274
@@ -26234,7 +26234,7 @@ latest_year,id,indicator,year,xaxis_display,value
 0,MA,gov_investment_perc_net_interest,2014,2014-2016,0.492957495001295
 0,MZ,gov_investment_perc_net_interest,2014,2014-2016,0.1061990434240582
 0,MM,gov_investment_perc_net_interest,2014,2014-2016,0.13489587304596182
-0,"NAM",gov_investment_perc_net_interest,2014,2014-2016,0.26683938435160187
+0,NAM,gov_investment_perc_net_interest,2014,2014-2016,0.26683938435160187
 0,NP,gov_investment_perc_net_interest,2014,2014-2016,0.11479608015608352
 0,NL,gov_investment_perc_net_interest,2014,2014-2016,0.34660593766995096
 0,NZ,gov_investment_perc_net_interest,2014,2014-2016,0.1204888781021872
@@ -26400,7 +26400,7 @@ latest_year,id,indicator,year,xaxis_display,value
 1,MA,gov_investment_perc_net_interest,2019,2019-2021,0.5384475728100349
 1,MZ,gov_investment_perc_net_interest,2019,2019-2021,0.31606370019952135
 1,MM,gov_investment_perc_net_interest,2019,2019-2021,0.19575143670876555
-1,"NAM",gov_investment_perc_net_interest,2019,2019-2021,0.7689661086272697
+1,NAM,gov_investment_perc_net_interest,2019,2019-2021,0.7689661086272697
 1,NR,gov_investment_perc_net_interest,2019,2019-2021,NA
 1,NP,gov_investment_perc_net_interest,2019,2019-2021,0.11574090730075312
 1,NL,gov_investment_perc_net_interest,2019,2019-2021,0.19763513650147216
