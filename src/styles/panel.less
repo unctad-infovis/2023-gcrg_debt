@@ -28,6 +28,7 @@
   flex: 1 1 auto;
   display: flex;
   flex-flow: column nowrap;
+  overflow: hidden;
 
   ul.nav {
     display: flex;
@@ -105,9 +106,10 @@
   .content {
     flex: 1 1 auto;
     position: relative;
-    overflow-y: scroll;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
 
     .axis-line {
       stroke-dasharray: 2, 2;
@@ -187,6 +189,7 @@
           background-color: none;
           border: 0.5px solid @ungrey;
           opacity: 0.3;
+          margin: 8px 0px;
         }
 
         button {

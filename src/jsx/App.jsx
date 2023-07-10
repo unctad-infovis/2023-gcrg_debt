@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useLayoutEffect } from 'react';
 import '../styles/styles.less';
 
 // Load context
@@ -18,18 +18,30 @@ import Filter from './filters/Filter.jsx';
 function App() {
   const { smScreen } = viewPort();
 
+  // get Visual Height
+  const visualsRef = useRef(null);
+  const [visualsHeight, setVisualsHeight] = useState(0);
+  useLayoutEffect(() => {
+    setVisualsHeight(visualsRef.current.offsetHeight);
+  }, []);
+
   return (
     <div className="app">
       <StaticDataContextProvider>
         <FocusContextProvider>
           <Filter />
-          <div className="visuals">
+          <div className="visuals" ref={visualsRef}>
             <MetricContextProvider>
               <PanelContextProvider>
                 <RadialDataContextProvider>
                   {smScreen ? <Dotplot /> : <Radial />}
                 </RadialDataContextProvider>
-                <Panel />
+                <div
+                  className="panel-wrapper"
+                  style={{ height: visualsHeight }}
+                >
+                  <Panel />
+                </div>
               </PanelContextProvider>
             </MetricContextProvider>
           </div>

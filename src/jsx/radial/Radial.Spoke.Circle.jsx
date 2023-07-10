@@ -39,7 +39,7 @@ function Circle({ data, settings, setTooltip }) {
             cx={scale(circle.value)}
             cy="0"
             r={
-              circle.value === null ? 0 : circle.focus_type === 'focus' ? 9 : 6
+              circle.value === null ? 0 : circle.focus_type === 'focus' ? 7 : 5
             }
             fillOpacity={0.65}
             className={`radial_circle ${circle.focus_type}_circle`}

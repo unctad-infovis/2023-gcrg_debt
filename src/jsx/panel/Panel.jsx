@@ -51,74 +51,65 @@ function Panel() {
 
   const [interactionData, setInteractionData] = useState(null);
 
-  return (
-    <div className="panel-wrapper">
-      {(showPanel && hidePanelWidth) || !hidePanelWidth ? (
-        <div className="panel">
-          <div className="name">
-            {metricInfo && metricInfo.indicator_full}
-            {hidePanelWidth ? <Button /> : ''}
-          </div>
-          <div className="tabs">
-            <ul className="nav">
-              <Tab
-                id="country"
-                display="By country"
-                activeTab={activeTab}
-                setTab={setActiveTab}
-              />
-              <Tab
-                id="trend"
-                display="Trend over time"
-                activeTab={activeTab}
-                setTab={setActiveTab}
-              />
+  return (showPanel && hidePanelWidth) || !hidePanelWidth ? (
+    <div className="panel">
+      <div className="name">
+        {metricInfo && metricInfo.indicator_full}
+        {hidePanelWidth ? <Button /> : ''}
+      </div>
+      <div className="tabs">
+        <ul className="nav">
+          <Tab
+            id="country"
+            display="By country"
+            activeTab={activeTab}
+            setTab={setActiveTab}
+          />
+          <Tab
+            id="trend"
+            display="Trend over time"
+            activeTab={activeTab}
+            setTab={setActiveTab}
+          />
 
-              <Tab
-                id="about"
-                display="About"
-                activeTab={activeTab}
-                setTab={setActiveTab}
-              />
-            </ul>
-            <div className="legend">
-              {activeTab === 'country' && <Legend />}
-            </div>
-            <div className="content" ref={ref}>
-              <div
-                className="swarm-wrapper"
-                style={{ figureWidth, figureHeight }}
-              >
-                <Tooltip
-                  data={interactionData}
-                  offset={offset}
-                  width={figureWidth}
-                />
-              </div>
-              <SwarmDataContextProvider>
-                {activeTab === 'country' ? (
-                  <Swarm
-                    width={figureWidth}
-                    figureHeight={figureHeight}
-                    setInteractionData={setInteractionData}
-                  />
-                ) : activeTab === 'trend' ? (
-                  <Line
-                    width={figureWidth}
-                    height={figureHeight}
-                    setInteractionData={setInteractionData}
-                  />
-                ) : (
-                  <About />
-                )}
-              </SwarmDataContextProvider>
-            </div>
+          <Tab
+            id="about"
+            display="About"
+            activeTab={activeTab}
+            setTab={setActiveTab}
+          />
+        </ul>
+        <div className="legend">{activeTab === 'country' && <Legend />}</div>
+        <div className="content" ref={ref}>
+          <div className="swarm-wrapper" style={{ figureWidth, figureHeight }}>
+            <Tooltip
+              data={interactionData}
+              offset={offset}
+              width={figureWidth}
+            />
           </div>
+          <SwarmDataContextProvider>
+            {activeTab === 'country' ? (
+              <Swarm
+                width={figureWidth}
+                figureHeight={figureHeight}
+                setInteractionData={setInteractionData}
+              />
+            ) : activeTab === 'trend' ? (
+              <Line
+                width={figureWidth}
+                height={figureHeight}
+                setInteractionData={setInteractionData}
+              />
+            ) : (
+              <About />
+            )}
+          </SwarmDataContextProvider>
         </div>
-      ) : (
-        ''
-      )}
+      </div>
     </div>
+  ) : (
+    ''
   );
 }
 

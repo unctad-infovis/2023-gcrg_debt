@@ -38,10 +38,8 @@ function Radial() {
     () => ({
       figureWidth,
       figureHeight,
-      line_length:
-        (figureWidth > figureHeight ? figureHeight : figureWidth) * 0.23,
-      inner_radius:
-        (figureWidth > figureHeight ? figureHeight : figureWidth) * 0.15,
+      line_length: figureHeight * 0.305,
+      inner_radius: figureHeight * 0.08,
       section_gap: 0.75,
     }),
     [figureWidth, figureHeight]
@@ -51,8 +49,8 @@ function Radial() {
 
   return (
     <div className="radial" ref={ref}>
-      <svg width={figureWidth} height={figureHeight}>
-        <g transform={`translate(${figureWidth / 2}, ${figureHeight / 2})`}>
+      <svg width={figureHeight} height={figureHeight}>
+        <g transform={`translate(${figureHeight / 2}, ${figureHeight / 2})`}>
           <Pie settings={settings} />
           {circleData
             && circleData.map((data, index) => (

@@ -55,7 +55,7 @@ export function SwarmDataContextProvider({ children }) {
 
           return {
             ...d,
-            r: d.id === id.id ? 9 : swarmRadius,
+            r: d.id === id.id ? 5 : swarmRadius,
 
             class:
               d.id === id.id || focus

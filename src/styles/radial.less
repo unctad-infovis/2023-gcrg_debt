@@ -43,8 +43,8 @@
   font-weight: bold;
   pointer-events: none;
   text-anchor: middle;
-  font-size: 16px;
-  fill: hsl(205, 100%, 20%);
+  font-size: 14px;
+  fill: #000;
 }
 
 .slice {
@@ -76,13 +76,15 @@
 
 .center {
   position: absolute;
-  border: 1px solid #ebeae6;
-  border-radius: 50%;
+  // border: 1px solid #ebeae6;
+  // border-radius: 50%;
   display: flex;
   flex-flow: column nowrap;
   align-content: center;
   justify-content: center;
   overflow: hidden;
+  bottom: 0;
+  left: 0;
 
   .content {
     display: flex;
@@ -190,6 +192,7 @@
     background-color: none;
     border: 0.5px solid @ungrey;
     opacity: 0.3;
+    margin: 8px 0px;
   }
 
   button {

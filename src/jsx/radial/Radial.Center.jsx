@@ -5,12 +5,9 @@ import { FocusContext } from '../context/Focus.js';
 function Center({ radius }) {
   const { id, comparisons } = useContext(FocusContext);
   return (
-    <div
-      className="center"
-      style={{ width: 0.9 * radius * 2, height: 0.9 * radius * 2 }}
-    >
+    <div className="center" style={{ width: 1.5 * radius * 2 }}>
       {' '}
-      <div className="content" style={{ padding: radius * 0.15 }}>
+      <div className="content">
         <div className="focus">
           <span className="focus_legend dot" />
           {id.id_display}
