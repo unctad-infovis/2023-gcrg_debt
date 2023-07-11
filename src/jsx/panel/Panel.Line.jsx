@@ -35,7 +35,7 @@ function Line({ setInteractionData }) {
   const labels = [...new Set(lineData.map((d) => d.xaxis_display))];
 
   const scale = scaleLinear()
-    .domain([+metricInfo.max_label, +metricInfo.min])
+    .domain([+metricInfo.max_overall_label, +metricInfo.min_overall])
     .range([-figureHeight / 2.2, figureHeight / 2.25])
     .clamp(true);
 
