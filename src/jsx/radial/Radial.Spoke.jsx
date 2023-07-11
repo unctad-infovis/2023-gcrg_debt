@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 // components
 // import Labels from './Radial.Spoke.Label.jsx';
@@ -39,4 +39,4 @@ Spoke.propTypes = {
   setTooltip: PropTypes.func.isRequired,
 };
 
-export default Spoke;
+export default memo(Spoke);

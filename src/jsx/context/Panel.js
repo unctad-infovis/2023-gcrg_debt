@@ -1,20 +1,10 @@
-import React, {
-  createContext, useState, useEffect, useMemo
-} from 'react';
+import React, { createContext, useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
 
 export const PanelContext = createContext({});
 
 export function PanelContextProvider({ children }) {
-  const [showPanel, setShowPanel] = useState([]);
-
-  useEffect(() => {
-    setShowPanel(false);
-  }, []);
-
-  const setShowPanelValue = (newValue) => {
-    setShowPanel(newValue);
-  };
+  const [showPanel, setShowPanelValue] = useState(false);
 
   const context = useMemo(
     () => ({

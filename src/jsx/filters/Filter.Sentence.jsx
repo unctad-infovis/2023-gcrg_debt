@@ -1,4 +1,6 @@
-import React, { useContext, useState, useRef } from 'react';
+import React, {
+  useContext, useState, useRef, memo
+} from 'react';
 
 // Load helpers.
 import { StaticDataContext } from '../context/StaticData.js';
@@ -52,15 +54,10 @@ function Sentence() {
     setMenuOpen(false);
   });
 
-  // const onClickOutside = () => {
-  //   setCompOpen(false);
-  //   setMenuOpen(false);
-  // };
-
   return (
     <div className="sentence">
       {pre_text}
-      &nbsp;
+
       <div className="focus-wrapper" ref={focusRef}>
         <div
           className="focus clickable"
@@ -74,9 +71,9 @@ function Sentence() {
 
         {menuOpen && <FocusMenu setMenuOpen={setMenuOpen} />}
       </div>
-      &nbsp;
+
       {middle_text}
-      &nbsp;
+
       <div className="comparisons-wrapper" ref={compRef}>
         <div
           className="comparisons clickable"
@@ -90,10 +87,9 @@ function Sentence() {
 
         {compOpen && <ComparisonsMenu setCompOpen={setCompOpen} />}
       </div>
-      &nbsp;
       {end_text}
     </div>
   );
 }
 
-export default Sentence;
+export default memo(Sentence);

@@ -2,13 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import formatNum from '../helpers/FormatNum.js';
 
-function Tooltip({ data, offset, width }) {
+function Tooltip({
+  data, offset, width, scroll
+}) {
   if (!data) {
     return null;
   }
 
   const x = data.xPos - offset.left;
-  const y = data.yPos - offset.top;
+  const y = data.yPos - offset.top + 4 + window.scrollY - scroll;
   const newY = y + 30;
   const newX = x > width / 2.4 ? width / 3.3 : x;
 
@@ -76,6 +78,7 @@ Tooltip.propTypes = {
     top: PropTypes.number,
   }),
   width: PropTypes.number.isRequired,
+  scroll: PropTypes.number,
 };
 
 Tooltip.defaultProps = {
@@ -90,5 +93,6 @@ Tooltip.defaultProps = {
     top: 0,
     left: 0,
   },
+  scroll: 0,
 };
 export default Tooltip;

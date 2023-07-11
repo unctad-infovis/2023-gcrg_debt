@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, memo } from 'react';
 import PropTypes from 'prop-types';
 
 // Load helpers.
@@ -106,4 +106,4 @@ FocusMenu.propTypes = {
   setMenuOpen: PropTypes.func.isRequired,
 };
 
-export default FocusMenu;
+export default memo(FocusMenu);

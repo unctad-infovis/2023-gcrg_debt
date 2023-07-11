@@ -8,7 +8,6 @@
 
   .number {
     font-size: 14px;
-    fill: @unblue;
     @media (max-width: 1050px) {
       font-size: 12px;
     }
@@ -74,89 +73,6 @@
   }
 }
 
-.center {
-  position: absolute;
-  // border: 1px solid #ebeae6;
-  // border-radius: 50%;
-  display: flex;
-  flex-flow: column nowrap;
-  align-content: center;
-  justify-content: center;
-  overflow: hidden;
-  bottom: 0;
-  left: 0;
-
-  .content {
-    display: flex;
-    display: flex;
-    flex-flow: column nowrap;
-    align-content: center;
-    justify-content: center;
-    gap: 8px;
-    justify-content: center;
-    align-items: flex-start;
-
-    @media (max-width: 1100px) {
-      padding: 12px;
-    }
-
-    .focus {
-      font-weight: bold;
-      font-size: 16px;
-      display: flex;
-      gap: 4px;
-      align-items: center;
-      // margin-left: 16px;
-
-      .dot {
-        height: 12px;
-        width: 12px;
-        min-height: 12px;
-        min-width: 12px;
-        border-radius: 50%;
-        display: inline-block;
-      }
-    }
-
-    .comparison1 {
-      font-size: 14px;
-      display: flex;
-      gap: 4px;
-      align-items: center;
-      line-height: 140%;
-      // margin-left: 16px;
-    }
-    .comparison2 {
-      font-size: 14px;
-      display: flex;
-      gap: 4px;
-      align-items: center;
-      line-height: 140%;
-      // margin-left: 16px;
-    }
-
-    .comparison2::before {
-      content: "";
-      display: inline-block;
-      width: 3px;
-      height: 3px;
-      background-color: @undarkgray;
-      position: absolute;
-      margin-left: 4.5px;
-      border-radius: 50%;
-    }
-
-    .dot {
-      height: 8px;
-      width: 8px;
-      min-height: 8px;
-      min-width: 8px;
-      border-radius: 50%;
-      display: inline-block;
-    }
-  }
-}
-
 .tooltip-viz {
   position: absolute;
   background-color: white;
@@ -214,4 +130,76 @@
 }
 .radial_circle:hover {
   stroke: black;
+}
+
+.center {
+  position: absolute;
+  border: 1px solid #ebeae6;
+  border-radius: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  justify-content: center;
+  overflow: hidden;
+
+  .content {
+    display: flex;
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    justify-content: center;
+    gap: 6px;
+    justify-content: center;
+    align-items: flex-start;
+
+    @media (max-width: 1100px) {
+      padding: 12px;
+    }
+
+    .focus {
+      font-weight: bold;
+      font-size: 14px;
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      // margin-left: 16px;
+    }
+
+    .comparison1 {
+      font-size: 14px;
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      line-height: 140%;
+      // margin-left: 16px;
+    }
+    .comparison2 {
+      font-size: 14px;
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      line-height: 140%;
+      // margin-left: 16px;
+    }
+
+    .comparison2::before {
+      content: "";
+      display: inline-block;
+      width: 3px;
+      height: 3px;
+      background-color: @undarkgray;
+      position: absolute;
+      margin-left: 4.5px;
+      border-radius: 50%;
+    }
+
+    .dot {
+      height: 8px;
+      width: 8px;
+      min-height: 8px;
+      min-width: 8px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+  }
 }

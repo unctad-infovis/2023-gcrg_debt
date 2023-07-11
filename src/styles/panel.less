@@ -101,14 +101,25 @@
       width: 12px;
       display: inline-block;
     }
+
+    .comparison2::before {
+      content: "";
+      display: inline-block;
+      width: 3.5px;
+      height: 3.5px;
+      background-color: @undarkgray;
+      position: absolute;
+      margin-left: 20px;
+      border-radius: 50%;
+    }
   }
 
   .content {
     flex: 1 1 auto;
     position: relative;
     display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
+    align-items: stretch;
+    overflow-y: auto;
     overflow-x: hidden;
 
     .axis-line {
@@ -219,21 +230,44 @@
       stroke-width: 2px;
       cursor: pointer;
     }
-  }
 
-  .about {
-    // padding: 24px;
-    margin-top: 1rem;
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 24px;
-    line-height: 28px;
+    .swarm {
+      width: 100%;
+      height: 100%;
+      display: block;
 
-    b {
-      text-transform: uppercase;
-      color: @ungray;
-      font-weight: normal;
-      letter-spacing: 0.05em;
+      svg {
+        display: block;
+      }
+    }
+    .line {
+      width: 100%;
+      height: 100%;
+      display: block;
+      svg {
+        display: block;
+      }
+    }
+
+    .about {
+      width: 100%;
+      height: 100%;
+      display: block;
+
+      .about-content {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 24px;
+        line-height: 28px;
+        overflow-y: scroll;
+
+        b {
+          text-transform: uppercase;
+          color: @ungray;
+          font-weight: normal;
+          letter-spacing: 0.05em;
+        }
+      }
     }
   }
 }

@@ -1,8 +1,11 @@
-import React, { useContext } from 'react';
+import React, {
+  useContext, useRef, useState, useLayoutEffect
+} from 'react';
 
 // context
 import Data from '../context/StaticData.js';
 import Metric_Context from '../context/Metric.js';
+import viewPort from '../helpers/viewPort';
 
 function About() {
   const { aboutData } = useContext(Data);
@@ -11,21 +14,35 @@ function About() {
 
   const p = text.text.replaceAll('<p>', '').split('</p>');
 
-  return (
-    <div className="about">
-      <div className="desc">
-        {p.map((paragraph) => (
-          <p>
-            {' '}
-            {paragraph}
-            {' '}
-          </p>
-        ))}
-      </div>
+  const ref = useRef(null);
+  const [figureWidth, setWidth] = useState(0);
+  const [figureHeight, setHeight] = useState(0);
 
-      <div className="source">
-        <b>Source</b>
-        <p>{text.source}</p>
+  const { width, height } = viewPort();
+
+  useLayoutEffect(() => {
+    setWidth(ref.current.offsetWidth);
+    setHeight(ref.current.offsetHeight);
+  }, [width, height]);
+
+  console.log(figureHeight, figureWidth, p);
+
+  return (
+    <div className="about" ref={ref}>
+      <div
+        className="about-content"
+        style={{ width: figureWidth, height: figureHeight }}
+      >
+        <div className="desc">
+          {p.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
+
+        <div className="source">
+          <b>Source</b>
+          <p>{text.source}</p>
+        </div>
       </div>
     </div>
   );

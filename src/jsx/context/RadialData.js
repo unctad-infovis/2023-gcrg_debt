@@ -21,8 +21,10 @@ export function RadialDataContextProvider({ children }) {
     () => groups(
       latestData
         .filter(
-          (d) => (d.id && d.id === id.id)
-              || (comparisons && comparisons.find((c) => c.id === d.id))
+          (d) => (d.id && id.id && d.id === id.id)
+              || (d.id
+                && comparisons
+                && comparisons.find((c) => c && c.id === d.id))
         )
         .map((d) => ({
           ...d,

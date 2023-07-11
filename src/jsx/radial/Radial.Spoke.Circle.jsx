@@ -17,8 +17,8 @@ function Circle({ data, settings, setTooltip }) {
 
   const onHover = (event, id, value, type, id_display) => {
     setTooltip({
-      xPos: event.pageX,
-      yPos: event.pageY,
+      xPos: event.clientX,
+      yPos: event.clientY,
       id,
       value,
       type,

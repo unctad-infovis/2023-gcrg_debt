@@ -67,7 +67,7 @@ function Pie({ settings }) {
     (d, i) => slice_entries[i].id !== 'filler'
   );
 
-  const slices = pieData(slice_data, settings, 0.18, 1.18, 0).map((d, i) => ({
+  const slices = pieData(slice_data, settings, 0.31, 1.18, 0).map((d, i) => ({
     d,
     indicator_key: indicatorData[i].indicator_key,
   }));

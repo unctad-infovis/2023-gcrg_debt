@@ -4,7 +4,7 @@ function getWindowDimensions() {
   return {
     width: window.innerWidth,
     height: window.innerHeight,
-    hidePanelWidth: window.innerWidth <= 1100,
+    hidePanelWidth: window.innerWidth <= 1024,
     smScreen: window.innerWidth <= 800,
     mobile: window.innerWidth <= 400,
   };
