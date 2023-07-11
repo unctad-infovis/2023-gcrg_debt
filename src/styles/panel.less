@@ -1,6 +1,6 @@
 .name {
   flex: 0 1 auto;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 28px;
   margin-bottom: 0.25rem;
   min-height: 56px;
@@ -38,6 +38,10 @@
     margin: 0;
     flex: 0 1 auto;
     padding: 0;
+
+    @media (max-width: 1100px) {
+      align-items: baseline;
+    }
   }
 
   ul.nav li {
@@ -53,11 +57,12 @@
 
     @media (max-width: 1200px) {
       padding: 1rem 0.5rem;
-      font-size: 14px;
+      font-size: 0.875rem;
     }
 
     @media (max-width: 1100px) {
       margin-right: 1.5rem;
+      height: 36px;
     }
     @media (max-width: 500px) {
       margin-right: 0.25rem;
@@ -76,7 +81,7 @@
   .legend {
     flex: 0 1 auto;
     margin-top: 12px;
-    font-size: 14px;
+    font-size: 0.875rem;
     display: flex;
     flex-wrap: wrap;
     line-height: 150%;
@@ -133,21 +138,21 @@
     .axis-label {
       fill: @ungray;
       text-anchor: end;
-      font-size: 14px;
+      font-size: 0.875rem;
     }
 
     .xaxis-label {
       fill: @ungray;
       text-anchor: middle;
-      font-size: 14px;
+      font-size: 0.875rem;
 
       @media (max-width: 1200px) and (min-width: 1100px) {
-        font-size: 12px;
+        font-size: 0.75rem;
       }
     }
 
     .reference_label {
-      font-size: 12px;
+      font-size: 0.75rem;
       text-anchor: start;
       fill: @ungray;
       text-transform: capitalize;
@@ -164,13 +169,17 @@
       .tooltip-viz {
         position: absolute;
         background-color: white;
-        font-size: 14px;
+        font-size: 0.875rem;
         padding: 8px 12px;
         border: 1px solid hsla(24, 11%, 64%, 0.3);
         border-radius: 12px;
         z-index: 100;
         filter: drop-shadow(0 0 0.75rem #ededed);
         width: 210px;
+
+        @media (max-width: 1100px) {
+          width: 160px;
+        }
 
         p {
           margin: 0;
@@ -193,7 +202,7 @@
           margin: 0;
           color: #000;
           font-weight: bold;
-          font-size: 16px;
+          font-size: 1rem;
         }
 
         hr {
@@ -211,7 +220,7 @@
           color: @ungray;
           display: flex;
           flex-wrap: wrap;
-          font-size: 12px;
+          font-size: 0.75rem;
           margin: 0;
           padding: 0;
           font-style: italic;
@@ -259,7 +268,7 @@
         flex-flow: column nowrap;
         gap: 24px;
         line-height: 28px;
-        overflow-y: scroll;
+        overflow-y: auto;
 
         b {
           text-transform: uppercase;

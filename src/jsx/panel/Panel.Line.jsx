@@ -67,9 +67,13 @@ function Line({ setInteractionData }) {
   );
 
   const pathMouseEnter = (event, data) => {
+    console.log(event.clientY, figureHeight);
     setInteractionData({
       xPos: event.clientX,
-      yPos: event.clientY,
+      yPos:
+        event.clientY - 120 > figureHeight / 1.5
+          ? event.clientY - 120
+          : event.clientY,
       info: data.values[0],
       type: 'line',
     });
@@ -114,9 +118,10 @@ function Line({ setInteractionData }) {
                   onMouseEnter={() => setInteractionData({
                     xPos: xScale(circle.year) < 0 ? 0 : xScale(circle.year),
                     yPos:
-                        scale(circle.value) + height / 1.9 > height / 2
-                          ? scale(circle.value) + height / 4
-                          : scale(circle.value) + height / 1.9,
+                        scale(circle.value) + figureHeight / 1.9
+                        > figureHeight / 2
+                          ? scale(circle.value) + figureHeight / 4
+                          : scale(circle.value) + figureHeight / 1.9,
                     info: circle,
                   })}
                   onMouseLeave={() => setInteractionData(null)}
