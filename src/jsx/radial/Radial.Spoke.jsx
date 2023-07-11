@@ -19,22 +19,19 @@ function Spoke({ i, total, settings, data, setTooltip }) {
     return end;
   };
 
+  // right side: -1.5 > 1.5 > 4.5
+  // leftside: -3 > 0 > 3
   let center = 0;
   if (i === 0 || i === 3 || i === 6) {
     center = -1.5;
   } else if (i === 9 || i === 12 || i === 15) {
-    center = -1.5;
-  } else if (
-    i === 1 ||
-    i === 4 ||
-    i === 7 ||
-    i === 10 ||
-    i === 13 ||
-    i === 16
-  ) {
+    center = -3;
+  } else if (i === 1 || i === 4 || i === 7) {
     center = 1.5;
   } else if (i === 11 || i === 14 || i === 17) {
     center = 3;
+  } else if (i === 10 || i === 13 || i === 16) {
+    center = 0;
   } else {
     center = 4.5;
   }
