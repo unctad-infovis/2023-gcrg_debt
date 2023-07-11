@@ -54,8 +54,8 @@ function Radial() {
     () => ({
       figureWidth,
       figureHeight,
-      line_length: size * 0.255,
-      inner_radius: size * 0.13,
+      line_length: size * 0.245,
+      inner_radius: size * 0.14,
       section_gap: 0.75,
     }),
     [figureWidth, figureHeight, size]

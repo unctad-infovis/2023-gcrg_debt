@@ -89,6 +89,7 @@ function Line({ setInteractionData }) {
             info={metricInfo}
             yearData={yearsWithData}
             yearLabel={yearsLabel}
+            width={figureWidth}
           />
           <YAxis scale={scale} width={figureWidth} info={metricInfo} />
           {countries

@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Axis({ scale, height, yearLabel }) {
-  const num = yearLabel[0].label.includes('-') ? null : 4;
+function Axis({
+  scale, height, yearLabel, width
+}) {
+  const num = yearLabel[0].label.includes('-') ? null : width < 1150 ? 2 : 4;
   const axisTicks = scale.ticks(num).map((tick) => {
     const label = yearLabel.find((d) => +d.year === +tick);
     return {
@@ -28,6 +30,7 @@ function Axis({ scale, height, yearLabel }) {
 Axis.propTypes = {
   scale: PropTypes.func.isRequired,
   height: PropTypes.number.isRequired,
+  width: PropTypes.number.isRequired,
   info: PropTypes.shape({}),
   yearData: PropTypes.arrayOf(PropTypes.string),
   yearLabel: PropTypes.arrayOf(PropTypes.shape({})),
