@@ -2,7 +2,6 @@ import React, {
   createContext, useState, useEffect, useMemo
 } from 'react';
 import PropTypes from 'prop-types';
-import { ascending } from 'd3';
 import CSVtoJSON from '../helpers/CSVtoJSON.js';
 
 export const StaticDataContext = createContext({});
@@ -51,15 +50,8 @@ export function StaticDataContextProvider({ children }) {
               ? idData.find((i) => i.id === d.id).id_display
               : d.id
             : d.id,
-          id_number: indicatorData
-            ? indicatorData.find((i) => i.indicator === d.indicator)
-              ? indicatorData.find((i) => i.indicator === d.indicator).number
-              : null
-            : null,
-        }))
-        .sort((a, b) => ascending(+a.id_number, +b.id_number)),
-
-    [valuesData, idData, indicatorData]
+        })),
+    [valuesData, idData]
   );
 
   const context = useMemo(

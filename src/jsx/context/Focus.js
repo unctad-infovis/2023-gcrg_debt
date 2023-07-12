@@ -71,6 +71,8 @@ export function FocusContextProvider({ children }) {
     [idData, comparisons]
   );
 
+  console.log(comparisonLists);
+
   const focusList = useMemo(
     () => (idData && id
       ? idData.filter((d) => d[id.type] === id.id || +d[id.type] === 1)
