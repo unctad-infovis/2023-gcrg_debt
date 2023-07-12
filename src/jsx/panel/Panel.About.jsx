@@ -25,8 +25,6 @@ function About() {
     setHeight(ref.current.offsetHeight);
   }, [width, height]);
 
-  console.log(figureHeight, figureWidth, p);
-
   return (
     <div className="about" ref={ref}>
       <div

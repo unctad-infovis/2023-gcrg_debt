@@ -67,7 +67,6 @@ function Line({ setInteractionData }) {
   );
 
   const pathMouseEnter = (event, data) => {
-    console.log(event.clientY, figureHeight);
     setInteractionData({
       xPos: event.clientX,
       yPos:

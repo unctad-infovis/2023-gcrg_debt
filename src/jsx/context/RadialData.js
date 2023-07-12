@@ -47,9 +47,7 @@ export function RadialDataContextProvider({ children }) {
     const groupedData = groups(mappedData, (d) => d.indicator).map((d) => ({
       indicator_key: d[0],
       indicator_info: indicatorData.find((i) => i.indicator_key === d[0]),
-      circles: d[1]
-        .sort((a, b) => descending(+a.sorto, +b.sorto))
-        .sort((a, b) => ascending(+a.sorto, +b.sorto)),
+      circles: d[1].sort((a, b) => descending(+a.sorto, +b.sorto)),
     }));
     return groupedData.sort((a, b) => ascending(+a.indicator_info.number, +b.indicator_info.number));
   }, [id, comparisons, latestData, indicatorData, idData]);
