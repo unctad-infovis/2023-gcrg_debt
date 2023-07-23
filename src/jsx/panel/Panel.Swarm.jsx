@@ -83,6 +83,7 @@ function Swarm({ setInteractionData }) {
                 cx={circle.x}
                 cy={circle.y}
                 r={circle.r}
+                fillOpacity={0.65}
                 className={circle.class}
                 onClick={() => setId({
                   type: circle.id_info.type,

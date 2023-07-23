@@ -70,7 +70,7 @@ function Pie({ settings }) {
   const slices = pieData(
     slice_data,
     settings,
-    settings.center ? 0.328 : 0.05,
+    settings.center ? 0.328 : 0.07,
     1.18,
     0
   ).map((d, i) => ({

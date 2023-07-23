@@ -10,6 +10,7 @@ import { MetricContextProvider } from './context/Metric';
 import { PanelContextProvider } from './context/Panel';
 import viewPort from './helpers/viewPort';
 import Center from './radial/Radial.Center.jsx';
+import Download from './Download.jsx';
 
 // Load components
 import Radial from './radial/Radial.jsx';
@@ -22,27 +23,30 @@ function App() {
 
   return (
     <div className="app">
-      {smScreen ? (
-        'Please view on a larger screen'
-      ) : (
-        <StaticDataContextProvider>
-          <FocusContextProvider>
-            <Filter />
-            {height <= 900 && <Center />}
-            <div className="visuals">
-              {' '}
-              <MetricContextProvider>
-                <PanelContextProvider>
-                  <RadialDataContextProvider>
-                    <Radial />
-                  </RadialDataContextProvider>
-                  <Panel />
-                </PanelContextProvider>
-              </MetricContextProvider>
-            </div>
-          </FocusContextProvider>
-        </StaticDataContextProvider>
-      )}
+      <div className="dashboard" id="app-root-2023-gcrg_debt-download">
+        {smScreen ? (
+          'Please view on a larger screen'
+        ) : (
+          <StaticDataContextProvider>
+            <FocusContextProvider>
+              <Filter />
+              {height <= 900 && <Center />}
+              <div className="visuals">
+                {' '}
+                <MetricContextProvider>
+                  <PanelContextProvider>
+                    <RadialDataContextProvider>
+                      <Radial />
+                    </RadialDataContextProvider>
+                    <Panel />
+                  </PanelContextProvider>
+                </MetricContextProvider>
+              </div>
+            </FocusContextProvider>
+          </StaticDataContextProvider>
+        )}
+      </div>
+      <Download />
       <noscript>Your browser does not support JavaScript!</noscript>
     </div>
   );
