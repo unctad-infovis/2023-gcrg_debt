@@ -40,10 +40,12 @@ function Spoke({
   const angle = (gaps(i) / total_gaps) * 360 - 90 + rotate / total + center;
 
   return (
-    <g transform={`rotate(${angle})`}>
-      <Axis settings={settings} angle={angle} data={data} />
-      <Circle settings={settings} data={data} setTooltip={setTooltip} />
-    </g>
+    data && (
+      <g transform={`rotate(${angle})`}>
+        <Axis settings={settings} angle={angle} data={data} />
+        <Circle settings={settings} data={data} setTooltip={setTooltip} />
+      </g>
+    )
   );
 }
 

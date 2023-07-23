@@ -98,24 +98,23 @@
       min-height: 8px;
       min-width: 8px;
       border-radius: 50%;
-      display: inline-block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .dot_center {
+        width: 4px;
+        height: 4px;
+        background-color: @undarkgray;
+
+        border-radius: 50%;
+      }
     }
 
     .line {
       height: 2px;
       width: 12px;
       display: inline-block;
-    }
-
-    .comparison2::before {
-      content: "";
-      display: inline-block;
-      width: 3.5px;
-      height: 3.5px;
-      background-color: @undarkgray;
-      position: absolute;
-      margin-left: 20px;
-      border-radius: 50%;
     }
   }
 

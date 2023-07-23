@@ -9,7 +9,7 @@ import { RadialDataContextProvider } from './context/RadialData.js';
 import { MetricContextProvider } from './context/Metric';
 import { PanelContextProvider } from './context/Panel';
 import viewPort from './helpers/viewPort';
-// import Center from './radial/Radial.Center.jsx';
+import Center from './radial/Radial.Center.jsx';
 
 // Load components
 import Radial from './radial/Radial.jsx';
@@ -18,7 +18,7 @@ import Panel from './panel/Panel.jsx';
 import Filter from './filters/Filter.jsx';
 
 function App() {
-  const { smScreen } = viewPort();
+  const { smScreen, height } = viewPort();
 
   return (
     <div className="app">
@@ -28,7 +28,7 @@ function App() {
         <StaticDataContextProvider>
           <FocusContextProvider>
             <Filter />
-            {/* <Center /> */}
+            {height <= 900 && <Center />}
             <div className="visuals">
               {' '}
               <MetricContextProvider>

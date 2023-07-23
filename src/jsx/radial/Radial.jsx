@@ -44,6 +44,7 @@ function Radial() {
   }, [width, mobile, height]);
 
   const panel = (width > 1280 ? 450 : width > 1150 ? 400 : 300) * 1.15;
+  const center = height > 900;
   const size = hidePanelWidth
     ? figureHeight
     : width < hidePanelWidth || width - panel > figureHeight
@@ -54,36 +55,39 @@ function Radial() {
     () => ({
       figureWidth,
       figureHeight,
-      line_length: size * 0.245,
-      inner_radius: size * 0.14,
+      line_length: center ? size * 0.245 : size * 0.33,
+      inner_radius: center ? size * 0.14 : size * 0.05,
       section_gap: 0.75,
+      center,
     }),
-    [figureWidth, figureHeight, size]
+    [figureWidth, figureHeight, size, center]
   );
 
   const [hovered, setHovered] = useState(null);
 
   return (
-    <div className="radial" ref={ref}>
-      <svg width={size} height="100%">
-        <g transform={`translate(${size / 2}, ${figureHeight / 2})`}>
-          <Pie settings={settings} />
-          {circleData
-            && circleData.map((data, index) => (
-              <Spoke
-                key={data.indicator_key}
-                data={data}
-                i={index}
-                total={circleData.length}
-                settings={settings}
-                setTooltip={setHovered}
-              />
-            ))}
-        </g>
-      </svg>
-      <Center radius={settings.inner_radius} />
-      <Tooltip data={hovered} offset={offset} scroll={scroll} />
-    </div>
+    circleData && (
+      <div className="radial" ref={ref}>
+        <svg width={size} height="100%">
+          <g transform={`translate(${size / 2}, ${figureHeight / 2})`}>
+            <Pie settings={settings} />
+            {circleData
+              && circleData.map((data, index) => (
+                <Spoke
+                  key={data.indicator_key}
+                  data={data}
+                  i={index}
+                  total={circleData.length}
+                  settings={settings}
+                  setTooltip={setHovered}
+                />
+              ))}
+          </g>
+        </svg>
+        {center && <Center radius={settings.inner_radius} />}
+        <Tooltip data={hovered} offset={offset} scroll={scroll} />
+      </div>
+    )
   );
 }
 

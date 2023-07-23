@@ -82,7 +82,9 @@ function Panel() {
               setTab={setActiveTab}
             />
           </ul>
-          <div className="legend">{activeTab === 'country' && <Legend />}</div>
+          <div className="legend">
+            {activeTab === 'country' && height > 900 && <Legend />}
+          </div>
           <div className="content" ref={ref}>
             <div
               className="swarm-wrapper"

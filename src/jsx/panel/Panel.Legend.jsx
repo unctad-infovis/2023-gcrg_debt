@@ -24,7 +24,10 @@ function Legend() {
           {comparisons[1] && <span className="line comparison_2_legend" />}
 
           {comparisons[1] && id.type === 'country' && (
-            <span className="dot comparison_2_circle" />
+            <span className="dot comparison_2_circle">
+              <span className="dot_center" />
+              {' '}
+            </span>
           )}
 
           {comparisons[1] && comparisons[1].id}

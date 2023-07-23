@@ -67,7 +67,13 @@ function Pie({ settings }) {
     (d, i) => slice_entries[i].id !== 'filler'
   );
 
-  const slices = pieData(slice_data, settings, 0.328, 1.18, 0).map((d, i) => ({
+  const slices = pieData(
+    slice_data,
+    settings,
+    settings.center ? 0.328 : 0.05,
+    1.18,
+    0
+  ).map((d, i) => ({
     d,
     indicator_key: indicatorData[i].indicator_key,
   }));
@@ -86,7 +92,9 @@ function Pie({ settings }) {
 }
 
 Pie.propTypes = {
-  settings: PropTypes.shape({}).isRequired,
+  settings: PropTypes.shape({
+    center: PropTypes.bool,
+  }).isRequired,
 };
 
 export default memo(Pie);

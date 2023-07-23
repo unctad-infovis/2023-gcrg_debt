@@ -61,17 +61,21 @@ export function FocusContextProvider({ children }) {
     () => ({
       comparison_1:
         idData && comparisons[0]
-          ? idData.filter((d) => d[comparisons[0].type] === comparisons[0].id)
+          ? idData.filter(
+            (d) => d[comparisons[0].type] === comparisons[0].id
+                || +d[comparisons[0].type] === 1
+          )
           : [],
       comparison_2:
         idData && comparisons[1]
-          ? idData.filter((d) => d[comparisons[1].type] === comparisons[1].id)
+          ? idData.filter(
+            (d) => d[comparisons[1].type] === comparisons[1].id
+                || +d[comparisons[1].type] === 1
+          )
           : [],
     }),
     [idData, comparisons]
   );
-
-  console.log(comparisonLists);
 
   const focusList = useMemo(
     () => (idData && id
