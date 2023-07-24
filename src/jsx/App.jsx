@@ -27,7 +27,7 @@ function App() {
         <StaticDataContextProvider>
           <FocusContextProvider>
             <Filter />
-            {height <= 900 && <Center />}
+            {height <= 900 && <Center radius={0} />}
             <div className="visuals">
               {' '}
               <MetricContextProvider>
