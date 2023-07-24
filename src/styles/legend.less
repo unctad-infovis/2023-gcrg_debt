@@ -17,6 +17,11 @@
     margin-bottom: 12px;
   }
 
+  @media (max-width: 400px) {
+    align-self: flex-start;
+    margin-left: calc(100% * 0.05);
+  }
+
   .content {
     display: flex;
     display: flex;
@@ -34,6 +39,11 @@
     @media (max-height: 900px) {
       flex-flow: row nowrap;
       gap: 24px;
+    }
+
+    @media (max-width: 400px) {
+      flex-flow: column nowrap;
+      gap: 8px;
     }
 
     .focus {

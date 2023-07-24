@@ -54,6 +54,10 @@
       display: flex;
       justify-content: center;
       margin-bottom: 8px;
+
+      @media (max-width: 400px) {
+        height: fit-content;
+      }
     }
 
     .visuals {
@@ -100,6 +104,12 @@
           position: absolute;
         }
 
+        @media (max-width: 800px) {
+          height: 90vh;
+          position: fixed;
+          top: 8px;
+        }
+
         // @media (max-width: 1300px) {
         //   width: 350px;
         // }
@@ -114,6 +124,66 @@
           border-radius: 24px;
           width: 100%;
           overflow: hidden;
+        }
+      }
+
+      .dotplot {
+        flex: 1 0 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 48px;
+        margin-top: 36px;
+
+        .dotplot-group {
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 8px;
+          height: fit-content;
+
+          span {
+            font-weight: bold;
+          }
+
+          svg {
+            height: 150px;
+            width: 98vw;
+          }
+
+          .axis {
+            pointer-events: none;
+
+            .line {
+              stroke: @ungrey;
+              opacity: 0.3;
+            }
+
+            .number {
+              font-size: 0.875rem;
+              font-weight: bold;
+              @media (max-width: 1050px) {
+                font-size: 0.75rem;
+              }
+            }
+
+            .max {
+              font-size: 0.6875rem;
+              fill: @ungrey;
+            }
+
+            .name {
+              font-size: 0.75rem;
+              fill: @undarkgray;
+            }
+
+            //helpers
+            .left {
+              text-anchor: start;
+            }
+
+            .right {
+              text-anchor: end;
+            }
+          }
         }
       }
     }

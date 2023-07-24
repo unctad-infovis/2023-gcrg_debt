@@ -71,9 +71,7 @@ function Sentence() {
 
         {menuOpen && <FocusMenu setMenuOpen={setMenuOpen} />}
       </div>
-
       {middle_text}
-
       <div className="comparisons-wrapper" ref={compRef}>
         <div
           className="comparisons clickable"

@@ -6,6 +6,8 @@ import React, {
   useContext,
 } from 'react';
 
+import { groups } from 'd3';
+
 // context
 import Data from '../context/RadialData.js';
 
@@ -35,15 +37,40 @@ function DotPlot() {
     () => ({
       figureWidth,
       figureHeight,
-      line_length: figureWidth * 0.75,
+      line_length: width * 0.75,
+      xPos: width * 0.1,
       inner_radius: 0,
       section_gap: 0.75,
     }),
-    [figureWidth, figureHeight]
+    [width, figureWidth, figureHeight]
   );
+
+  const grouped = groups(circleData, (d) => d.indicator_info.group);
+
   return (
     <div className="dotplot" ref={ref}>
-      <svg width={figureWidth} height={figureHeight}>
+      {grouped.map(
+        (d) => d[0] && (
+        <div className="dotplot-group" key={d[0]}>
+          <span style={{ paddingLeft: settings.xPos / 2 }}>{d[0]}</span>
+          <svg width={figureWidth} height="100%">
+            {d[1]
+                  && d[1].map((data, index) => (
+                    <Spoke
+                      key={data.indicator_key}
+                      data={data}
+                      i={index}
+                      total={circleData.length}
+                      settings={settings}
+                      setTooltip={() => false}
+                      xPos={settings.xPos}
+                    />
+                  ))}
+          </svg>
+        </div>
+        )
+      )}
+      {/* <svg width={figureWidth} height="100%">
         <g>
           {circleData
             && circleData.map((data, index) => (
@@ -53,10 +80,12 @@ function DotPlot() {
                 i={index}
                 total={circleData.length}
                 settings={settings}
+                setTooltip={() => false}
+                xPos={settings.xPos}
               />
             ))}
         </g>
-      </svg>
+      </svg> */}
     </div>
   );
 }

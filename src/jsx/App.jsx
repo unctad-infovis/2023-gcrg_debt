@@ -14,7 +14,7 @@ import Download from './Download.jsx';
 
 // Load components
 import Radial from './radial/Radial.jsx';
-// import Dotplot from './dotplot/Dotplot.jsx';
+import Dotplot from './dotplot/Dotplot.jsx';
 import Panel from './panel/Panel.jsx';
 import Filter from './filters/Filter.jsx';
 
@@ -24,27 +24,23 @@ function App() {
   return (
     <div className="app">
       <div className="dashboard" id="app-root-2023-gcrg_debt-download">
-        {smScreen ? (
-          'Please view on a larger screen'
-        ) : (
-          <StaticDataContextProvider>
-            <FocusContextProvider>
-              <Filter />
-              {height <= 900 && <Center />}
-              <div className="visuals">
-                {' '}
-                <MetricContextProvider>
-                  <PanelContextProvider>
-                    <RadialDataContextProvider>
-                      <Radial />
-                    </RadialDataContextProvider>
-                    <Panel />
-                  </PanelContextProvider>
-                </MetricContextProvider>
-              </div>
-            </FocusContextProvider>
-          </StaticDataContextProvider>
-        )}
+        <StaticDataContextProvider>
+          <FocusContextProvider>
+            <Filter />
+            {height <= 900 && <Center />}
+            <div className="visuals">
+              {' '}
+              <MetricContextProvider>
+                <PanelContextProvider>
+                  <RadialDataContextProvider>
+                    {smScreen ? <Dotplot /> : <Radial />}
+                  </RadialDataContextProvider>
+                  <Panel />
+                </PanelContextProvider>
+              </MetricContextProvider>
+            </div>
+          </FocusContextProvider>
+        </StaticDataContextProvider>
       </div>
       <Download />
       <noscript>Your browser does not support JavaScript!</noscript>

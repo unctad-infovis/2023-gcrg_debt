@@ -70,7 +70,7 @@ function Radial() {
       <div className="radial" ref={ref}>
         <svg width={size} height="100%">
           <g transform={`translate(${size / 2}, ${figureHeight / 2})`}>
-            <Pie settings={settings} />
+            {!mobile && <Pie settings={settings} />}
             {circleData
               && circleData.map((data, index) => (
                 <Spoke

@@ -44,9 +44,8 @@ function Pie({ settings }) {
   const { indicatorData } = useContext(Data);
   const entries = groups(indicatorData, (d) => d.group);
   const pie_data = pieGenerator(groups(indicatorData, (d) => d.group));
-
   const arcs = pieData(pie_data, settings, 1.18, 1.28, 0.05).map((d, i) => {
-    const textpath = invisibleArc(d, pie_data[i].endAngle);
+    const textpath = d ? invisibleArc(d, pie_data[i].endAngle) : null;
     const dy = pie_data[i].endAngle > 3 && pie_data[i].endAngle < 5 ? -10 : 20;
     return {
       d,

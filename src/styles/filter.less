@@ -4,11 +4,21 @@
   flex-flow: row wrap;
   margin: 0px 24px;
 
+  @media (max-width: 400px) {
+    font-size: 18px;
+    line-height: 200%;
+    justify-content: flex-start;
+  }
+
   .clickable {
     display: flex;
     align-items: center;
     gap: 4px;
     margin: 0 8px;
+
+    @media (max-width: 400px) {
+      margin: 0px 4px;
+    }
   }
 
   .exit-button {
@@ -31,7 +41,7 @@
     .focus {
       // font-weight: bold;
       border-bottom: 2px solid @unblue;
-      padding: 0px 4px 2px 4px;
+      // padding: 0px 4px 2px 4px;
       cursor: pointer;
       color: @unblue;
       cursor: pointer;
@@ -43,7 +53,7 @@
     .comparisons {
       // font-weight: bold;
       border-bottom: 2px solid black;
-      padding: 0px 4px 2px 4px;
+      // padding: 0px 4px 2px 4px;
       display: flex;
       align-items: center;
       gap: 4px;
@@ -68,6 +78,12 @@
     overflow-y: scroll;
     max-height: 30vh;
     min-height: 220px;
+
+    @media (max-width: 400px) {
+      background: white;
+      width: 100%;
+      max-height: 70vh;
+    }
 
     .tabs {
       padding-top: 12px;
@@ -151,7 +167,7 @@
         display: flex;
         align-items: baseline;
         border-bottom: 1px solid #ededed;
-        padding: 6px 0px;
+        padding: 3px 0px;
         font-size: 14px;
         font-weight: normal;
         cursor: pointer;
@@ -200,6 +216,12 @@
     width: 300px;
     max-height: 30vh;
     min-height: 220px;
+
+    @media (max-width: 400px) {
+      background: white;
+      width: 100%;
+      max-height: 70vh;
+    }
 
     .group {
       padding: 8px 0px 6px 0px;
