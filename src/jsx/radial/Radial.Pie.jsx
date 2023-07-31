@@ -13,7 +13,7 @@ import Slices from './Radial.Pie.Slices.jsx';
 const pieGenerator = pie().value(1);
 const arcPathGenerator = arc();
 const sliceGenerator = pie()
-  .sort((d) => d.i)
+  .sort(() => null)
   .value((d) => d.value || 1);
 
 const pieData = (data, settings, innerR, outerR, pad) => {

@@ -21,40 +21,72 @@ export function FocusContextProvider({ children }) {
     id_display: 'Developing countries',
   });
 
+  const [comparisons, setComparisons] = useState([
+    { type: 'development', id: 'Developed countries' },
+  ]);
+
+  const [readURL, setReadURL] = useState(false);
   useEffect(() => {
     const query = window.location.href.includes('?')
       ? window.location.href.split('?')[1]
       : null;
     if (query) {
-      const id_query = query.split('=')[0] === 'id' ? query.split('=')[1] : null;
+      const pairs = query.split('&');
+      const id_query = pairs[0].split('=')[0] === 'id' ? pairs[0].split('=')[1] : null;
       if (id_query && idData) {
-        const data = idData.find((d) => d.id === id_query);
+        const data = idData.find((d) => d.id === decodeURIComponent(id_query));
         if (data) {
           setId(data);
         }
       }
+      const c1_query = pairs[1].split('=')[0] === 'comparison1'
+        ? pairs[1].split('=')[1]
+        : null;
+      const c2_query = pairs[2].split('=')[0] === 'comparison2'
+        ? pairs[2].split('=')[1]
+        : null;
+
+      if ((c1_query || c2_query) && idData) {
+        const c1_data = idData.find(
+          (d) => d.id === decodeURIComponent(c1_query)
+        );
+        const c2_data = idData.find(
+          (d) => d.id === decodeURIComponent(c2_query)
+        );
+        console.log(c2_query);
+
+        if (c1_data || c2_data) {
+          setComparisons([c1_data, c2_data]);
+        }
+      }
+
+      setTimeout(() => {
+        setReadURL(true);
+      }, 1000);
     }
   }, [idData]);
 
-  const [comparisons, setComparisons] = useState([
-    { type: 'development', id: 'Developed countries' },
-  ]);
-
   useMemo(() => {
-    const defaultComps = idData.find((d) => d.id === id.id);
-    let comp1 = null;
-    let comp2 = null;
+    if (readURL) {
+      console.log('here');
+      const defaultComps = idData.find((d) => d.id === id.id);
+      let comp1 = null;
+      let comp2 = null;
 
-    if (id.type === 'country') {
-      comp1 = idData.find((d) => defaultComps.development === d.id);
-      comp2 = idData.find((d) => defaultComps.region === d.id);
-    } else if (id.type === 'development' && id.id === 'Developing countries') {
-      comp1 = idData.find((d) => d.id === 'Developed countries');
-    } else {
-      comp1 = idData.find((d) => d.id === 'Developing countries');
+      if (id.type === 'country') {
+        comp1 = idData.find((d) => defaultComps.development === d.id);
+        comp2 = idData.find((d) => defaultComps.region === d.id);
+      } else if (
+        id.type === 'development'
+        && id.id === 'Developing countries'
+      ) {
+        comp1 = idData.find((d) => d.id === 'Developed countries');
+      } else {
+        comp1 = idData.find((d) => d.id === 'Developing countries');
+      }
+      const newComps = comp2 ? [comp1, comp2] : [comp1];
+      setComparisons(newComps);
     }
-    const newComps = comp2 ? [comp1, comp2] : [comp1];
-    setComparisons(newComps);
   }, [id, idData]);
 
   const comparisonLists = useMemo(

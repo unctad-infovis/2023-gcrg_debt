@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import html2canvas from 'html2canvas';
+import { FocusContext } from './context/Focus.js';
 
 function Download() {
+  const { id, comparisons } = useContext(FocusContext);
+
   const onClick = () => {
     const captureElement = document.querySelector(
       '#app-root-2023-gcrg_debt-download'
@@ -24,6 +27,18 @@ function Download() {
         canvas.remove();
       });
   };
+
+  const c1 = comparisons[0]
+    ? `&comparison1=${encodeURIComponent(comparisons[0].id)}`
+    : '';
+  const c2 = comparisons[1]
+    ? `&comparison2=${encodeURIComponent(comparisons[1].id)}`
+    : '';
+  const url = `https://unctad.org/publication/world-of-debt/dashboard?id=${encodeURIComponent(
+    id.id
+  )}${c1}${c2}`;
+
+  // https://unctad.org/publication/world-of-debt/dashboard?id=Low%20income%20countries&comparison1=Europe%20and%20Central%20Asia*&comparison2=Upper%20middle%20income%20countries
 
   return (
     <div className="debt-download-share">
@@ -48,7 +63,9 @@ function Download() {
       </div>
       <div className="icon-link">
         <a
-          href="https://twitter.com/intent/tweet?text=UNCTAD%20World%20of%20Debt%20&source=sharethiscom&related=sharethis&url=https://unctad.org/publication/world-of-debt/dashboard"
+          href={`https://twitter.com/intent/tweet?text=UNCTAD%20World%20of%20Debt%20&source=sharethiscom&related=sharethis&url=${encodeURIComponent(
+            url
+          )}`}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -71,7 +88,9 @@ function Download() {
 
       <div className="icon-link">
         <a
-          href="https://www.facebook.com/sharer.php?u=https://unctad.org/publication/world-of-debt/dashboard&t=UNCTAD%20World%20of%20Debt%20"
+          href={`https://www.facebook.com/sharer.php?u=${encodeURIComponent(
+            url
+          )}`}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -94,7 +113,9 @@ function Download() {
 
       <div className="icon-link">
         <a
-          href="https://www.linkedin.com/sharing/share-offsite/?url=https://unctad.org/publication/world-of-debt/dashboard"
+          href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+            url
+          )}`}
           target="_blank"
           rel="noopener noreferrer"
         >

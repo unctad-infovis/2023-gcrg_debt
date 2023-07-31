@@ -23,9 +23,9 @@ function App() {
 
   return (
     <div className="app">
-      <div className="dashboard" id="app-root-2023-gcrg_debt-download">
-        <StaticDataContextProvider>
-          <FocusContextProvider>
+      <StaticDataContextProvider>
+        <FocusContextProvider>
+          <div className="dashboard" id="app-root-2023-gcrg_debt-download">
             <Filter />
             {height <= 900 && <Center radius={0} />}
             <div className="visuals">
@@ -39,11 +39,11 @@ function App() {
                 </PanelContextProvider>
               </MetricContextProvider>
             </div>
-          </FocusContextProvider>
-        </StaticDataContextProvider>
-      </div>
-      <Download />
-      <noscript>Your browser does not support JavaScript!</noscript>
+          </div>
+          <Download />
+          <noscript>Your browser does not support JavaScript!</noscript>
+        </FocusContextProvider>
+      </StaticDataContextProvider>
     </div>
   );
 }

@@ -78,12 +78,21 @@
     overflow-y: scroll;
     max-height: 30vh;
     min-height: 220px;
+    min-width: 300px;
 
     @media (max-width: 400px) {
       background: white;
-      width: 100%;
+      width: 90%;
+      left: 1.5%;
       max-height: 70vh;
+      position: fixed;
     }
+
+    // @media (max-width: 800px) {
+    //   height: 90vh;
+    //   position: fixed;
+    //   top: 8px;
+    // }
 
     .tabs {
       padding-top: 12px;
@@ -216,11 +225,15 @@
     width: 300px;
     max-height: 30vh;
     min-height: 220px;
+    min-width: 300px;
 
     @media (max-width: 400px) {
       background: white;
       width: 100%;
       max-height: 70vh;
+      width: 90%;
+      left: 1.5%;
+      position: fixed;
     }
 
     .group {
@@ -235,15 +248,34 @@
       color: @ungray;
     }
 
+    input[type="checkbox"]:checked + label {
+      font-weight: bold; /* Set the font weight to bold when the checkbox is checked */
+    }
+
+    input[type="checkbox"] {
+      cursor: pointer;
+    }
+
     .item {
       font-weight: normal;
       font-size: 14px;
       padding: 4px 0px;
+      border-radius: 4px;
+
+      input {
+        font-weight: bold;
+      }
 
       label {
-        font-weight: normal;
+        //font-weight: normal;
         margin-left: 4px;
+        pointer-events: none;
       }
+    }
+
+    .item:hover {
+      background-color: @lightblue;
+      cursor: pointer;
     }
 
     .instructions {

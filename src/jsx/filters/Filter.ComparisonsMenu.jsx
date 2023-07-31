@@ -67,7 +67,12 @@ function Comparisons({ setCompOpen }) {
         <div className="group" key={group}>
           <span className="name">{group}</span>
           {values.map((item) => (
-            <div className="item" key={item.id}>
+            <div
+              className="item"
+              key={item.id}
+              onClick={() => handleOnChange(item.order)}
+              role="presentation"
+            >
               <input
                 type="checkbox"
                 id={`custom-checkbox-${item.order}`}

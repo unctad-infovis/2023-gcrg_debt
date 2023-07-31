@@ -20,7 +20,13 @@ function Sentence() {
   const compRef = useRef();
   const focusRef = useRef();
 
-  const pre_value = id.type === 'country' ? 'sentence_2_pre' : 'sentence_1_pre';
+  const pre_value = id.type === 'country'
+    || id.id_display === 'Africa'
+    || id.id_display === 'Europe'
+    || id.id_display === 'Latin America'
+    || id.id_display === 'Asia'
+    ? 'sentence_2_pre'
+    : 'sentence_1_pre';
   const pre_find = textData.find((d) => d.id === pre_value);
   const pre_text = pre_find ? pre_find.text : null;
 
@@ -35,7 +41,7 @@ function Sentence() {
 
   let comps = null;
   if (comparisons.length === 0) {
-    comps = '';
+    comps = 'select up to two comparisons';
   } else if (comparisons.length === 1) {
     comps = comp1;
   } else {

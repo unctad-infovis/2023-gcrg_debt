@@ -21,7 +21,7 @@ export function SwarmDataContextProvider({ children }) {
   } = useContext(FocusContext);
 
   const { width, hidePanelWidth } = viewPort();
-  const swarmRadius = width <= 1150 ? 3 : width <= 1200 ? 4 : hidePanelWidth ? 4.5 : 4.5;
+  const swarmRadius = width <= 1150 ? 3 : width <= 1300 ? 4 : hidePanelWidth ? 4.5 : 4.5;
 
   const lineData = useMemo(
     () => valuesData
