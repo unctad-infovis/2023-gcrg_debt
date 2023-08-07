@@ -20,13 +20,17 @@ function Sentence() {
   const compRef = useRef();
   const focusRef = useRef();
 
-  const pre_value = id.type === 'country'
-    || id.id_display === 'Africa'
-    || id.id_display === 'Europe'
-    || id.id_display === 'Latin America'
-    || id.id_display === 'Asia'
+  const doesList = [
+    'Africa',
+    'Developing Asia and Oceania',
+    'Latin America and the Caribbean',
+    'Europe and Central Asia*',
+  ];
+
+  const pre_value = id.type === 'country' || doesList.includes(id.id_display)
     ? 'sentence_2_pre'
     : 'sentence_1_pre';
+
   const pre_find = textData.find((d) => d.id === pre_value);
   const pre_text = pre_find ? pre_find.text : null;
 
