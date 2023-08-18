@@ -43,24 +43,31 @@ function Download() {
   return (
     <div className="debt-download-share">
       <div className="icon-link">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="lucide lucide-download"
-          onClick={onClick}
+        <a
+          href={`https://www.facebook.com/sharer.php?u=${encodeURIComponent(
+            url
+          )}`}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-          <polyline points="7 10 12 15 17 10" />
-          <line x1="12" x2="12" y1="15" y2="3" />
-        </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 165.36 298.41"
+            width="24"
+            height="24"
+          >
+            <g id="Layer_2" data-name="Layer 2">
+              <g>
+                <path
+                  fill="#ded9d5"
+                  d="M136.45,53.37l28.91.75V1.5L122.52,0A72.91,72.91,0,0,0,49.61,72.91v46.6H0v56.38H49.61V298.41H112V175.89h44.34l9-56.38H112V77.82A24.45,24.45,0,0,1,136.45,53.37Z"
+                />
+              </g>
+            </g>
+          </svg>
+        </a>
       </div>
+
       <div className="icon-link">
         <a
           href={`https://twitter.com/intent/tweet?text=UNCTAD%20World%20of%20Debt%20&source=sharethiscom&related=sharethis&url=${encodeURIComponent(
@@ -71,42 +78,18 @@ function Download() {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 317.5 301.21"
             width="24"
             height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-twitter"
           >
-            <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-          </svg>
-        </a>
-      </div>
-
-      <div className="icon-link">
-        <a
-          href={`https://www.facebook.com/sharer.php?u=${encodeURIComponent(
-            url
-          )}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-facebook"
-          >
-            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            <g id="Layer_2" data-name="Layer 2">
+              <g>
+                <path
+                  fill="#ded9d5"
+                  d="M317,297,188.48,125.6,300.62,4.41A2.63,2.63,0,0,0,298.69,0H278.6a5.4,5.4,0,0,0-4,1.73l-98.9,106.88L96,2.16A5.4,5.4,0,0,0,91.63,0h-89A2.63,2.63,0,0,0,.53,4.2L122.18,166.49,1.6,296.8a2.63,2.63,0,0,0,1.93,4.41H23.62a5.4,5.4,0,0,0,4-1.73l107.34-116,86.63,115.57a5.4,5.4,0,0,0,4.32,2.16h89A2.63,2.63,0,0,0,317,297ZM83.51,21.64,276.86,279.57H234L40.64,21.64Z"
+                />
+              </g>
+            </g>
           </svg>
         </a>
       </div>
@@ -121,21 +104,64 @@ function Download() {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 301.82 301.14"
             width="24"
             height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-linkedin"
           >
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-            <rect width="4" height="12" x="2" y="9" />
-            <circle cx="4" cy="4" r="2" />
+            <g id="Layer_2" data-name="Layer 2">
+              <g>
+                <rect
+                  x="4.29"
+                  y="100.94"
+                  width="63.16"
+                  height="200.21"
+                  fill="#ded9d5"
+                />
+                <circle
+                  cx="36.35"
+                  cy="36.35"
+                  r="36.35"
+                  transform="matrix(0.95, -0.3, 0.3, 0.95, -9.27, 12.66)"
+                  fill="#ded9d5"
+                />
+                <path
+                  fill="#ded9d5"
+                  d="M230.32,95c-48.86,0-62.77,33.37-62.77,33.37V100.94H106.78v200.2h63.16V196.27c0-14.3,4.37-46.47,36.94-46.47s32.57,37.73,32.57,37.73V301.14h62.37V182.37C301.82,126,279.18,95,230.32,95Z"
+                />
+              </g>
+            </g>
           </svg>
         </a>
+      </div>
+
+      <div className="icon-link">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 300.84 292.78"
+          height="24"
+          width="24"
+          onClick={onClick}
+        >
+          <g id="Layer_2" data-name="Layer 2">
+            <g>
+              <line
+                className="cls-1"
+                x1="15.5"
+                y1="277.28"
+                x2="285.34"
+                y2="277.28"
+                stroke="#dadada"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="31px"
+              />
+              <path
+                fill="#ded9d5"
+                d="M180.48,115.83V9.51A9.51,9.51,0,0,0,171,0H116.32a9.51,9.51,0,0,0-9.51,9.51V115.83H74.14A9.51,9.51,0,0,0,67,131.61l69.51,79.27a9.5,9.5,0,0,0,14.29,0l69.51-79.27a9.51,9.51,0,0,0-7.15-15.78Z"
+              />
+            </g>
+          </g>
+        </svg>
       </div>
     </div>
   );
