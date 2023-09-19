@@ -10,7 +10,7 @@ import { MetricContextProvider } from './context/Metric';
 import { PanelContextProvider } from './context/Panel';
 import viewPort from './helpers/viewPort';
 import Center from './radial/Radial.Center.jsx';
-import Download from './Download.jsx';
+import Download1 from './Download.jsx';
 
 // Load components
 import Radial from './radial/Radial.jsx';
@@ -40,7 +40,7 @@ function App() {
               </MetricContextProvider>
             </div>
           </div>
-          <Download />
+          <Download1 />
           <noscript>Your browser does not support JavaScript!</noscript>
         </FocusContextProvider>
       </StaticDataContextProvider>
