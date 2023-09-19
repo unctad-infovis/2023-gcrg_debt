@@ -1,5 +1,5 @@
 import React, {
-  createContext, useState, useMemo, useContext
+  createContext, useState, useMemo, useContext, useRef, useEffect
 } from 'react';
 import PropTypes from 'prop-types';
 
@@ -25,6 +25,18 @@ export function MetricContextProvider({ children }) {
     }),
     [metric, metricInfo]
   );
+
+  const analytics = window.gtag || undefined;
+  const changeIdx = useRef(0);
+  useEffect(() => {
+    if (typeof analytics !== 'undefined') {
+      // Only track user initiated changes.
+      if (changeIdx.current >= 2) {
+        analytics('event', 'Metric', { event_category: '2023-gcrg_debt', event_label: context.metricInfo.indicator_full, transport_type: 'beacon' });
+      }
+    }
+    changeIdx.current += 1;
+  }, [analytics, changeIdx, context]);
 
   return (
     <MetricContext.Provider value={context}>{children}</MetricContext.Provider>
