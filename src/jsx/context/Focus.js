@@ -4,6 +4,7 @@ import React, {
   useMemo,
   useContext,
   useEffect,
+  useRef,
 } from 'react';
 import PropTypes from 'prop-types';
 
@@ -87,7 +88,7 @@ export function FocusContextProvider({ children }) {
       const newComps = comp2 ? [comp1, comp2] : [comp1];
       setComparisons(newComps);
     }
-  }, [id, idData]);
+  }, [id, idData, readURL]);
 
   const comparisonLists = useMemo(
     () => ({
@@ -142,6 +143,25 @@ export function FocusContextProvider({ children }) {
     }),
     [id, comparisons, comparisonLists, focusList, optionsList]
   );
+
+  const analytics = window.gtag || undefined;
+  const changeIdx = useRef(0);
+  useEffect(() => {
+    if (typeof analytics !== 'undefined') {
+      // Only track user initiated changes.
+      if (changeIdx.current >= 2) {
+        analytics('event', 'Focus', { event_category: '2023-gcrg_debt', event_label: context.id.id, transport_type: 'beacon' });
+        analytics('event', 'Comparison 1', { event_category: '2023-gcrg_debt', event_label: context.comparisons[0].id, transport_type: 'beacon' });
+        if (context.comparisons[1]) {
+          analytics('event', 'Comparison 2', { event_category: '2023-gcrg_debt', event_label: context.comparisons[1].id, transport_type: 'beacon' });
+          analytics('event', 'Selection 1', { event_category: '2023-gcrg_debt', event_label: `${context.id.id}, ${context.comparisons[0].id}, ${context.comparisons[1].id}`, transport_type: 'beacon' });
+        } else {
+          analytics('event', 'Selection 2', { event_category: '2023-gcrg_debt', event_label: `${context.id.id}, ${context.comparisons[0].id}`, transport_type: 'beacon' });
+        }
+      }
+    }
+    changeIdx.current += 1;
+  }, [analytics, changeIdx, context]);
 
   return (
     <FocusContext.Provider value={context}>{children}</FocusContext.Provider>
