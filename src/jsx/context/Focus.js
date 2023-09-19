@@ -154,9 +154,9 @@ export function FocusContextProvider({ children }) {
         analytics('event', 'Comparison 1', { event_category: '2023-gcrg_debt', event_label: context.comparisons[0].id, transport_type: 'beacon' });
         if (context.comparisons[1]) {
           analytics('event', 'Comparison 2', { event_category: '2023-gcrg_debt', event_label: context.comparisons[1].id, transport_type: 'beacon' });
-          analytics('event', 'Selection 1', { event_category: '2023-gcrg_debt', event_label: `${context.id.id}, ${context.comparisons[0].id}, ${context.comparisons[1].id}`, transport_type: 'beacon' });
+          analytics('event', 'Selection 1', { event_category: '2023-gcrg_debt', event_label: `${context.id.id},${context.comparisons[0].id},${context.comparisons[1].id}`, transport_type: 'beacon' });
         } else {
-          analytics('event', 'Selection 2', { event_category: '2023-gcrg_debt', event_label: `${context.id.id}, ${context.comparisons[0].id}`, transport_type: 'beacon' });
+          analytics('event', 'Selection 2', { event_category: '2023-gcrg_debt', event_label: `${context.id.id},${context.comparisons[0].id}`, transport_type: 'beacon' });
         }
       }
     }
