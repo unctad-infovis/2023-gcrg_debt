@@ -40,10 +40,10 @@ export function FocusContextProvider({ children }) {
           setId(data);
         }
       }
-      const c1_query = pairs[1].split('=')[0] === 'comparison1'
+      const c1_query = pairs[1]?.split('=')[0] === 'comparison1'
         ? pairs[1].split('=')[1]
         : null;
-      const c2_query = pairs[2].split('=')[0] === 'comparison2'
+      const c2_query = pairs[2]?.split('=')[0] === 'comparison2'
         ? pairs[2].split('=')[1]
         : null;
 
@@ -54,7 +54,6 @@ export function FocusContextProvider({ children }) {
         const c2_data = idData.find(
           (d) => d.id === decodeURIComponent(c2_query)
         );
-        console.log(c2_query);
 
         if (c1_data || c2_data) {
           setComparisons([c1_data, c2_data]);
@@ -69,7 +68,6 @@ export function FocusContextProvider({ children }) {
 
   useMemo(() => {
     if (readURL) {
-      console.log('here');
       const defaultComps = idData.find((d) => d.id === id.id);
       let comp1 = null;
       let comp2 = null;
@@ -147,13 +145,11 @@ export function FocusContextProvider({ children }) {
   const analytics = window.gtag || undefined;
   const changeIdx = useRef(0);
   useEffect(() => {
-    console.log(context.id.id);
-    console.log(context.comparisons[0]);
     if (typeof analytics !== 'undefined') {
       // Only track user initiated changes.
       if (changeIdx.current >= 2) {
         analytics('event', 'Focus', { event_category: '2023-gcrg_debt', event_label: context.id.id, transport_type: 'beacon' });
-        if (context.comparisons[0].id) {
+        if (context.comparisons[0]) {
           analytics('event', 'Comparison 1', { event_category: '2023-gcrg_debt', event_label: context.comparisons[0].id, transport_type: 'beacon' });
           if (context.comparisons[1]) {
             analytics('event', 'Comparison 2', { event_category: '2023-gcrg_debt', event_label: context.comparisons[1].id, transport_type: 'beacon' });
