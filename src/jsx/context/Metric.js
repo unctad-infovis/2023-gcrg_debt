@@ -10,7 +10,7 @@ export const MetricContext = createContext({});
 export function MetricContextProvider({ children }) {
   const { indicatorData } = useContext(Static_Context);
   // set up the variable for storing the selected metric
-  const [metric, setMetric] = useState('gov_investment_perc_net_interest');
+  const [metric, setMetric] = useState('gov_spending_perc_net_interest');
 
   const metricInfo = useMemo(
     () => indicatorData.find((d) => d.indicator_key === metric),
