@@ -44,23 +44,22 @@ function Download() {
     <div className="debt-download-share">
       <div className="icon-link">
         <a
-          href={`https://www.facebook.com/sharer.php?u=${encodeURIComponent(
-            url
-          )}`}
-          target="_blank"
+          aria-label="Share on Facebook"
+          href={`https://www.facebook.com/sharer.php?u=${encodeURIComponent(url)}`}
           rel="noopener noreferrer"
+          target="_blank"
         >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
+            height="24"
             viewBox="0 0 165.36 298.41"
             width="24"
-            height="24"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <g id="Layer_2" data-name="Layer 2">
               <g>
                 <path
-                  fill="#ded9d5"
                   d="M136.45,53.37l28.91.75V1.5L122.52,0A72.91,72.91,0,0,0,49.61,72.91v46.6H0v56.38H49.61V298.41H112V175.89h44.34l9-56.38H112V77.82A24.45,24.45,0,0,1,136.45,53.37Z"
+                  fill="#ded9d5"
                 />
               </g>
             </g>
@@ -70,23 +69,22 @@ function Download() {
 
       <div className="icon-link">
         <a
-          href={`https://twitter.com/intent/tweet?text=UNCTAD%20World%20of%20Debt%20&source=sharethiscom&related=sharethis&url=${encodeURIComponent(
-            url
-          )}`}
-          target="_blank"
+          aria-label="Share on Twitter"
+          href={`https://twitter.com/intent/?text=UNCTAD%20World%20of%20Debt%20&source=sharethiscom&related=sharethis&url=${encodeURIComponent(url)}`}
           rel="noopener noreferrer"
+          target="_blank"
         >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
+            height="24"
             viewBox="0 0 317.5 301.21"
             width="24"
-            height="24"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <g id="Layer_2" data-name="Layer 2">
               <g>
                 <path
-                  fill="#ded9d5"
                   d="M317,297,188.48,125.6,300.62,4.41A2.63,2.63,0,0,0,298.69,0H278.6a5.4,5.4,0,0,0-4,1.73l-98.9,106.88L96,2.16A5.4,5.4,0,0,0,91.63,0h-89A2.63,2.63,0,0,0,.53,4.2L122.18,166.49,1.6,296.8a2.63,2.63,0,0,0,1.93,4.41H23.62a5.4,5.4,0,0,0,4-1.73l107.34-116,86.63,115.57a5.4,5.4,0,0,0,4.32,2.16h89A2.63,2.63,0,0,0,317,297ZM83.51,21.64,276.86,279.57H234L40.64,21.64Z"
+                  fill="#ded9d5"
                 />
               </g>
             </g>
@@ -96,37 +94,36 @@ function Download() {
 
       <div className="icon-link">
         <a
-          href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-            url
-          )}`}
-          target="_blank"
+          href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`}
           rel="noopener noreferrer"
+          target="_blank"
         >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
+            aria-label="Share on LinkedIn"
+            height="24"
             viewBox="0 0 301.82 301.14"
             width="24"
-            height="24"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <g id="Layer_2" data-name="Layer 2">
               <g>
                 <rect
+                  fill="#ded9d5"
+                  height="200.21"
+                  width="63.16"
                   x="4.29"
                   y="100.94"
-                  width="63.16"
-                  height="200.21"
-                  fill="#ded9d5"
                 />
                 <circle
                   cx="36.35"
                   cy="36.35"
+                  fill="#ded9d5"
                   r="36.35"
                   transform="matrix(0.95, -0.3, 0.3, 0.95, -9.27, 12.66)"
-                  fill="#ded9d5"
                 />
                 <path
-                  fill="#ded9d5"
                   d="M230.32,95c-48.86,0-62.77,33.37-62.77,33.37V100.94H106.78v200.2h63.16V196.27c0-14.3,4.37-46.47,36.94-46.47s32.57,37.73,32.57,37.73V301.14h62.37V182.37C301.82,126,279.18,95,230.32,95Z"
+                  fill="#ded9d5"
                 />
               </g>
             </g>
