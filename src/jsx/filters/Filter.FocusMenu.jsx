@@ -19,6 +19,7 @@ function FocusMenu({ setMenuOpen }) {
       id_display: e.id_display,
       type: e.type,
     });
+
     setMenuOpen(false);
   };
 

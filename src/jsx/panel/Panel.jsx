@@ -90,12 +90,15 @@ function Panel() {
               className="swarm-wrapper"
               style={{ figureWidth, figureHeight }}
             >
+              {(interactionData && offset)
+              && (
               <Tooltip
                 data={interactionData}
                 offset={offset}
                 width={figureWidth}
                 scroll={scroll}
               />
+              )}
             </div>
             <SwarmDataContextProvider>
               {activeTab === 'country' ? (

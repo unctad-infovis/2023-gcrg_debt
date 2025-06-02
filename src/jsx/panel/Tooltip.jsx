@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import formatNum from '../helpers/FormatNum.js';
 
 function Tooltip({
-  data, offset, width, scroll
+  data = false, offset = false, width = false, scroll = false
 }) {
   if (!data) {
     return null;
@@ -72,27 +72,13 @@ Tooltip.propTypes = {
         id_display: PropTypes.string,
       }),
     }),
-  }),
+  }).isRequired,
   offset: PropTypes.shape({
     left: PropTypes.number,
     top: PropTypes.number,
-  }),
+  }).isRequired,
   width: PropTypes.number.isRequired,
-  scroll: PropTypes.number,
+  scroll: PropTypes.number.isRequired,
 };
 
-Tooltip.defaultProps = {
-  data: {
-    xPos: null,
-    yPos: null,
-    info: { id: null, value: null },
-    type: null,
-    id: null,
-  },
-  offset: {
-    top: 0,
-    left: 0,
-  },
-  scroll: 0,
-};
 export default Tooltip;

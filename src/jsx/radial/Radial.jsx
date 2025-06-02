@@ -85,7 +85,7 @@ function Radial() {
           </g>
         </svg>
         {center && <Center radius={settings.inner_radius} />}
-        <Tooltip data={hovered} offset={offset} scroll={scroll} />
+        {(hovered && offset) && <Tooltip data={hovered} offset={offset} scroll={scroll} />}
       </div>
     )
   );

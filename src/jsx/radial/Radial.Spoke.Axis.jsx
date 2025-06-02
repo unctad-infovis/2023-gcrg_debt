@@ -6,7 +6,7 @@ import { MetricContext } from '../context/Metric.js';
 function Axis({ settings, angle, data }) {
   const {
     indicator_short, format, decimals, max_label
-  } = data.indicator_info;
+  } = data.indicator_info || {};
 
   const { inner_radius, line_length } = settings;
 

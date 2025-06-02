@@ -5,7 +5,7 @@ import { FocusContext } from '../context/Focus.js';
 
 function Circle({ data, settings, setTooltip }) {
   const { setId } = useContext(FocusContext);
-  const { max_label } = data.indicator_info;
+  const { max_label } = data.indicator_info || {};
   const { inner_radius, line_length } = settings;
 
   const extent = [0, +max_label];
