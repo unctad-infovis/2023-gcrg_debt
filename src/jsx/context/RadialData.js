@@ -26,7 +26,7 @@ export function RadialDataContextProvider({ children }) {
       const idDataItem = idData.find((i) => i.id === d.id);
       return {
         ...d,
-        value: d.value === 'NA' ? null : +d.value,
+        value: (d.value === 'NA' || d.value === '') ? null : +d.value,
         type: idDataItem ? idDataItem.type : undefined,
         sorto:
           d.id === id.id

@@ -50,7 +50,7 @@ function Axis({ settings, angle, data }) {
           y={y}
           className={`number ${reverse} ${focus.value ? 'focus' : 'no_value'}`}
         >
-          {formatNum(focus.value, format, decimals)}
+          {(focus.value) ? formatNum(focus.value, format, decimals) : '–'}
         </text>
       </g>
     </g>
