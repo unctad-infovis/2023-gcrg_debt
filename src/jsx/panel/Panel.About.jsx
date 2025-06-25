@@ -33,7 +33,8 @@ function About() {
       >
         <div className="desc">
           {p.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
+            // eslint-disable-next-line
+            <p key={paragraph} dangerouslySetInnerHTML={{ __html: paragraph }} />
           ))}
         </div>
 
