@@ -32,11 +32,11 @@ export function StaticDataContextProvider({ children }) {
   const [aboutData, setAboutData] = useState([]);
 
   useEffect(() => {
-    fetchData('indicator_key.csv', setIndicatorData);
-    fetchData('values.csv', setValuesData);
-    fetchData('id_key.csv', setIdData);
-    fetchData('text.csv', setTextData);
-    fetchData('about.json', setAboutData);
+    fetchData('indicator_key.csv?v=2025', setIndicatorData);
+    fetchData('values.csv?v=2025', setValuesData);
+    fetchData('id_key.csv?v=2025', setIdData);
+    fetchData('text.csv?v=2025', setTextData);
+    fetchData('about.json?v=2025', setAboutData);
   }, []);
 
   const latestData = useMemo(
