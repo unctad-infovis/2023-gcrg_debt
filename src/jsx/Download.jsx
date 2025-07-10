@@ -5,6 +5,12 @@ import { FocusContext } from './context/Focus.js';
 function Download() {
   const { id, comparisons } = useContext(FocusContext);
 
+  const shareButton = (event) => {
+    const specs = `top=${(window.screen.height / 2) - (420 / 2)},left=${(window.screen.width / 2) - (550 / 2)},toolbar=0,status=0,width=550,height=420`;
+    window.open(event.currentTarget.href, 'Jaa', specs);
+    event.preventDefault();
+  };
+
   const onClick = () => {
     const captureElement = document.querySelector(
       '#app-root-2023-gcrg_debt-download'
@@ -45,9 +51,10 @@ function Download() {
       <div className="icon-link">
         <a
           aria-label="Share on Facebook"
-          href={`https://www.facebook.com/sharer.php?u=${encodeURIComponent(url)}`}
+          href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`}
           rel="noopener noreferrer"
           target="_blank"
+          onClick={(event) => shareButton(event)}
         >
           <svg
             height="24"
@@ -70,9 +77,9 @@ function Download() {
       <div className="icon-link">
         <a
           aria-label="Share on Twitter"
-          href={`https://twitter.com/intent/?text=UNCTAD%20World%20of%20Debt%20&source=sharethiscom&related=sharethis&url=${encodeURIComponent(url)}`}
+          href={`https://twitter.com/share?text=${encodeURIComponent('UN Trade and Development (UNCTAD): World of Debt')}&hashtags=${encodeURIComponent('unctad')}&url=${encodeURIComponent(url)}`}
           rel="noopener noreferrer"
-          target="_blank"
+          onClick={(event) => shareButton(event)}
         >
           <svg
             height="24"
@@ -94,9 +101,10 @@ function Download() {
 
       <div className="icon-link">
         <a
-          href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`}
+          aria-label="Share on LinkedIn"
+          href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}`}
           rel="noopener noreferrer"
-          target="_blank"
+          onClick={(event) => shareButton(event)}
         >
           <svg
             aria-label="Share on LinkedIn"

@@ -10,7 +10,7 @@ import { MetricContextProvider } from './context/Metric';
 import { PanelContextProvider } from './context/Panel';
 import viewPort from './helpers/viewPort';
 import Center from './radial/Radial.Center.jsx';
-import Download1 from './Download.jsx';
+import Download from './Download.jsx';
 
 // Load components
 import Radial from './radial/Radial.jsx';
@@ -39,8 +39,13 @@ function App() {
                 </PanelContextProvider>
               </MetricContextProvider>
             </div>
+            <div className="source">
+              <em>Source:</em>
+              {' '}
+              UN Trade and Development (UNCTAD)
+            </div>
           </div>
-          <Download1 />
+          <Download />
           <noscript>Your browser does not support JavaScript!</noscript>
         </FocusContextProvider>
       </StaticDataContextProvider>

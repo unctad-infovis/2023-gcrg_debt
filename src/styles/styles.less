@@ -8,52 +8,54 @@
   @import "legend.less";
   font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
+  .source {
+    color: rgba(0, 0.0, 0.0, 0.65);
+    font-size: 14px;
+    max-width: 1350px;
+    text-align: left;
+    width: 95%;
+  }
   .debt-download-share {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 12px;
     color: @ungray;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
     margin-top: 12px;
-
     .icon-link:hover {
-      color: @unblue;
+      line,
+      path,
+      circle,
+      rect {
+        fill: @unblue;
+        stroke: @unblue;
+      }
     }
 
     .icon-link {
-      display: flex;
       align-items: center;
-      justify-content: center;
+      cursor: pointer;
+      display: flex;
       gap: 8px;
-
-      a:link,
-      a:visited {
-        color: @ungray;
-      }
-      a:hover {
-        color: @unblue;
-        cursor: pointer;
-      }
+      justify-content: center;
     }
   }
 
   .dashboard {
+    align-items: center;
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
-    height: 100%;
     font-size: 16px;
+    height: 100%;
     min-height: calc(99vh - 35px);
-
     .filters {
       @import "filter.less";
-      flex: 0 1 auto;
-      margin: 0;
-      height: 64px;
-      width: 100%;
       display: flex;
+      flex: 0 1 auto;
+      height: 64px;
       justify-content: center;
-      margin-bottom: 8px;
+      margin: 0 0 8px 0;
+      width: 100%;
 
       @media (max-width: 400px) {
         height: fit-content;
