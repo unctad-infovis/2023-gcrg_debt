@@ -23,6 +23,9 @@ function App() {
 
   return (
     <div className="app">
+      {
+        (window.innerWidth < 801) && <p className="message">ⓘ This dashboard is optimized for larger screens. For the best experience, please view it on a tablet in landscape mode or on a desktop.</p>
+      }
       <StaticDataContextProvider>
         <FocusContextProvider>
           <div className="dashboard" id="app-root-2023-gcrg_debt-download">
