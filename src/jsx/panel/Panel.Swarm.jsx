@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 
 // context
 import {
-  scaleLinear, forceSimulation, forceX, forceY, forceCollide
+  scaleLinear, forceSimulation, forceX, /* forceY, */ forceCollide
 } from 'd3';
 import { SwarmDataContext } from '../context/SwarmData.js';
 import { MetricContext } from '../context/Metric.js';
@@ -23,7 +23,8 @@ import YAxis from './Panel.yAxis.jsx';
 // helpers
 
 function Swarm({ setInteractionData }) {
-  const { swarmData, referenceLines } = useContext(SwarmDataContext);
+  let { swarmData } = useContext(SwarmDataContext);
+  const { referenceLines } = useContext(SwarmDataContext);
   const { metricInfo } = useContext(MetricContext);
   const { setId } = useContext(FocusContext);
 
@@ -44,15 +45,22 @@ function Swarm({ setInteractionData }) {
     .range([-figureHeight / 2.5, figureHeight / 2.5])
     .clamp(true);
 
+  swarmData = (swarmData.filter((d) => d.value !== ''));
+
   useMemo(
     () => swarmData
       && forceSimulation(swarmData)
         .force('forceX', forceX(() => 0).strength(0.1))
-        .force('forceY', forceY((d) => scale(d.value)).strength(3))
+        // .force('forceY', forceY((d) => scale(d.value)).strength(3))
         .force(
           'collide',
           forceCollide((d) => d.r * 1.4)
         )
+        .force('lockY', () => {
+          swarmData.forEach(node => {
+            node.y = scale(parseFloat(node.value) || 0);
+          });
+        })
         .stop()
         .tick(300),
     [swarmData, scale]
