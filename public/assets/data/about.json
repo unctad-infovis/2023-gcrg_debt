@@ -62,32 +62,32 @@
     },
     {
       "id": "edu_spending_perc_net_interest",
-      "text": "<p>This indicator measures the relative proportion of a country's general government's resources that are dedicated to net interest payments to those allocated to public education. A value greater than 1 shows that a country spends more on interest payments than on education. The indicator provides insights into the potential impact of debt servicing on a government's ability to fund essential public services.</p><p>Country group aggregates. Estimates based on three-year averages for the periods of 2011-2013, 2016-2018 and 2021-2023.</p>",
+      "text": "<p>This indicator measures the relative proportion of a country's general government's resources that are dedicated to net interest payments to those allocated to public education. A value greater than 1 shows that a country spends more on interest payments than on education. The indicator provides insights into the potential impact of debt servicing on a government's ability to fund essential public services.</p><p>Country group aggregates. Estimates based on three-year averages for the periods of 2011–2013, 2016–2018 and 2021–2023.</p>",
       "source": "World Bank World Development Indicators and IMF World Economic Outlook (April 2025)."
     },
     {
       "id": "health_spending_perc_net_interest",
-      "text": "<p>This indicator measures the relative proportion of a country's general government's resources that are dedicated to net interest payments to those allocated to public health. A value greater than 1 shows that a country spends more on interest payments than on health. The indicator provides insights into the potential impact of debt servicing on a government's ability to fund essential public services.</p><p>Country group aggregates. Estimates based on three-year averages for the periods of 2011-2013, 2016-2018 and 2021-2023.</p>",
+      "text": "<p>This indicator measures the relative proportion of a country's general government's resources that are dedicated to net interest payments to those allocated to public health. A value greater than 1 shows that a country spends more on interest payments than on health. The indicator provides insights into the potential impact of debt servicing on a government's ability to fund essential public services.</p><p>Country group aggregates. Estimates based on three-year averages for the periods of 2011–2013, 2016–2018 and 2021–2023.</p>",
       "source": "World Bank World Development Indicators and IMF World Economic Outlook (April 2025)."
     },
     {
       "id": "gov_spending_perc_net_interest",
-      "text": "<p>This indicator measures the relative proportion of a country's general government's resources that are dedicated to net interest payments to total public expenditure. The indicator provides insights into the weight of debt servicing on a government's spending ability, including its capacity to fund essential public services and public investment.</p><p>Country group aggregates. Estimates based on three-year averages for the periods of 2011-2013, 2016-2018 and 2021-2023; but the “Trend over time” tabs show the (highly fluctuating) annual data.</p>",
+      "text": "<p>This indicator measures the relative proportion of a country's general government's resources that are dedicated to net interest payments to total public expenditure. The indicator provides insights into the weight of debt servicing on a government's spending ability, including its capacity to fund essential public services and public investment.</p><p>Country group aggregates. Estimates based on three-year averages for the periods of 2011–2013, 2016–2018 and 2021–2023; but the “Trend over time” tabs show the (highly fluctuating) annual data.</p>",
       "source": "IMF World Economic Outlook (April 2025)."
     },
     {
       "id": "edu_spending_perc_gdp",
-      "text": "<p>This indicator measures a country's general government spending on education relative to the size of its economy. A high share indicates the allocation of a substantial amount of resources towards education. A low share indicates potential underinvestment in education in the country, which increases the development challenges it faces.</p><p>Country group aggregates. Estimates based on three-year averages for the periods of 2011-2013, 2016-2018 and 2021-2023.</p>",
+      "text": "<p>This indicator measures a country's general government spending on education relative to the size of its economy. A high share indicates the allocation of a substantial amount of resources towards education. A low share indicates potential underinvestment in education in the country, which increases the development challenges it faces.</p><p>Country group aggregates. Estimates based on three-year averages for the periods of 2011–2013, 2016–2018 and 2021–2023.</p>",
       "source": "World Bank World Development Indicators."
     },
     {
       "id": "health_spending_perc_gdp",
-      "text": "<p>This indicator measures a country's general government spending on health relative to the size of its economy. A high share indicates the allocation of a substantial amount of resources towards health. A low share indicates potential underinvestment in health in the country, which increases the development challenges it faces.</p><p>Country group aggregates. Estimates based on three-year averages for the periods of 2011-2013, 2016-2018 and 2021-2023.</p>",
+      "text": "<p>This indicator measures a country's general government spending on health relative to the size of its economy. A high share indicates the allocation of a substantial amount of resources towards health. A low share indicates potential underinvestment in health in the country, which increases the development challenges it faces.</p><p>Country group aggregates. Estimates based on three-year averages for the periods of 2011–2013, 2016–2018 and 2021–2023.</p>",
       "source": "World Bank World Development Indicators."
     },
     {
       "id": "gov_spending_perc_gdp",
-      "text": "<p>This indicator measures a country's general government total expenditure relative to the size of the economy. A high share indicates the allocation of a substantial amount of resources to public expenditure. A low share indicates a limited role for government expenditure, including potentially in terms of public infrastructure and services.</p><p>Country group aggregates. Estimates based on three-year averages for the periods of 2011-2013, 2016-2018 and 2021-2023; but the “Trend over time” tabs show the (highly fluctuating) annual data.</p>",
+      "text": "<p>This indicator measures a country's general government total expenditure relative to the size of the economy. A high share indicates the allocation of a substantial amount of resources to public expenditure. A low share indicates a limited role for government expenditure, including potentially in terms of public infrastructure and services.</p><p>Country group aggregates. Estimates based on three-year averages for the periods of 2011–2013, 2016–2018 and 2021–2023; but the “Trend over time” tabs show the (highly fluctuating) annual data.</p>",
       "source": " IMF World Economic Outlook (April 2025)."
     }
   ]

@@ -1,0 +1,90 @@
+#app-root-2023-gcrg_debt .app {
+  .focus {
+    fill: var(--un-color-blue);
+  }
+  .focus_circle {
+    fill: var(--un-color-blue);
+    stroke: var(--un-color-blue);
+    stroke-width: 2;
+  }
+  .focus_line {
+    stroke: var(--un-color-blue);
+    stroke-width: 3;
+  }
+  .focus_legend {
+    background-color: var(--un-color-blue-light);
+    border: 2px solid var(--un-color-blue);
+  }
+  .focus_comparison_circle {
+    fill: #fff;
+    stroke: var(--un-color-blue);
+    stroke-width: 2;
+  }
+  .comparison_1_circle {
+    background-color: var(--un-color-yellow-light);
+    border: 2px solid var(--un-color-yellow);
+    fill: var(--un-color-yellow-light);
+    stroke: var(--un-color-yellow);
+    stroke-width: 2;
+  }
+  .comparison_1_line {
+    stroke: var(--un-color-yellow);
+    stroke-width: 3;
+  }
+  .comparison_1_line_thin {
+    stroke: var(--un-color-yellow);
+    stroke-width: 1.5;
+  }
+  .comparison_1_legend {
+    background-color: var(--un-color-yellow);
+  }
+  .comparison_2_circle {
+    border: 2px solid var(--un-color-grey-dark);
+    fill: #fff;
+    fill-opacity: 0.05;
+    stroke: var(--un-color-grey-dark);
+    stroke-width: 2;
+  }
+  .comparison_2_circle_filled {
+    border: 2px solid var(--un-color-grey-dark);
+    fill: #fff;
+    stroke: var(--un-color-grey-dark);
+    stroke-width: 2;
+  }
+  .comparison_2_line {
+    stroke: var(--un-color-grey-dark);
+    stroke-width: 3;
+  }
+  .comparison_2_line_thin {
+    stroke: var(--un-color-grey-dark);
+    stroke-width: 1.5;
+  }
+  .comparison_2_center {
+    fill: var(--un-color-grey-dark);
+    pointer-events: none;
+  }
+  .comparison_2_legend {
+    background-color: var(--un-color-grey-dark);
+  }
+  .no_highlight_circle {
+    fill: #fff;
+    stroke: var(--un-color-grey);
+  }
+  .no_highlight_line {
+    opacity: 0.2;
+    stroke: var(--un-color-grey);
+    stroke-width: 1;
+  }
+  .no_value {
+    fill: var(--un-color-grey);
+  }
+  .both_comparisons_circle {
+    fill: #fff;
+    stroke: var(--un-color-yellow);
+    stroke-width: 2;
+  }
+  .both_comparisons_center {
+    fill: var(--un-color-grey-dark);
+    pointer-events: none;
+  }
+}

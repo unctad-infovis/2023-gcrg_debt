@@ -1,0 +1,120 @@
+#app-root-2023-gcrg_debt .app {
+  g {
+    outline: none;
+  }
+  .axis {
+    pointer-events: none;
+    .line {
+      opacity: 0.3;
+      stroke: var(--un-color-grey);
+    }
+    .number {
+      font-size: var(--un-font-size-xxs);
+      @media (max-width: 1050px) {
+        font-size: var(--un-font-size-xxs);
+      }
+    }
+    .max {
+      fill: var(--un-color-grey);
+      font-size: var(--un-font-size-xxxxs);
+    }
+    .name {
+      fill: var(--un-color-grey-dark);
+      font-size: var(--un-font-size-xxs);
+    }
+    .left {
+      text-anchor: start;
+    }
+    .right {
+      text-anchor: end;
+    }
+  }
+
+  .donut {
+    fill: var(--un-color-blue-light);
+    pointer-events: none;
+  }
+
+  .donut-label {
+    fill: #000;
+    font-size: var(--un-font-size-xxs);
+    font-weight: var(--un-font-weight-bolder);
+    pointer-events: none;
+    text-anchor: middle;
+  }
+
+  .slice {
+    cursor: zoom-in;
+    fill: #fff;
+    &:hover {
+      fill: var(--un-color-blue-light);
+      opacity: 0.4;
+    }
+    &.selected {
+      fill: var(--un-color-blue-lightest);
+      opacity: 0.6;
+      stroke: var(--un-color-blue-light);
+    }
+  }
+  .axis.selected {
+    font-weight: var(--un-font-weight-bolder);
+    .number {
+      fill: var(--un-color-blue);
+    }
+    .name {
+      fill: #000;
+    }
+  }
+  .tooltip-viz {
+    background-color: #fff;
+    border: 1px solid hsla(24, 11%, 64%, 0.3);
+    border-radius: 12px;
+    filter: drop-shadow(0 0 0.75rem var(--un-color-grey-lightest));
+    font-size: var(--un-font-size-xxs);
+    padding: 8px 12px;
+    position: absolute;
+    width: 210px;
+    z-index: 100;
+    p {
+      color: var(--un-color-grey-dark);
+      line-height: 1.4em;
+      margin: 0;
+    }
+    .title {
+      color: #000;
+      font-weight: var(--un-font-weight-bolder);
+      margin: 0 0 4px;
+    }
+    .kpi {
+      color: #000;
+      font-size: var(--un-font-size-xs);
+      font-weight: var(--un-font-weight-bolder);
+      margin: 0;
+    }
+    hr {
+      background-color: none;
+      border: 0.5px solid var(--un-color-grey);
+      margin: 8px 0px;
+      opacity: 0.3;
+    }
+    button {
+      background-color: #fff;
+      border: none;
+      color: var(--un-color-grey-dark);
+      cursor: pointer;
+      display: flex;
+      flex-wrap: wrap;
+      font-size: var(--un-font-size-xxs);
+      font-style: italic;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+    }
+  }
+  .radial_circle {
+    cursor: pointer;
+  }
+  .radial_circle:hover {
+    stroke: #000;
+  }
+}

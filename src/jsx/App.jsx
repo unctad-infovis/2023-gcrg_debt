@@ -1,59 +1,33 @@
-import React from 'react';
-// { useState, useRef, useLayoutEffect }
-import '../styles/styles.less';
+import { useRef } from 'react';
 
-// Load context
-import { StaticDataContextProvider } from './context/StaticData.js';
-import { FocusContextProvider } from './context/Focus.js';
-import { RadialDataContextProvider } from './context/RadialData.js';
-import { MetricContextProvider } from './context/Metric';
-import { PanelContextProvider } from './context/Panel';
-import viewPort from './helpers/viewPort';
-import Center from './radial/Radial.Center.jsx';
-import Download from './Download.jsx';
+import Article from '../Article.mdx';
 
-// Load components
-import Radial from './radial/Radial.jsx';
-import Dotplot from './dotplot/Dotplot.jsx';
-import Panel from './panel/Panel.jsx';
-import Filter from './filters/Filter.jsx';
+// Storyboard
+import DebtWheel from './components/debt_wheel/DebtWheel.jsx';
 
-function App() {
-  const { smScreen, height } = viewPort();
+import './../styles/styles.css';
+
+const components = {
+  DebtWheel
+};
+
+const App = ({ meta }) => {
+  const appRef = useRef();
 
   return (
-    <div className="app">
-      {
-        (window.innerWidth < 801) && <p className="message">ⓘ This dashboard is optimized for larger screens. For the best experience, please view it on a tablet in landscape mode or on a desktop.</p>
+    <div
+      className="app"
+      style={
+        {
+          // '--main-color': 'var(--un-color-green-dark)',
+          // '--secondary-color': 'var(--un-color-green-text)'
+        }
       }
-      <StaticDataContextProvider>
-        <FocusContextProvider>
-          <div className="dashboard" id="app-root-2023-gcrg_debt-download">
-            <Filter />
-            {height <= 900 && <Center radius={0} />}
-            <div className="visuals">
-              {' '}
-              <MetricContextProvider>
-                <PanelContextProvider>
-                  <RadialDataContextProvider>
-                    {smScreen ? <Dotplot /> : <Radial />}
-                  </RadialDataContextProvider>
-                  <Panel />
-                </PanelContextProvider>
-              </MetricContextProvider>
-            </div>
-            <div className="source">
-              <em>Source:</em>
-              {' '}
-              UN Trade and Development (UNCTAD)
-            </div>
-          </div>
-          <Download />
-          <noscript>Your browser does not support JavaScript!</noscript>
-        </FocusContextProvider>
-      </StaticDataContextProvider>
+      ref={appRef}
+    >
+      <Article components={components} meta={meta} />
     </div>
   );
-}
+};
 
 export default App;

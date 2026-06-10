@@ -1,0 +1,165 @@
+@import 'legend.css';
+@import 'coloring.css';
+
+#app-root-2023-gcrg_debt .app {
+  font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  .message {
+    background-color: var(--un-color-blue-light);
+    border-radius: 20px;
+    color: var(--un-color-grey-darkest);
+    margin: 20px 20px;
+    padding: 20px;
+  }
+  .source {
+    color: rgba(0, 0, 0, 0.65);
+    font-size: var(--un-font-size-xxs);
+    max-width: 1350px;
+    text-align: left;
+    width: 95%;
+  }
+  .debt-download-share {
+    align-items: center;
+    color: var(--un-color-grey);
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 12px;
+    .icon-link:hover {
+      line,
+      path,
+      circle,
+      rect {
+        fill: var(--un-color-blue);
+        stroke: var(--un-color-blue);
+      }
+    }
+    .icon-link {
+      align-items: center;
+      cursor: pointer;
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+    }
+  }
+
+  .dashboard {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: var(--un-font-size-xs);
+    height: 100%;
+    min-height: calc(99vh - 35px);
+    .filters {
+      display: flex;
+      flex: 0 1 auto;
+      height: 64px;
+      justify-content: center;
+      margin: 0 0 8px 0;
+      width: 100%;
+      @media (max-width: 400px) {
+        height: fit-content;
+      }
+    }
+    .visuals {
+      align-items: stretch;
+      display: flex;
+      flex: 1 0 auto;
+      gap: 32px;
+      justify-content: center;
+      min-height: 700px;
+      position: relative;
+      .radial {
+        align-items: center;
+        display: flex;
+        flex: 1 0 auto;
+        justify-content: center;
+        position: relative;
+        @media (max-width: 1024px) {
+          width: 100vw;
+        }
+        svg {
+          height: 100%;
+        }
+      }
+      .panel-wrapper {
+        align-items: stretch;
+        display: flex;
+        width: 450px;
+        @media (max-width: 1280px) {
+          width: 400px;
+        }
+        @media (max-width: 1150px) {
+          width: 300px;
+        }
+        @media (max-width: 1024px) {
+          height: 95%;
+          position: absolute;
+          width: 95%;
+        }
+        @media (max-width: 800px) {
+          height: 90vh;
+          position: fixed;
+          top: 8px;
+        }
+        .panel {
+          background-color: #fff;
+          border: 1px solid var(--un-color-grey-light);
+          border-radius: 24px;
+          display: flex;
+          flex-flow: column nowrap;
+          overflow: hidden;
+          padding: 20px 24px;
+          width: 100%;
+        }
+      }
+      .dotplot {
+        display: flex;
+        flex: 1 0 auto;
+        flex-flow: column nowrap;
+        gap: 48px;
+        margin-top: 36px;
+        .dotplot-group {
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 8px;
+          height: fit-content;
+          span {
+            font-weight: var(--un-font-weight-bolder);
+          }
+          svg {
+            height: 150px;
+            width: 98vw;
+          }
+          .axis {
+            pointer-events: none;
+            .line {
+              opacity: 0.3;
+              stroke: var(--un-color-grey);
+            }
+            .number {
+              font-size: var(--un-font-size-xxs);
+              font-weight: var(--un-font-weight-bolder);
+              @media (max-width: 1050px) {
+                font-size: var(--un-font-size-xxs);
+              }
+            }
+            .max {
+              fill: var(--un-color-blue);
+              font-size: var(--un-font-size-xxxxs);
+            }
+            .name {
+              fill: var(--un-color-grey-dark);
+              font-size: var(--un-font-size-xxs);
+            }
+            .left {
+              text-anchor: start;
+            }
+            .right {
+              text-anchor: end;
+            }
+          }
+        }
+      }
+    }
+  }
+}
