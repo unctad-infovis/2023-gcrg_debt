@@ -18,7 +18,7 @@ export function SwarmDataContextProvider({ children }) {
   const { comparisonLists, id, comparisons, focusList } = useContext(FocusContext);
 
   const { width, hidePanelWidth } = viewPort();
-  const swarmRadius = width <= 1150 ? 3 : width <= 1300 ? 4 : hidePanelWidth ? 4 : 4;
+  const swarmRadius = width <= 1150 ? 3 : 4;
 
   const lineData = useMemo(
     () =>
@@ -36,7 +36,7 @@ export function SwarmDataContextProvider({ children }) {
   const swarmData = useMemo(
     () =>
       lineData
-        ?.filter(d => +d.latest_year === 1 && d.id.length === 2)
+        ?.filter(d => +d.latest_year === 1 && d.id.length === 2 && d.id_info)
         .map(d => {
           const one = comparisonLists.comparison_1.find(c => c.id === d.id);
           const two = comparisonLists.comparison_2.find(c => c.id === d.id);

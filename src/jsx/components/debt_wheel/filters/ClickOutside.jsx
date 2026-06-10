@@ -1,19 +1,18 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 function useOutsideClick(ref, callback) {
-  const handleClick = e => {
-    if (ref.current && !ref.current.contains(e.target)) {
-      callback();
-    }
-  };
+  const callbackRef = useRef(callback);
+  callbackRef.current = callback;
 
   useEffect(() => {
-    document.addEventListener('click', handleClick);
-
-    return () => {
-      document.removeEventListener('click', handleClick);
+    const handleClick = e => {
+      if (ref.current && !ref.current.contains(e.target)) {
+        callbackRef.current();
+      }
     };
-  });
+    document.addEventListener('click', handleClick);
+    return () => document.removeEventListener('click', handleClick);
+  }, [ref]);
 }
 
 export default useOutsideClick;

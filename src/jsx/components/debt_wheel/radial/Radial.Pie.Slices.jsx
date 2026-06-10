@@ -17,7 +17,7 @@ function Slices({ arcs, shaded }) {
       {arcs.map(arc => (
         // biome-ignore lint/a11y/useSemanticElements: SVG does not support <button> as a descendant of <g>; role="button" is the correct ARIA pattern here
         <g
-          key={arc.d}
+          key={arc.indicator_key}
           role="button"
           tabIndex={0}
           aria-label={arc.indicator_key}

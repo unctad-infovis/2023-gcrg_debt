@@ -7,9 +7,6 @@ import Data from '../context/StaticData';
 function About() {
   const { aboutData } = useContext(Data);
   const { metric } = useContext(Metric_Context);
-  const text = aboutData.data.find(d => d.id === metric);
-
-  const p = text.text.replaceAll('<p>', '').split('</p>');
 
   const ref = useRef(null);
   const [figureWidth, setWidth] = useState(0);
@@ -19,6 +16,14 @@ function About() {
     setWidth(ref.current.offsetWidth);
     setHeight(ref.current.offsetHeight);
   }, []);
+
+  if (!aboutData?.data) return null;
+
+  const text = aboutData.data.find(d => d.id === metric);
+
+  if (!text) return null;
+
+  const p = text.text.replaceAll('<p>', '').split('</p>');
 
   return (
     <div className="about" ref={ref}>

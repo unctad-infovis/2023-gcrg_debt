@@ -19,6 +19,8 @@ function Axis({ settings, angle, data }) {
 
   const focus = data.circles.find(d => d.focus_type === 'focus');
 
+  if (!focus) return null;
+
   const selected = focus.indicator === metric;
 
   return (

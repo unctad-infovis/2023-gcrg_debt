@@ -28,16 +28,14 @@ export function StaticDataContextProvider({ children }) {
     });
   }, []);
 
-  useEffect(() => {}, []);
-
   const latestData = useMemo(
     () =>
       valuesData
         ?.filter(d => +d.latest_year === 1)
-        .map(d => ({
-          ...d,
-          id_display: idData ? (idData.find(i => i.id === d.id) ? idData.find(i => i.id === d.id).id_display : d.id) : d.id
-        })),
+        .map(d => {
+          const idMatch = idData?.find(i => i.id === d.id);
+          return { ...d, id_display: idMatch ? idMatch.id_display : d.id };
+        }),
     [idData, valuesData]
   );
 

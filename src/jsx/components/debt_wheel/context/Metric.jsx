@@ -25,7 +25,7 @@ export function MetricContextProvider({ children }) {
   useEffect(() => {
     if (typeof analytics !== 'undefined') {
       // Only track user initiated changes.
-      if (changeIdx.current >= 2) {
+      if (changeIdx.current >= 2 && context.metricInfo) {
         analytics('event', 'Metric', { event_category: '2023-gcrg_debt', event_label: context.metricInfo.indicator_full, transport_type: 'beacon' });
       }
     }

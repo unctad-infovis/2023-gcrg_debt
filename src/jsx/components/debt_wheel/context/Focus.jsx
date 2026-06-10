@@ -46,7 +46,7 @@ export function FocusContextProvider({ children }) {
     }
   }, [idData]);
 
-  useMemo(() => {
+  useEffect(() => {
     if (readURL) {
       const defaultComps = idData.find(d => d.id === id.id);
       let comp1 = null;

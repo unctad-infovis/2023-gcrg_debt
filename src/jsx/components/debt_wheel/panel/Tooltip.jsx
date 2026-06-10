@@ -1,6 +1,10 @@
+import { useContext } from 'react';
+import { FocusContext } from '../context/Focus';
 import formatNum from '../helpers/FormatNum.js';
 
 function Tooltip({ data = false, offset = false, width = false, scroll = false }) {
+  const { setId } = useContext(FocusContext);
+
   if (!data) {
     return null;
   }
@@ -9,6 +13,14 @@ function Tooltip({ data = false, offset = false, width = false, scroll = false }
   const y = data.yPos - offset.top + 4 + window.scrollY - scroll;
   const newY = y + 30;
   const newX = x > width / 2.4 ? width / 3.3 : x;
+
+  const switchFocus = () => {
+    setId({
+      type: data.info.id_info.type,
+      id: data.info.id_info.id,
+      id_display: data.info.id_info.id_display
+    });
+  };
 
   return (
     <div
@@ -27,7 +39,7 @@ function Tooltip({ data = false, offset = false, width = false, scroll = false }
         </p>
       )}
       <hr />
-      <button type="button" className="switch">
+      <button type="button" className="switch" onClick={switchFocus}>
         Click on {data.type || 'circle'} to switch focus to {data.info.id_info.id_display}
       </button>
     </div>

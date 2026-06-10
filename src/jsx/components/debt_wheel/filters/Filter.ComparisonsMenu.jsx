@@ -52,22 +52,19 @@ function Comparisons({ setCompOpen }) {
           {textData.find(d => d.id === 'comparisons_instructions').text}
           <Exit handleExit={setCompOpen} />
         </span>
-        {comparisonsG.map(({ group, values }) => {
-          console.log(group);
-          return (
-            <div className="group" key={group}>
-              <span className="name">{group}</span>
-              {values.map(item => (
-                <div key={item.id} className="item" role="presentation">
-                  <button onClick={() => handleOnChange(item.order)} type="button">
-                    <input type="checkbox" id={`custom-checkbox-${item.order}`} name={item.id_display} value={item.id} checked={item.checked} onChange={() => handleOnChange(item.order)} />
-                    <label htmlFor={`custom-checkbox-${item.order}`}>{item.id_display}</label>
-                  </button>
-                </div>
-              ))}
-            </div>
-          );
-        })}
+        {comparisonsG.map(({ group, values }) => (
+          <div className="group" key={group}>
+            <span className="name">{group}</span>
+            {values.map(item => (
+              <div key={item.id} className="item" role="presentation">
+                <button onClick={() => handleOnChange(item.order)} type="button">
+                  <input type="checkbox" id={`custom-checkbox-${item.order}`} name={item.id_display} value={item.id} checked={item.checked} onChange={() => handleOnChange(item.order)} />
+                  <label htmlFor={`custom-checkbox-${item.order}`}>{item.id_display}</label>
+                </button>
+              </div>
+            ))}
+          </div>
+        ))}
         <span className="description">{textData.find(d => d.id === 'comparisons_star').text}</span>
       </li>
     </ul>

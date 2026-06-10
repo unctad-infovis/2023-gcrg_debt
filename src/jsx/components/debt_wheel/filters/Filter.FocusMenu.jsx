@@ -22,9 +22,10 @@ function FocusMenu({ setMenuOpen }) {
     setMenuOpen(false);
   };
 
-  const tabs = textData?.find(t => t.id === 'sentence_focus_tabs').text.split('|');
+  const tabEntry = textData?.find(t => t.id === 'sentence_focus_tabs');
+  const tabs = tabEntry ? tabEntry.text.split('|') : [];
 
-  const [activeTab, setActiveTab] = useState(tabs[0]);
+  const [activeTab, setActiveTab] = useState(tabs[0] ?? '');
 
   const [query, setQuery] = useState('');
 
