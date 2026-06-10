@@ -1,6 +1,6 @@
 number,indicator,indicator_full,indicator_key,desire,decimals,indicator_short,format,group,round_digits,max_label,max_overall_label,min,max,min_overall,max_overall
 1.1,gov_debt_to_gdp_perc,Public debt as a share of GDP,gov_debt_to_gdp_perc,Lower is better,1,as a share of GDP,percent,Public debt,2,3.1,6.1000000000000005,0.00525,3.08747,2e-5,6.0010900000000005
-1.2,gov_debt_usd_billions,Public debt in US$ billions,gov_debt_usd_billions,Lower is better,0,in US$ billions,dollar,Public debt,2,75000,75000,0.00208974,74930.68545110001,2.3200000000000005e-5,74930.68545110001
+1.2,gov_debt_usd_billions,Public debt in US$ billions,gov_debt_usd_billions,Lower is better,0,in US$ billions,dollar,Public debt,2,39000,39000,0.00208974,38116.09853449999,2.3200000000000005e-5,38116.09853449999
 1.3,gov_debt_usd_per_capita,Public debt in US$ per capita,gov_debt_usd_per_capita,Neutral,0,in US$ per capita,dollar,Public debt,2,180000,180000,35.76865979381444,170180.64209313807,0.02065894924309884,170180.64209313807
 2.1,external_ppg_perc_gdp,External public debt as a share of GDP,external_ppg_perc_gdp,Lower is better,1,as a share of GDP,percent,External public debt,2,1.2000000000000002,4,7.763539227121314e-4,1.149604287075224,8.620689655172414e-6,3.932755241666666
 2.2,external_ppg_usd_billions,External public debt in US$ billions,external_ppg_usd_billions,Lower is better,0,in US$ billions,dollar,External public debt,1,600,600,0.12934675550000002,504.1125308995,1e-5,554.2922538366
