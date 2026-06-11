@@ -1,4 +1,4 @@
-import { memo, useContext, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { memo, useCallback, useContext, useLayoutEffect, useMemo, useRef, useState } from 'react';
 // context
 import Data from '../context/RadialData';
 // components
@@ -20,19 +20,18 @@ function Radial() {
   const ref = useRef(null);
   const [figureWidth, setWidth] = useState(0);
   const [figureHeight, setHeight] = useState(0);
-  const [offset, setOffset] = useState({ top: 0, left: 0 });
-  const [scroll, setScroll] = useState(0);
 
-  useLayoutEffect(() => {
-    setOffset(ref.current.getBoundingClientRect());
-    setScroll(window.scrollY);
-  }, []);
-
-  useLayoutEffect(() => {
+  const measure = useCallback(() => {
+    if (!ref.current) return;
     setWidth(ref.current.offsetWidth);
     setHeight(ref.current.offsetHeight);
-    setOffset(ref.current.getBoundingClientRect());
   }, []);
+
+  useLayoutEffect(() => {
+    measure();
+    window.addEventListener('resize', measure);
+    return () => window.removeEventListener('resize', measure);
+  }, [measure]);
 
   const panel = (width > 1280 ? 450 : width > 1150 ? 400 : 300) * 1.15;
   const center = height > 900;
@@ -64,7 +63,7 @@ function Radial() {
           </g>
         </svg>
         {center && <Center radius={settings.inner_radius} />}
-        {hovered && offset && <Tooltip data={hovered} offset={offset} scroll={scroll} />}
+        {hovered && <Tooltip data={hovered} />}
       </div>
     )
   );

@@ -34,10 +34,6 @@
       display: flex;
       gap: 4px;
     }
-    ul.nav li button {
-      display: block;
-      width: 100%;
-    }
     .selections .item button,
     .comparison-menu .item button {
       align-items: baseline;
@@ -118,6 +114,45 @@
       font-size: var(--un-font-size-xxs);
       line-height: 140%;
       padding-top: 12px;
+    }
+    .comparison-menu {
+      background-color: #fff;
+      border: 1px solid hsla(24, 11%, 64%, 0.3);
+      border-radius: 8px;
+      filter: drop-shadow(0 0 0.75rem var(--un-color-grey-lightest));
+      left: 0;
+      margin: 0;
+      max-height: 30vh;
+      min-height: 220px;
+      min-width: 300px;
+      overflow-y: scroll;
+      padding: 12px;
+      position: absolute;
+      top: 42px;
+      width: 300px;
+      z-index: 100;
+      ul {
+        li {
+          list-style-type: none;
+          button {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+      @media (max-width: 400px) {
+        background: #fff;
+        left: 1.5%;
+        max-height: 70vh;
+        position: fixed;
+        width: 90%;
+      }
+      input[type='checkbox']:checked + label {
+        font-weight: var(--un-font-weight-bolder);
+      }
+      input[type='checkbox'] {
+        cursor: pointer;
+      }
     }
     .focus-menu {
       background-color: #fff;
@@ -241,36 +276,6 @@
         .item:hover {
           background-color: var(--un-color-blue-light);
         }
-      }
-    }
-    .comparison-menu {
-      background-color: #fff;
-      border: 1px solid hsla(24, 11%, 64%, 0.3);
-      border-radius: 8px;
-      filter: drop-shadow(0 0 0.75rem var(--un-color-grey-lightest));
-      left: 0;
-      margin: 0;
-      max-height: 30vh;
-      min-height: 220px;
-      min-width: 300px;
-      overflow-y: scroll;
-      padding: 12px;
-      position: absolute;
-      top: 42px;
-      width: 300px;
-      z-index: 100;
-      @media (max-width: 400px) {
-        background: #fff;
-        left: 1.5%;
-        max-height: 70vh;
-        position: fixed;
-        width: 90%;
-      }
-      input[type='checkbox']:checked + label {
-        font-weight: var(--un-font-weight-bolder);
-      }
-      input[type='checkbox'] {
-        cursor: pointer;
       }
     }
   }

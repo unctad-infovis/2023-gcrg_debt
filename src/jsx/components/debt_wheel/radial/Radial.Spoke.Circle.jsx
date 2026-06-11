@@ -29,15 +29,19 @@ function Circle({ data, settings, setTooltip }) {
           role="button"
           tabIndex={0}
           aria-label={circle.id_display || circle.id}
-          onMouseEnter={e => setTooltip({
-            xPos: e.clientX,
-            yPos: e.clientY,
-            id: circle.id,
-            value: circle.value,
-            type: circle.type,
-            id_display: circle.id_display,
-            indicator_info: data.indicator_info
-          })}
+          onMouseEnter={e => {
+            const containerEl = e.currentTarget.closest('.radial');
+            const rect = containerEl?.getBoundingClientRect();
+            setTooltip({
+              xPos: rect ? e.clientX - rect.left : 0,
+              yPos: rect ? e.clientY - rect.top : 0,
+              id: circle.id,
+              value: circle.value,
+              type: circle.type,
+              id_display: circle.id_display,
+              indicator_info: data.indicator_info
+            });
+          }}
           onMouseLeave={() => setTooltip(null)}
           onClick={() => handleSelect(circle)}
           onKeyDown={e => {

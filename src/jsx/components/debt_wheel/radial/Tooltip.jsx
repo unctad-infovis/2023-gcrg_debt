@@ -9,12 +9,7 @@ function Tooltip({
     id: null,
     value: null,
     indicator_info: null
-  },
-  offset = {
-    left: 0,
-    top: 0
-  },
-  scroll = 0
+  }
 }) {
   const { id, setId } = useContext(FocusContext);
 
@@ -34,8 +29,8 @@ function Tooltip({
     <div
       className="tooltip-viz"
       style={{
-        left: data.xPos - offset.left,
-        top: data.yPos - offset.top + 4 + window.scrollY - scroll
+        left: data.xPos + 12,
+        top: data.yPos - 12
       }}
     >
       <p className="title">{data.id_display || data.id}</p>
