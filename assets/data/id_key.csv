@@ -1,16 +1,16 @@
 ﻿id,type,region,income,development,LDC,SIDS,id_display,category_display
-Africa,region,,,,NA,NA,Africa,Region
-Developing Asia and Oceania,region,,,,NA,NA,Developing Asia and Oceania,Region
-Europe and Central Asia*,region,,,,NA,NA,Europe and Central Asia*,Region
-Latin America and the Caribbean,region,,,,NA,NA,Latin America and the Caribbean,Region
-Developed countries,development,,,,NA,NA,Developed countries,Development Status
-Developing countries,development,,,,NA,NA,Developing countries,Development Status
-Low income countries,income,,,,NA,NA,Low income countries,Income
-Lower middle income countries,income,,,,NA,NA,Lower middle income countries,Income
-Upper middle income countries,income,,,,NA,NA,Upper middle income countries,Income
-High income countries,income,,,,NA,NA,High income countries,Income
-Least developed countries,LDC,,,,NA,NA,Least developed countries,Special Group
-Small island developing states,SIDS,,,,NA,NA,Small island developing states,Special Group
+Africa,region,,,,,,Africa,Region
+Developing Asia and Oceania,region,,,,,,Developing Asia and Oceania,Region
+Europe and Central Asia*,region,,,,,,Europe and Central Asia*,Region
+Latin America and the Caribbean,region,,,,,,Latin America and the Caribbean,Region
+Developed countries,development,,,,,,Developed countries,Development Status
+Developing countries,development,,,,,,Developing countries,Development Status
+Low income countries,income,,,,,,Low income countries,Income
+Lower middle income countries,income,,,,,,Lower middle income countries,Income
+Upper middle income countries,income,,,,,,Upper middle income countries,Income
+High income countries,income,,,,,,High income countries,Income
+Least developed countries,LDC,,,,,,Least developed countries,Special Group
+Small island developing states,SIDS,,,,,,Small island developing states,Special Group
 AF,country,Developing Asia and Oceania,Low income countries,Developing countries,1,0,Afghanistan,
 AL,country,Europe and Central Asia*,Upper middle income countries,Developed countries,0,0,Albania,
 DZ,country,Africa,Lower middle income countries,Developing countries,0,0,Algeria,
@@ -125,7 +125,7 @@ ME,country,Europe and Central Asia*,Upper middle income countries,Developed coun
 MA,country,Africa,Lower middle income countries,Developing countries,0,0,Morocco,
 MZ,country,Africa,Low income countries,Developing countries,1,0,Mozambique,
 MM,country,Developing Asia and Oceania,Lower middle income countries,Developing countries,1,0,Myanmar,
-NAM,country,Africa,Upper middle income countries,Developing countries,0,0,Namibia,
+NA,country,Africa,Upper middle income countries,Developing countries,0,0,Namibia,
 NR,country,Developing Asia and Oceania,High income countries,Developing countries,0,1,Nauru,
 NP,country,Developing Asia and Oceania,Lower middle income countries,Developing countries,1,0,Nepal,
 NL,country,,High income countries,Developed countries,0,0,Netherlands,
