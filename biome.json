@@ -7,13 +7,7 @@
   },
   "files": {
     "ignoreUnknown": true,
-    "includes": [
-      "**",
-      "!**/*.min.js",
-      "!**/public/**",
-      "!**/dist/**",
-      "!**/node_modules/**"
-    ]
+    "includes": ["**", "!**/*.min.js", "!**/public", "!**/dist", "!**/node_modules"]
   },
   "formatter": {
     "enabled": true,

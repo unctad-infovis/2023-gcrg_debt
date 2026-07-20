@@ -12,7 +12,7 @@ function Circle({ data, settings, setTooltip }) {
     .range([inner_radius, inner_radius + line_length])
     .clamp(true);
 
-  const handleSelect = (circle) => {
+  const handleSelect = circle => {
     setId({
       type: circle.type,
       id: circle.id,
@@ -25,10 +25,10 @@ function Circle({ data, settings, setTooltip }) {
       {data.circles.map(circle => (
         // biome-ignore lint/a11y/useSemanticElements: SVG does not support <button> as a descendant of <g>; role="button" is the correct ARIA pattern here
         <g
+          aria-label={circle.id_display || circle.id}
           key={circle.id}
           role="button"
-          tabIndex={0}
-          aria-label={circle.id_display || circle.id}
+          onClick={() => handleSelect(circle)}
           onMouseEnter={e => {
             const containerEl = e.currentTarget.closest('.radial');
             const rect = containerEl?.getBoundingClientRect();
@@ -43,10 +43,10 @@ function Circle({ data, settings, setTooltip }) {
             });
           }}
           onMouseLeave={() => setTooltip(null)}
-          onClick={() => handleSelect(circle)}
           onKeyDown={e => {
             if (e.key === 'Enter' || e.key === ' ') handleSelect(circle);
           }}
+          tabIndex={0}
         >
           <circle cx={scale(circle.value)} cy="0" r={circle.value === null ? 0 : circle.focus_type === 'focus' ? 7 : 5} fillOpacity={0.65} className={`radial_circle ${circle.focus_type}_circle`} />
           {circle.focus_type === 'comparison_2' && <circle cx={scale(circle.value)} cy="0" r="2" className="comparison_2_center" />}

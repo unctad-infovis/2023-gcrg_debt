@@ -17,7 +17,7 @@ export function SwarmDataContextProvider({ children }) {
   const { metric } = useContext(Metric_Context);
   const { comparisonLists, id, comparisons, focusList } = useContext(FocusContext);
 
-  const { width, hidePanelWidth } = viewPort();
+  const { width } = viewPort();
   const swarmRadius = width <= 1150 ? 3 : 4;
 
   const lineData = useMemo(

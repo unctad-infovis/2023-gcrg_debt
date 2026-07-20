@@ -20,7 +20,7 @@ function Panel() {
   const { metricInfo } = useContext(Metric_Context);
   const { showPanel } = useContext(PanelContext);
 
-  const { width, hidePanelWidth, height } = viewPort();
+  const { hidePanelWidth, height } = viewPort();
 
   // manage the tabs
   const [activeTab, setActiveTab] = useState('country');

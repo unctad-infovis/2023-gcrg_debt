@@ -59,7 +59,7 @@ function Swarm({ setInteractionData }) {
 
   return (
     <div className="swarm" ref={ref}>
-      <svg width={figureWidth} height="100%">
+      <svg width={figureWidth} height="100%" aria-label="Swarm graph">
         <g transform={`translate(${figureWidth / 2}, ${figureHeight / 2})`}>
           {referenceLines.map(d => (
             <g className="referenceLine" key={d.id}>

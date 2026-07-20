@@ -33,9 +33,7 @@ export function RadialDataContextProvider({ children }) {
       indicator_info: indicatorData.find(i => i.indicator_key === d[0]),
       circles: d[1].sort((a, b) => descending(+a.sorto, +b.sorto))
     }));
-    return groupedData
-      .filter(d => d.indicator_info)
-      .sort((a, b) => ascending(+a.indicator_info.number, +b.indicator_info.number));
+    return groupedData.filter(d => d.indicator_info).sort((a, b) => ascending(+a.indicator_info.number, +b.indicator_info.number));
   }, [id, comparisons, latestData, indicatorData, idData]);
 
   const context = useMemo(
