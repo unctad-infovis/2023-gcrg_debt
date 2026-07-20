@@ -14,11 +14,11 @@ export function StaticDataContextProvider({ children }) {
   useEffect(() => {
     const data_version = '2026';
     Promise.all([
-      loadFile(`/assets/data/indicator_key.csv?v=${data_version}`).then(r => r?.text()),
-      loadFile(`/assets/data/values.csv?v=${data_version}`).then(r => r?.text()),
-      loadFile(`/assets/data/id_key.csv?v=${data_version}`).then(r => r?.text()),
-      loadFile(`/assets/data/text.csv?v=${data_version}`).then(r => r?.text()),
-      loadFile(`/assets/data/about.json?v=${data_version}`).then(r => r?.json())
+      loadFile(`assets/data/indicator_key.csv?v=${data_version}`).then(r => r?.text()),
+      loadFile(`assets/data/values.csv?v=${data_version}`).then(r => r?.text()),
+      loadFile(`assets/data/id_key.csv?v=${data_version}`).then(r => r?.text()),
+      loadFile(`assets/data/text.csv?v=${data_version}`).then(r => r?.text()),
+      loadFile(`assets/data/about.json?v=${data_version}`).then(r => r?.json())
     ]).then(([indicator_key, values, id_key, text, about]) => {
       if (indicator_key) setIndicatorData(CSVtoJSON(indicator_key));
       if (values) setValuesData(CSVtoJSON(values));
