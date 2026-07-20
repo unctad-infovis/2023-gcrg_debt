@@ -2,6 +2,30 @@
 
 **Live demo** https://unctad-infovis.github.io/2023-gcrg_debt/
 
+## About
+
+Sovereign debt is a growing concern for many developing countries, where governments increasingly spend more on servicing debt than on essential public services like education and health. This project is an interactive "debt wheel" dashboard that lets users select a country or country grouping and compare it against up to two others across 18 debt-related indicators — covering public debt, external public and publicly guaranteed (PPG) debt, debt-service costs, and how government interest payments compare to spending on education and health.
+
+The wheel visualization is built with D3 and falls back to a dot-plot layout on small screens, drawing on data from the IMF World Economic Outlook, International Debt Statistics, and World Bank World Development Indicators, with a screenshot/download feature powered by html2canvas. Content is authored in MDX and rendered as a standalone React application embeddable within UNCTAD's Drupal platform.
+
+## Embedding
+
+```html
+<script type="module" crossorigin="" src="https://storage.unctad.org/2023-gcrg_debt/js/2023-gcrg_debt.min.js?v=1"></script>
+<link rel="stylesheet" crossorigin="" href="https://storage.unctad.org/2023-gcrg_debt/css/2023-gcrg_debt.min.css?v=1">
+<div class="app-root-2023-gcrg_debt" id="app-root-2023-gcrg_debt">
+  Loading...
+</div>
+<noscript>Your browser does not support Javascript!</noscript>
+```
+
+Update the `?v=` query parameter to match the current build version to bust the cache.
+
+## Used in
+
+* [A World of Debt](https://unctad.org/publication/world-of-debt)
+* [A World of Debt Dashboard](https://unctad.org/publication/world-of-debt/dashboard)
+
 ## Rights of usage
 
 Contact Teemo Tebest.
@@ -10,7 +34,7 @@ Contact Teemo Tebest.
 
 This is a Vite + React project.
 
-* `npm run install`
+* `npm install`
 * `npm run start`
 
 Project should start at: http://localhost:8080
@@ -29,8 +53,8 @@ The following packages are used in this project by default.
 
 ### Project specific
 
-* **d3** - used to create the wheel
-* **html2canvas** - used to convert html view into canvas (img)
+* **d3** — used to create the wheel
+* **html2canvas** — used to convert html view into canvas (img)
 
 ### Build & Dev Server
 
