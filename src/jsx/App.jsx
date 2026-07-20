@@ -5,7 +5,8 @@ import Article from '../Article.mdx';
 // Storyboard
 import DebtWheel from './components/debt_wheel/DebtWheel.jsx';
 
-import './../styles/styles.css';
+import '@unctad-infovis/general-tools/styles/styles.css';
+import './App.css';
 
 const components = {
   DebtWheel

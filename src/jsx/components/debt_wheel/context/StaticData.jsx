@@ -1,6 +1,6 @@
 import { createContext, useEffect, useMemo, useState } from 'react';
-import CSVtoJSON from './../../../helpers/CSVtoJSON.js';
-import loadFile from './../../../helpers/LoadFile.js';
+import CSVtoJSON from '@unctad-infovis/general-tools/helpers/CsvToJson.js';
+import loadFile from '@unctad-infovis/general-tools/helpers/LoadFile.js';
 
 export const StaticDataContext = createContext({});
 
