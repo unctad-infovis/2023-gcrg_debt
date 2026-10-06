@@ -12,6 +12,8 @@
     "preview": "vite preview",
     "format": "biome format --write src",
     "lint:fix": "biome check --write src",
+    "validate-data": "node scripts/validate-data.js",
+    "fill-missing-values": "node scripts/fill-missing-values.js",
     "login": "az login --service-principal -u $AZURE_USER -p $AZURE_PW --tenant $AZURE_TENANT",
     "push": "git push && git push unctad main",
     "sync-gh-pages": "git subtree push --prefix dist origin gh-pages",
