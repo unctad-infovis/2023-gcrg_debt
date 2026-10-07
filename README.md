@@ -41,6 +41,8 @@ Project should start at: http://localhost:8080
 
 For developing please refer to `package.json`
 
+See `CLAUDE.md` for the component architecture (context provider structure, folder breakdown) and deployment mechanics/gotchas — it's written for whoever picks up this project next, human or AI.
+
 ## Files and folders
 
 All public assets go to folder `public`.
@@ -126,7 +128,7 @@ These packages are published from the [`un-init-project`](https://github.com/unc
 
 ### Project specific
 
-* **d3** — used to create the wheel
+* **d3** — used to create the wheel; its `d3-dsv` module (`csvParse`/`csvFormat`) is also used directly by `scripts/validate-data.js` and `scripts/fill-missing-values.js` to read/write the data CSVs without adding a separate CSV dependency
 * **html2canvas** — used to convert html view into canvas (img)
 
 ### Build & Dev Server
