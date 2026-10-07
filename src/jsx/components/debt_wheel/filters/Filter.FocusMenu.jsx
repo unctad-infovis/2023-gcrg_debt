@@ -23,7 +23,7 @@ function FocusMenu({ setMenuOpen }) {
   };
 
   const tabEntry = textData?.find(t => t.id === 'sentence_focus_tabs');
-  const tabs = tabEntry ? tabEntry.text.split('|') : [];
+  const tabs = tabEntry ? tabEntry.text.split(';') : [];
 
   const [activeTab, setActiveTab] = useState(tabs[0] ?? '');
 
