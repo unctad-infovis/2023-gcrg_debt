@@ -102,3 +102,7 @@ diff <(git show origin/gh-pages:assets/data/values.csv) public/assets/data/value
 ```
 
 This project has two git remotes (`origin` on GitHub, `unctad` on Azure DevOps) — `npm run push` pushes to both; after pushing, verify both point at the same commit with `git ls-remote origin main` / `git ls-remote unctad main`.
+
+**Two separate, unrelated cache-busting mechanisms — don't confuse them:**
+1. The embed snippet's `?v=1` on the JS/CSS bundle URLs (see README → Embedding) — bumped manually in the CMS/Drupal embed code, busts the cache for the *application bundle* only.
+2. `__DATA_VERSION__` (`vite.config.js`'s `define`, consumed in `StaticData.jsx` as `data_version`) — a build timestamp baked into the bundle at build time, appended as `?v=...` to every data file fetch (`values.csv`, `id_key.csv`, etc.). This busts the cache for the *data*, independently of the bundle. It used to be a hardcoded literal (`'2026'`) that never changed across builds — meaning every deploy requested the exact same data URL, so Azure/CDN caching could silently keep serving stale data indefinitely regardless of how many times the embed's `?v=` was bumped or the blob storage was overwritten. Fixed to regenerate automatically every build; don't hardcode it again.
