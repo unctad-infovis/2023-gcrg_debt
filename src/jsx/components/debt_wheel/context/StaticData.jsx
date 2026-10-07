@@ -12,7 +12,7 @@ export function StaticDataContextProvider({ children }) {
   const [aboutData, setAboutData] = useState([]);
 
   useEffect(() => {
-    const data_version = '2026';
+    const data_version = __DATA_VERSION__;
     Promise.all([
       loadFile(`assets/data/indicator_key.csv?v=${data_version}`).then(r => r?.text()),
       loadFile(`assets/data/values.csv?v=${data_version}`).then(r => r?.text()),

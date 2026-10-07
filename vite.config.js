@@ -32,7 +32,8 @@ export default defineConfig(({ command }) => ({
     }
   },
   define: {
-    __PROJECT_NAME__: JSON.stringify(name)
+    __PROJECT_NAME__: JSON.stringify(name),
+    __DATA_VERSION__: JSON.stringify(String(Date.now()))
   },
   plugins: [{ enforce: 'pre', ...mdx() }, react()],
   server: {
