@@ -22,12 +22,10 @@ function Spoke({ i, settings, data, setTooltip, xPos }) {
   };
 
   return (
-    <g transform={`translate(${xPos / 2},${50 * (i + 1) - 25})`} className="g-hover">
-      <button onClick={() => handleSliceClick(data.indicator_key)} type="button">
-        <rect width={settings.line_length} y="-15px" height="30px" fill="hsl(0, 0%, 100%, 0)" />
-        <Axis settings={settings} angle={angle} data={data} />
-        <Circle settings={settings} data={data} setTooltip={setTooltip} />
-      </button>
+    <g transform={`translate(${xPos / 2},${50 * (i + 1) - 25})`} className="g-hover" onClick={() => handleSliceClick(data.indicator_key)} type="button">
+      <rect width={settings.line_length} y="-15px" height="30px" fill="hsl(0, 0%, 100%, 0)" />
+      <Axis settings={settings} angle={angle} data={data} />
+      <Circle settings={settings} data={data} setTooltip={setTooltip} />
     </g>
   );
 }

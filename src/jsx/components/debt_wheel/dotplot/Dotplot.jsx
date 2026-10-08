@@ -1,5 +1,5 @@
 import { groups } from 'd3';
-import { useContext, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useContext, useEffect, useMemo, useRef, useState } from 'react';
 
 // context
 import Data from '../context/RadialData';
@@ -17,9 +17,11 @@ function DotPlot() {
   const [figureHeight, setHeight] = useState(0);
   // const [offset, setOffset] = useState({ top: 0, left: 0 });
 
-  useLayoutEffect(() => {
-    setWidth(ref.current.offsetWidth);
-    setHeight(ref.current.offsetHeight);
+  useEffect(() => {
+    setTimeout(() => {
+      setWidth(ref.current.offsetWidth);
+      setHeight(ref.current.offsetHeight);
+    }, 100);
     // setOffset(ref.current.getBoundingClientRect());
   }, []);
 
@@ -27,8 +29,8 @@ function DotPlot() {
     () => ({
       figureWidth,
       figureHeight,
-      line_length: width * 0.75,
-      xPos: width * 0.1,
+      line_length: figureWidth * 0.75,
+      xPos: figureWidth * 0.1,
       inner_radius: 0,
       section_gap: 0.75
     }),
